@@ -198,9 +198,10 @@
                     @* Departure Time *@
                     <MudItem xs="3">
 
-                        <div>
+                        <div class="@(!_departureTimeTouched ? "departure-time-default" : "")">
 
-                            <SelectTime @bind-Time="_model.DepartureTime"
+                            <SelectTime Time="@_model.DepartureTime"
+                                        TimeChanged="@OnDepartureTimeChanged"
                                         ForTime="@(()=>_model.DepartureTime)"
                                         Title="@_localizer["Vehicles_Departure_Time_Title"]" />
 

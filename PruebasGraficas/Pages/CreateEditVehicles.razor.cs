@@ -30,6 +30,18 @@ public partial class CreateEditVehicles
     private bool _loading { get; set; }
 
     /// <summary>
+    /// Tracks whether the user has explicitly chosen a departure time.
+    /// Used to style the default value as a gray placeholder.
+    /// </summary>
+    private bool _departureTimeTouched { get; set; }
+
+    private async Task OnDepartureTimeChanged(TimeOnly value)
+    {
+        _departureTimeTouched = true;
+        _model.DepartureTime = value;
+    }
+
+    /// <summary>
     /// Bool for MudSwitch at the top
     /// </summary>
     private bool _deactivate
