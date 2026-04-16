@@ -33,7 +33,6 @@
     background-color: var(--ce-page-bg);
 }
 
-va
 /* -- Section cards (MudCard.custom-card overrides) -------------------------- */
 .create-edit-page .mud-card.custom-card {
     border-radius: 20px;
