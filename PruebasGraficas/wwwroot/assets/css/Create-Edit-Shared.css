@@ -138,7 +138,7 @@
 }
 
 .create-edit-page .ce-section-group-title {
-    color: var(--mud-palette-text-primary);
+    color: var(--Grey-Body-text, #585858);
     font-weight: 500;
     margin: 0;
     background-color: transparent;
