@@ -1,0 +1,2704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About Us" xml:space="preserve">
+    <value>À propos de nous</value>
+  </data>
+  <data name="Accordion &amp; Collapse" xml:space="preserve">
+    <value>Accordéon &amp; Réduction</value>
+  </data>
+  <data name="Add Job" xml:space="preserve">
+    <value>Ajouter un travail</value>
+  </data>
+  <data name="Add Products" xml:space="preserve">
+    <value>Ajouter des produits</value>
+  </data>
+  <data name="Additional Content" xml:space="preserve">
+    <value>Contenu supplémentaire</value>
+  </data>
+  <data name="AddressCoordinatesRequired" xml:space="preserve">
+    <value>L'adresse doit avoir des coordonnées valides. Veuillez sélectionner une adresse dans les suggestions.</value>
+  </data>
+  <data name="AddressInformation" xml:space="preserve">
+    <value>Informations sur l’adresse</value>
+  </data>
+  <data name="AdvancedFilters.Actions.Apply" xml:space="preserve">
+    <value>Appliquer</value>
+  </data>
+  <data name="AdvancedFilters.Actions.Filter" xml:space="preserve">
+    <value>Filtrer</value>
+  </data>
+  <data name="AdvancedFilters.Actions.Reset" xml:space="preserve">
+    <value>Réinitialiser</value>
+  </data>
+  <data name="AdvancedFilters.DeselectAll" xml:space="preserve">
+    <value>Tout désélectionner</value>
+  </data>
+  <data name="AdvancedFilters.Placeholder.NothingSelected" xml:space="preserve">
+    <value>Aucune sélection</value>
+  </data>
+  <data name="AdvancedFilters.Placeholder.Search" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="AdvancedFilters.SelectAll" xml:space="preserve">
+    <value>Tout sélectionner</value>
+  </data>
+  <data name="AdvancedFilters.SelectedCount" xml:space="preserve">
+    <value>{0} sélectionnés</value>
+  </data>
+  <data name="AdvancedFilters.TimePreference.AM" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="AdvancedFilters.TimePreference.None" xml:space="preserve">
+    <value>Aucune préférence</value>
+  </data>
+  <data name="AdvancedFilters.TimePreference.PM" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="AddressInput_AddressHelper_Default" xml:space="preserve">
+    <value>Sélectionnez une adresse dans les suggestions</value>
+  </data>
+  <data name="AddressInput_AddressLabel" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="AddressInput_AddressPlaceholder" xml:space="preserve">
+    <value>Commencez à saisir une adresse...</value>
+  </data>
+  <data name="AddressInput_AllowManualEntry" xml:space="preserve">
+    <value>Autoriser la saisie manuelle de l’adresse</value>
+  </data>
+  <data name="AddressInput_City" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="AddressInput_Country" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="AddressInput_CountryLabel" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="AddressInput_CountryPlaceholder" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="AddressInput_Error_AddressRequired" xml:space="preserve">
+    <value>L’adresse est obligatoire</value>
+  </data>
+  <data name="AddressInput_Error_InvalidLatitudeRange" xml:space="preserve">
+    <value>La latitude doit être comprise entre -90 et 90.</value>
+  </data>
+  <data name="AddressInput_Error_InvalidLongitudeRange" xml:space="preserve">
+    <value>La longitude doit être comprise entre -180 et 180.</value>
+  </data>
+  <data name="AddressInput_Error_LookupUnavailable" xml:space="preserve">
+    <value>Le service de recherche d’adresse est temporairement indisponible</value>
+  </data>
+  <data name="AddressInput_Error_RetrieveDetails" xml:space="preserve">
+    <value>Erreur lors de la récupération des détails de l’adresse</value>
+  </data>
+  <data name="AddressInput_Error_SelectFromSuggestions" xml:space="preserve">
+    <value>Veuillez sélectionner une adresse dans les suggestions</value>
+  </data>
+  <data name="AddressInput_GoogleApiUnavailable" xml:space="preserve">
+    <value>L’API Google Maps n’est pas disponible. Vous pouvez quand même saisir l’adresse manuellement.</value>
+  </data>
+  <data name="AddressInput_LatitudeLabel" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="AddressInput_LatitudePlaceholder" xml:space="preserve">
+    <value>p. ex. 43.6532</value>
+  </data>
+  <data name="AddressInput_LongitudeLabel" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="AddressInput_LongitudePlaceholder" xml:space="preserve">
+    <value>p. ex. -79.3832</value>
+  </data>
+  <data name="AddressInput_PostalCode" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="AddressInput_PostalCodeLabel" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="AddressInput_PostalCodePlaceholder" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="AddressInput_ProvinceLabel" xml:space="preserve">
+    <value>Province / État</value>
+  </data>
+  <data name="AddressInput_ProvincePlaceholder" xml:space="preserve">
+    <value>Province / État</value>
+  </data>
+  <data name="AddressInput_State" xml:space="preserve">
+    <value>Province/État</value>
+  </data>
+  <data name="AddressInput_Street" xml:space="preserve">
+    <value>Rue</value>
+  </data>
+  <data name="AddressInput_Tooltip_EnterCoordinates" xml:space="preserve">
+    <value>Saisir les coordonnées manuellement</value>
+  </data>
+  <data name="AddressInput_Tooltip_UseAddressSearch" xml:space="preserve">
+    <value>Rechercher avec les coordonnées</value>
+  </data>
+  <data name="AddressInput_Unit" xml:space="preserve">
+    <value>Unité / Suite</value>
+  </data>
+  <data name="AddressInput_UnitLabel" xml:space="preserve">
+    <value>Unité</value>
+  </data>
+  <data name="AddressInput_UnitPlaceholder" xml:space="preserve">
+    <value>Unité, App.</value>
+  </data>
+  <data name="AddressInput_UseAutoSuggestions" xml:space="preserve">
+    <value>Utiliser les suggestions automatiques d’adresse</value>
+  </data>
+  <data name="Advanced Ui" xml:space="preserve">
+    <value>UI avancée</value>
+  </data>
+  <data name="Alerts" xml:space="preserve">
+    <value>Alertes</value>
+  </data>
+  <data name="Analytics" xml:space="preserve">
+    <value>Analytique</value>
+  </data>
+  <data name="Apex Charts" xml:space="preserve">
+    <value>Apex Charts</value>
+  </data>
+  <data name="Apps" xml:space="preserve">
+    <value>Applications</value>
+  </data>
+  <data name="Area Charts" xml:space="preserve">
+    <value>Graphiques en aires</value>
+  </data>
+  <data name="Authentication" xml:space="preserve">
+    <value>Authentification</value>
+  </data>
+  <data name="Auto-Dispatch" xml:space="preserve">
+    <value>Auto-répartition</value>
+  </data>
+  <data name="Avatars" xml:space="preserve">
+    <value>Avatars</value>
+  </data>
+  <data name="Badge" xml:space="preserve">
+    <value>Badge</value>
+  </data>
+  <data name="Bar Charts" xml:space="preserve">
+    <value>Graphiques en barres</value>
+  </data>
+  <data name="Basic" xml:space="preserve">
+    <value>Basique</value>
+  </data>
+  <data name="Blazor Calendar" xml:space="preserve">
+    <value>Calendrier Blazor</value>
+  </data>
+  <data name="Blazor Carousel" xml:space="preserve">
+    <value>Carrousel Blazor</value>
+  </data>
+  <data name="Blocked Members" xml:space="preserve">
+    <value>Membres bloqués</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Blog Details" xml:space="preserve">
+    <value>Détails du blog</value>
+  </data>
+  <data name="Borders" xml:space="preserve">
+    <value>Bordures</value>
+  </data>
+  <data name="Boxplot Charts" xml:space="preserve">
+    <value>Graphiques en boîtes à moustaches</value>
+  </data>
+  <data name="Breadcrumb" xml:space="preserve">
+    <value>Fil d’Ariane</value>
+  </data>
+  <data name="Breakpoints" xml:space="preserve">
+    <value>Points d’arrêt</value>
+  </data>
+  <data name="Bubble Charts" xml:space="preserve">
+    <value>Graphiques à bulles</value>
+  </data>
+  <data name="Button Group" xml:space="preserve">
+    <value>Groupe de boutons</value>
+  </data>
+  <data name="Buttons" xml:space="preserve">
+    <value>Boutons</value>
+  </data>
+  <data name="Buy &amp; Sell" xml:space="preserve">
+    <value>Acheter &amp; Vendre</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>Calendrier</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Candidate-details" xml:space="preserve">
+    <value>Détails du candidat</value>
+  </data>
+  <data name="Candle Stick Charts" xml:space="preserve">
+    <value>Graphiques en chandeliers</value>
+  </data>
+  <data name="Cards" xml:space="preserve">
+    <value>Cartes</value>
+  </data>
+  <data name="Carousel" xml:space="preserve">
+    <value>Carrousel</value>
+  </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Panier</value>
+  </data>
+  <data name="Chartjs" xml:space="preserve">
+    <value>Chartjs</value>
+  </data>
+  <data name="Charts" xml:space="preserve">
+    <value>Graphiques</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="Checkout" xml:space="preserve">
+    <value>Paiement</value>
+  </data>
+  <data name="Checks &amp; Radios" xml:space="preserve">
+    <value>Cases &amp; boutons radio</value>
+  </data>
+  <data name="CIGO TRACKER" xml:space="preserve">
+    <value>CIGO TRACKER</value>
+  </data>
+  <data name="Color Picker" xml:space="preserve">
+    <value>Sélecteur de couleur</value>
+  </data>
+  <data name="Colors" xml:space="preserve">
+    <value>Couleurs</value>
+  </data>
+  <data name="Column Charts" xml:space="preserve">
+    <value>Graphiques en colonnes</value>
+  </data>
+  <data name="Coming Soon" xml:space="preserve">
+    <value>Bientôt disponible</value>
+  </data>
+  <data name="Common.Active" xml:space="preserve">
+    <value>Actif</value>
+  </data>
+  <data name="Common.All" xml:space="preserve">
+    <value>Tous</value>
+  </data>
+  <data name="Common.BackToHome" xml:space="preserve">
+    <value>Retour à l'accueil</value>
+  </data>
+  <data name="Common.ExampleCanada" xml:space="preserve">
+    <value>ex. Canada</value>
+  </data>
+  <data name="Common.Inactive" xml:space="preserve">
+    <value>Inactif</value>
+  </data>
+  <data name="Common.IsActive" xml:space="preserve">
+    <value>Est actif</value>
+  </data>
+  <data name="Common.IsEmailVerified" xml:space="preserve">
+    <value>Vérification par e-mail</value>
+  </data>
+  <data name="Common.LocationType" xml:space="preserve">
+    <value>Type de Site</value>
+  </data>
+  <data name="Common.No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="Common.Role" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
+  <data name="Common.Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="Companies" xml:space="preserve">
+    <value>Entreprises</value>
+  </data>
+  <data name="CompanyInformation" xml:space="preserve">
+    <value>Informations sur l’adresse</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Nom de l’entreprise</value>
+  </data>
+  <data name="CompanyNameRequired" xml:space="preserve">
+    <value>Le nom de l’entreprise est requis</value>
+  </data>
+  <data name="CompanySettings" xml:space="preserve">
+    <value>Paramètres de l'entreprise</value>
+  </data>
+  <data name="Concluded Jobs" xml:space="preserve">
+    <value>Travaux terminés</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+  <data name="Contact Us" xml:space="preserve">
+    <value>Nous contacter</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="Counters" xml:space="preserve">
+    <value>Compteurs</value>
+  </data>
+  <data name="CountryCode_Invalid" xml:space="preserve">
+    <value>Le code du pays est invalide</value>
+  </data>
+  <data name="CountryCode_Is_Necessary" xml:space="preserve">
+    <value>L'indicatif du pays est nécessaire</value>
+  </data>
+  <data name="Country_DialCode_Is_Invalid" xml:space="preserve">
+    <value>L'indicatif téléphonique du pays est invalide</value>
+  </data>
+  <data name="Courses" xml:space="preserve">
+    <value>Cours</value>
+  </data>
+  <data name="Cover" xml:space="preserve">
+    <value>Couverture</value>
+  </data>
+  <data name="Create Blog" xml:space="preserve">
+    <value>Créer un blog</value>
+  </data>
+  <data name="Create Invoice" xml:space="preserve">
+    <value>Créer une facture</value>
+  </data>
+  <data name="Create NFT" xml:space="preserve">
+    <value>Créer un NFT</value>
+  </data>
+  <data name="Create Password" xml:space="preserve">
+    <value>Créer un mot de passe</value>
+  </data>
+  <data name="Create Project" xml:space="preserve">
+    <value>Créer un projet</value>
+  </data>
+  <data name="CreateEditEmployee_AccessManagementPagesUpdateOnly" xml:space="preserve">
+    <value>Accès aux pages de gestion (mise à jour uniquement)</value>
+  </data>
+  <data name="CreateEditEmployee_AriaLabel_ShowPassword" xml:space="preserve">
+    <value>Afficher le mot de passe</value>
+  </data>
+  <data name="CreateEditEmployee_Button_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CreateEditEmployee_Button_Save" xml:space="preserve">
+    <value>Enregister</value>
+  </data>
+  <data name="CreateEditEmployee_Description_AllowAccessCustomerSms" xml:space="preserve">
+    <value>Activer l’onglet SMS client dans le profil du poste pour cet utilisateur.</value>
+  </data>
+  <data name="CreateEditEmployee_Description_AssignBranchToUser" xml:space="preserve">
+    <value>Assigner une succursale à l’utilisateur</value>
+  </data>
+  <data name="CreateEditEmployee_Description_ChatAccess" xml:space="preserve">
+    <value>Si activé, cet utilisateur pourra envoyer des messages pour les postes associés à ses emplacements.</value>
+  </data>
+  <data name="CreateEditEmployee_Description_ChatVisibility" xml:space="preserve">
+    <value>Si activé, cet utilisateur pourra voir la section Notes et Chat dans le profil d’un poste</value>
+  </data>
+  <data name="CreateEditEmployee_Description_EnforceEmail2FA" xml:space="preserve">
+    <value>L’activation de cette option obligera les utilisateurs à se connecter avec une adresse e-mail vérifiée. S’ils ne l’ont pas encore vérifiée, ils seront invités à le faire lors de leur prochaine connexion. De plus, activer cette option vous permettra d’activer l’authentification à deux facteurs (2FA).</value>
+  </data>
+  <data name="CreateEditEmployee_Description_EnforceEmailVerification" xml:space="preserve">
+    <value>L’activation de cette option oblige les utilisateurs à compléter une couche de sécurité supplémentaire en saisissant un code envoyé dans leur boîte mail à chaque tentative de connexion. Cela permet de protéger les comptes en exigeant une seconde forme d’authentification en plus du mot de passe</value>
+  </data>
+  <data name="CreateEditEmployee_Description_IpBlockExemption" xml:space="preserve">
+    <value>Si activé, cet utilisateur pourra se connecter depuis n’importe quelle adresse IP, indépendamment des paramètres de liste blanche d’IP appliqués au reste du personnel.</value>
+  </data>
+  <data name="CreateEditEmployee_Description_IpWhitelist" xml:space="preserve">
+    <value>Autoriser cet utilisateur à accéder à la plateforme via l’adresse IP suivante.
+Remarque : Ceci s’ajoute à la liste blanche d’IP définie dans les paramètres de votre entreprise.</value>
+  </data>
+  <data name="CreateEditEmployee_Description_ProfilePhotoUpload" xml:space="preserve">
+    <value>Glissez-déposez votre image ici ou cliquez pour parcourir</value>
+  </data>
+  <data name="CreateEditEmployee_Description_TimezoneOverride" xml:space="preserve">
+    <value>Si une adresse a été définie pour cet utilisateur, le fuseau horaire configuré ici sera remplacé. Sinon, si aucune adresse n’est associée à cet utilisateur, le fuseau horaire sera défini selon la valeur sélectionnée dans cette liste déroulante.</value>
+  </data>
+  <data name="CreateEditEmployee_DispatcherPoint_AccessReports" xml:space="preserve">
+    <value>Accès à la section Rapports</value>
+  </data>
+  <data name="CreateEditEmployee_DispatcherPoint_CloneAndReschedule" xml:space="preserve">
+    <value>Possibilité de cloner des itinéraires et de reprogrammer des tâches en attente</value>
+  </data>
+  <data name="CreateEditEmployee_DispatcherPoint_DeleteNonStarted" xml:space="preserve">
+    <value>Possibilité de supprimer des tâches non commencées</value>
+  </data>
+  <data name="CreateEditEmployee_DispatcherPoint_FullAccess" xml:space="preserve">
+    <value>Accès à toutes les mêmes pages et fonctionnalités qu’un Répartiteur</value>
+  </data>
+  <data name="CreateEditEmployee_DispatcherPoint_Itineraries" xml:space="preserve">
+    <value>Itinéraires</value>
+  </data>
+  <data name="CreateEditEmployee_Employee_NotFound" xml:space="preserve">
+    <value>Employé introuvable</value>
+  </data>
+  <data name="CreateEditEmployee_Error_Create" xml:space="preserve">
+    <value>Erreur lors de la création de l’employé.</value>
+  </data>
+  <data name="CreateEditEmployee_Label_AccessImportTool" xml:space="preserve">
+    <value>Accéder à l’outil d’importation</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="CreateEditEmployee_Label_AllowAccessCustomerSms" xml:space="preserve">
+    <value>Autoriser l’accès aux SMS des clients</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Branch" xml:space="preserve">
+    <value>Succursale</value>
+  </data>
+  <data name="CreateEditEmployee_Label_ChatAccess" xml:space="preserve">
+    <value>Accés au chat</value>
+  </data>
+  <data name="CreateEditEmployee_Label_ChatVisibility" xml:space="preserve">
+    <value>Visibilité du chat</value>
+  </data>
+  <data name="CreateEditEmployee_Label_City" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="CreateEditEmployee_Label_ConfirmPassword" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Country" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="CreateEditEmployee_Label_CreateUpdateItineraries" xml:space="preserve">
+    <value>Créer et mettre à jour des itinéraires</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Dispatcher" xml:space="preserve">
+    <value>Répartiteur</value>
+  </data>
+  <data name="CreateEditEmployee_Label_FirstName" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="CreateEditEmployee_Label_IpWhitelist" xml:space="preserve">
+    <value>Liste blanche d’IP</value>
+  </data>
+  <data name="CreateEditEmployee_Label_LastName" xml:space="preserve">
+    <value>Nom de famille</value>
+  </data>
+  <data name="CreateEditEmployee_Label_LoginEmail" xml:space="preserve">
+    <value>E-mail de connexion</value>
+  </data>
+  <data name="CreateEditEmployee_Label_NewPassword" xml:space="preserve">
+    <value>Nouveau mot de passe</value>
+  </data>
+  <data name="CreateEditEmployee_Label_NotificationsNewMessagesOperators" xml:space="preserve">
+    <value>Notifications pour les nouveaux messages des opérateurs</value>
+  </data>
+  <data name="CreateEditEmployee_Label_PhoneNumber" xml:space="preserve">
+    <value>Número de téléphone</value>
+  </data>
+  <data name="CreateEditEmployee_Label_PostalCode" xml:space="preserve">
+    <value>Code Postal</value>
+  </data>
+  <data name="CreateEditEmployee_Label_ProfilePhoto" xml:space="preserve">
+    <value>Photo de profil</value>
+  </data>
+  <data name="CreateEditEmployee_Label_ProvinceState" xml:space="preserve">
+    <value>Province / État</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Role" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
+  <data name="CreateEditEmployee_Label_SearchCreateUpdateDeleteJobs" xml:space="preserve">
+    <value>Rechercher, créer, mettre à jour et supprimer des missions</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Timezone" xml:space="preserve">
+    <value>Fuseau horaire</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Unit" xml:space="preserve">
+    <value>Unité</value>
+  </data>
+  <data name="CreateEditEmployee_Link_WhatIsRole" xml:space="preserve">
+    <value>Qu’est-ce que le rôle ?</value>
+  </data>
+  <data name="CreateEditEmployee_PasswordRule_Complexity" xml:space="preserve">
+    <value>• Utilisez au moins un symbole (ex. : $, !, &amp;, etc.), une lettre majuscule, une lettre minuscule et un chiffre</value>
+  </data>
+  <data name="CreateEditEmployee_PasswordRule_LengthSecurity" xml:space="preserve">
+    <value>• Plus le mot de passe est long, plus il est sécurisé</value>
+  </data>
+  <data name="CreateEditEmployee_PasswordRule_MinLength" xml:space="preserve">
+    <value>• Le mot de passe doit comporter au moins 10 caractères</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_AssignBranch" xml:space="preserve">
+    <value>Assigner une succursale</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_City" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_ConfirmPassword" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_FirstName" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_LastName" xml:space="preserve">
+    <value>Nom de famille</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_Longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_Platform" xml:space="preserve">
+    <value>Langage de la plateforme</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_SelectRole" xml:space="preserve">
+    <value>Sélectionnez un rôle</value>
+  </data>
+  <data name="CreateEditEmployee_Placeholder_Unit" xml:space="preserve">
+    <value>Unité</value>
+  </data>
+  <data name="CreateEditEmployee_Span_AccessAllExceptSettingsTransactions" xml:space="preserve">
+    <value>Accès à toutes les pages sauf Paramètres et Transactions</value>
+  </data>
+  <data name="CreateEditEmployee_Span_AccessDashboard" xml:space="preserve">
+    <value>Accéder au tableau de bord</value>
+  </data>
+  <data name="CreateEditEmployee_Span_AccessDashboardLimitedVisibility" xml:space="preserve">
+    <value>Accéder au tableau de bord avec visibilité limitée</value>
+  </data>
+  <data name="CreateEditEmployee_Span_AccessReportsSection" xml:space="preserve">
+    <value>Accès à la section Rapports</value>
+  </data>
+  <data name="CreateEditEmployee_Span_AccessTransactionsPage" xml:space="preserve">
+    <value>Accès à la page Transactions</value>
+  </data>
+  <data name="CreateEditEmployee_Span_Accounting" xml:space="preserve">
+    <value>Comptabilité</value>
+  </data>
+  <data name="CreateEditEmployee_Span_SearchCustomersAndJobs" xml:space="preserve">
+    <value>Rechercher parmi les clients et les missions</value>
+  </data>
+  <data name="CreateEditEmployee_Span_SearchCustomersCreateJobs" xml:space="preserve">
+    <value>Rechercher des clients et créer des missions</value>
+  </data>
+  <data name="CreateEditEmployee_Span_UpdateDeleteOwnJobs" xml:space="preserve">
+    <value>Mettre à jour et supprimer les missions qu’ils ont créées</value>
+  </data>
+  <data name="Deactivate_Switch" xml:space="preserve">
+    <value>Désactiver</value>
+  </data>
+  <data name="CreateEditEmployee_Switch_IpBlockExemption" xml:space="preserve">
+    <value>Exemption de blocage IP</value>
+  </data>
+  <data name="CreateEditEmployee_Switch_UseAddressSuggestions" xml:space="preserve">
+    <value>Utiliser les suggestions automatiques d´adresse</value>
+  </data>
+  <data name="CreateEditEmployee_Title_AddWebUser" xml:space="preserve">
+    <value>Ajouter un utilisateur web</value>
+  </data>
+  <data name="CreateEditEmployee_Title_BusinessAnalyst" xml:space="preserve">
+    <value>Analyste d´affaires</value>
+  </data>
+  <data name="CreateEditEmployee_Title_CustomerSupportLevel1" xml:space="preserve">
+    <value>Support Client (Niveau 1)</value>
+  </data>
+  <data name="CreateEditEmployee_Title_CustomerSupportLevel2" xml:space="preserve">
+    <value>Support Client (Niveau 2)</value>
+  </data>
+  <data name="CreateEditEmployee_Title_EditWebUser" xml:space="preserve">
+    <value>Modifier l'utilisateur web</value>
+  </data>
+  <data name="CreateEditEmployee_Title_EnforceEmail2FA" xml:space="preserve">
+    <value>Forcer la double authentification (2FA) par e-mail</value>
+  </data>
+  <data name="CreateEditEmployee_Title_EnforceEmailVerification" xml:space="preserve">
+    <value>Forcer la vérification de l´e-mail</value>
+  </data>
+  <data name="CreateEditEmployee_Title_LocationTimezone" xml:space="preserve">
+    <value>Localisation et fuseau horaire</value>
+  </data>
+  <data name="CreateEditEmployee_Title_LoginCredentials" xml:space="preserve">
+    <value>Identifiants de connexion</value>
+  </data>
+  <data name="CreateEditEmployee_Title_Manager" xml:space="preserve">
+    <value>Responsable</value>
+  </data>
+  <data name="CreateEditEmployee_Title_PermissionByRole" xml:space="preserve">
+    <value>Autorisations par rôle</value>
+  </data>
+  <data name="CreateEditEmployee_Title_PrimaryInformation" xml:space="preserve">
+    <value>Informations principales</value>
+  </data>
+  <data name="CreateEditVehicle_Title_PrimaryInformation" xml:space="preserve">
+    <value>Informations principales</value>
+  </data>
+  <data name="CreateEditEmployee_Title_ProfilePhoto" xml:space="preserve">
+    <value>Photo de profil</value>
+  </data>
+  <data name="CreateEditEmployee_Title_SalesLevel1" xml:space="preserve">
+    <value>Ventes (Niveau 1)</value>
+  </data>
+  <data name="CreateEditEmployee_Title_SalesLevel2" xml:space="preserve">
+    <value>Ventes (Niveau 2)</value>
+  </data>
+  <data name="CreateEditEmployee_Title_SalesLevel3" xml:space="preserve">
+    <value>Ventes (Niveau 3)</value>
+  </data>
+  <data name="CreateEditEmployee_Title_Security" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="CreateEditEmployee_Title_SubAdministrator" xml:space="preserve">
+    <value>Sous-administrateur</value>
+  </data>
+  <data name="CreateEditJob_Button_ApplyAllSuggested" xml:space="preserve">
+    <value>Appliquer toutes les suggestions</value>
+  </data>
+  <data name="CreateEditJob_Button_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CreateEditJob_Button_Save" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="CreateEditJob_Error_SaveFailed" xml:space="preserve">
+    <value>Impossible de sauvegarder le travail. Veuillez réessayer.</value>
+  </data>
+  <data name="CreateEditJob_Helper_BalanceOwedUsd" xml:space="preserve">
+    <value>Montant prévu à percevoir à l'arrivée.</value>
+  </data>
+  <data name="CreateEditJob_Helper_Branch" xml:space="preserve">
+    <value>Emplacement qui a programmé ce travail</value>
+  </data>
+  <data name="CreateEditJob_Helper_Comment" xml:space="preserve">
+    <value>Note ou commentaire concernant le travail pour le(s) opérateur(s) auquel il sera assigné.</value>
+  </data>
+  <data name="CreateEditJob_Helper_ConfirmationStatus" xml:space="preserve">
+    <value>Démarcation utile dans le Constructeur de Routes pour différencier les travaux selon leur statut de confirmation.</value>
+  </data>
+  <data name="CreateEditJob_Helper_DistributionCenter" xml:space="preserve">
+    <value>Point de départ lié à ce travail</value>
+  </data>
+  <data name="CreateEditJob_Helper_JobDetails" xml:space="preserve">
+    <value>Informations relatives spécifiquement à ce travail.</value>
+  </data>
+  <data name="CreateEditJob_Helper_LabelBoxes" xml:space="preserve">
+    <value>Cette quantité est utilisée comme nombre d'étiquettes à imprimer</value>
+  </data>
+  <data name="CreateEditJob_Helper_Metrics" xml:space="preserve">
+    <value>Les informations de métriques sont liées à ce travail. La valeur, le poids et le volume sont utilisés comme totaux si aucune action n'est créée pour ce travail, ou si aucun de ces champs n'est défini pour les actions ajoutées. Sinon, leurs sommes respectives seront calculées.</value>
+  </data>
+  <data name="CreateEditJob_Helper_QuickDescription" xml:space="preserve">
+    <value>Étiquette courte pour référence interne</value>
+  </data>
+  <data name="CreateEditJob_Helper_TimePreference" xml:space="preserve">
+    <value>Préférence horaire pour le démarrage du travail.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TimeWindowEnd" xml:space="preserve">
+    <value>Définissez l'heure de fin approximative à laquelle le travail doit être terminé et les opérateurs doivent quitter le site du client. Remarque : Ne définissez pas cette valeur si vous souhaitez que la plateforme calcule automatiquement le cadre temporel de fin en fonction de l'itinéraire et des données de circulation.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TimeWindowStart" xml:space="preserve">
+    <value>Définissez l'heure de début approximative à laquelle le travail doit commencer et les opérateurs doivent être sur le site du client. Remarque : Ne définissez pas cette valeur si vous souhaitez que la plateforme calcule automatiquement le cadre temporel de début en fonction de l'itinéraire et des données de circulation.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TotalHandleTime" xml:space="preserve">
+    <value>Durée prévue à passer sur place pour ce travail.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TotalPieceCount" xml:space="preserve">
+    <value>Nombre d'articles pour ce travail.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TotalQuantity" xml:space="preserve">
+    <value>Quantité d'articles pour ce travail.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TotalValueUsd" xml:space="preserve">
+    <value>Valeur monétaire liée à ce travail.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TotalVolume" xml:space="preserve">
+    <value>Volume des articles liés à ce travail.</value>
+  </data>
+  <data name="CreateEditJob_Helper_TotalWeight" xml:space="preserve">
+    <value>Poids des articles liés à ce travail.</value>
+  </data>
+  <data name="CreateEditJob_Job_NotFound" xml:space="preserve">
+    <value>Travail non trouvé</value>
+  </data>
+  <data name="CreateEditJob_Label_Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="CreateEditJob_Label_BalanceOwedUsd" xml:space="preserve">
+    <value>Solde dû (USD)</value>
+  </data>
+  <data name="CreateEditJob_Label_Branch" xml:space="preserve">
+    <value>Succursale</value>
+  </data>
+  <data name="CreateEditJob_Label_Comment" xml:space="preserve">
+    <value>Commentaire</value>
+  </data>
+  <data name="CreateEditJob_Label_ConfirmationStatus" xml:space="preserve">
+    <value>Statut de confirmation</value>
+  </data>
+  <data name="CreateEditJob_Label_Country" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="CreateEditJob_Label_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="CreateEditJob_Label_DistributionCenter" xml:space="preserve">
+    <value>Centre de distribution</value>
+  </data>
+  <data name="CreateEditJob_Label_FirstName" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="CreateEditJob_Label_ForceSyncWithActionList" xml:space="preserve">
+    <value>Forcer la synchronisation avec la liste d'actions</value>
+  </data>
+  <data name="CreateEditJob_Label_InvoiceNumber" xml:space="preserve">
+    <value>Numéro de facture</value>
+  </data>
+  <data name="CreateEditJob_Label_LabelBoxes" xml:space="preserve">
+    <value>Étiquette / Boîtes</value>
+  </data>
+  <data name="CreateEditJob_Label_LastName" xml:space="preserve">
+    <value>Nom de famille</value>
+  </data>
+  <data name="CreateEditJob_Label_PostalCode" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="CreateEditJob_Label_ProvinceState" xml:space="preserve">
+    <value>Province / État</value>
+  </data>
+  <data name="CreateEditJob_Label_QuickDescription" xml:space="preserve">
+    <value>Description rapide</value>
+  </data>
+  <data name="CreateEditJob_Label_ShippingBarcodes" xml:space="preserve">
+    <value>Code(s)-barres d'expédition du travail</value>
+  </data>
+  <data name="CreateEditJob_Label_TimePreference" xml:space="preserve">
+    <value>Préférence horaire</value>
+  </data>
+  <data name="CreateEditJob_Label_TimeWindowEnd" xml:space="preserve">
+    <value>Fenêtre horaire - Fin</value>
+  </data>
+  <data name="CreateEditJob_Label_TimeWindowStart" xml:space="preserve">
+    <value>Fenêtre horaire - Début</value>
+  </data>
+  <data name="CreateEditJob_Label_ToBeDetermined" xml:space="preserve">
+    <value>À définir</value>
+  </data>
+  <data name="CreateEditJob_Label_TotalHandleTime" xml:space="preserve">
+    <value>Temps total de manutention</value>
+  </data>
+  <data name="CreateEditJob_Label_TotalPieceCount" xml:space="preserve">
+    <value>Nombre total de pièces</value>
+  </data>
+  <data name="CreateEditJob_Label_TotalQuantity" xml:space="preserve">
+    <value>Quantité totale</value>
+  </data>
+  <data name="CreateEditJob_Label_TotalValueUsd" xml:space="preserve">
+    <value>Valeur totale (USD)</value>
+  </data>
+  <data name="CreateEditJob_Label_TotalVolume" xml:space="preserve">
+    <value>Volume total</value>
+  </data>
+  <data name="CreateEditJob_Label_TotalWeight" xml:space="preserve">
+    <value>Poids total</value>
+  </data>
+  <data name="CreateEditJob_Label_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="CreateEditJob_Label_Unit" xml:space="preserve">
+    <value>Unité</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_Address" xml:space="preserve">
+    <value>Entrez l'adresse</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_Branch" xml:space="preserve">
+    <value>Choisir une succursale</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_Comment" xml:space="preserve">
+    <value>Entrez une note ou un commentaire</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_Date" xml:space="preserve">
+    <value>Date cible</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_DistributionCenter" xml:space="preserve">
+    <value>Choisir un centre de distribution</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_FirstName" xml:space="preserve">
+    <value>Entrez le prénom</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_LabelBoxes" xml:space="preserve">
+    <value>Quantité d'étiquettes pour les boîtes</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_LastName" xml:space="preserve">
+    <value>Entrez le nom de famille</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_PostalCode" xml:space="preserve">
+    <value>Entrez le code postal</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_ProvinceState" xml:space="preserve">
+    <value>Entrez la province ou l'état</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_QuickDescription" xml:space="preserve">
+    <value>Étiquette courte</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_TimeWindowEnd" xml:space="preserve">
+    <value>Sélectionner l'heure de fin</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_TimeWindowStart" xml:space="preserve">
+    <value>Sélectionner l'heure de début</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_Type" xml:space="preserve">
+    <value>Sélectionner le type</value>
+  </data>
+  <data name="CreateEditJob_Placeholder_Unit" xml:space="preserve">
+    <value>Entrez l'unité</value>
+  </data>
+  <data name="CreateEditJob_Section_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="CreateEditJob_Section_JobDetails" xml:space="preserve">
+    <value>Détails du travail</value>
+  </data>
+  <data name="CreateEditJob_Section_Location" xml:space="preserve">
+    <value>Emplacement</value>
+  </data>
+  <data name="CreateEditJob_Section_Metrics" xml:space="preserve">
+    <value>Métriques</value>
+  </data>
+  <data name="CreateEditJob_Section_PrimaryInformation" xml:space="preserve">
+    <value>Informations principales</value>
+  </data>
+  <data name="CreateEditJob_Title_Add" xml:space="preserve">
+    <value>Ajouter un travail</value>
+  </data>
+  <data name="CreateEditJob_Title_Edit" xml:space="preserve">
+    <value>Modifier le travail</value>
+  </data>
+  <data name="CreateEditJob_Validation_AddressRequired" xml:space="preserve">
+    <value>L'adresse est obligatoire</value>
+  </data>
+  <data name="CreateEditJob_Validation_BalanceOwedPositive" xml:space="preserve">
+    <value>Le solde dû ne peut pas être négatif</value>
+  </data>
+  <data name="CreateEditJob_Validation_BalanceOwedScale" xml:space="preserve">
+    <value>Le solde dû ne doit pas avoir plus de 2 décimales</value>
+  </data>
+  <data name="CreateEditJob_Validation_CommentMaxLength" xml:space="preserve">
+    <value>Le commentaire doit contenir 2500 caractères ou moins</value>
+  </data>
+  <data name="CreateEditJob_Validation_ConfirmationStatusInvalid" xml:space="preserve">
+    <value>Le statut de confirmation n'est pas valide</value>
+  </data>
+  <data name="CreateEditJob_Validation_FirstNameMaxLength" xml:space="preserve">
+    <value>Le prénom doit contenir 100 caractères ou moins</value>
+  </data>
+  <data name="CreateEditJob_Validation_FirstNameRequired" xml:space="preserve">
+    <value>Le prénom est obligatoire</value>
+  </data>
+  <data name="CreateEditJob_Validation_InvoiceNumbersMaxItems" xml:space="preserve">
+    <value>Les numéros de facture ne peuvent pas dépasser 10 éléments</value>
+  </data>
+  <data name="CreateEditJob_Validation_LabelsToPrintMax" xml:space="preserve">
+    <value>Étiquette / Boîtes ne peut pas dépasser 10000</value>
+  </data>
+  <data name="CreateEditJob_Validation_LabelsToPrintMin" xml:space="preserve">
+    <value>Étiquette / Boîtes ne peut pas être inférieur à 0</value>
+  </data>
+  <data name="CreateEditJob_Validation_NumberInvalid" xml:space="preserve">
+    <value>Saisissez un nombre valide.</value>
+  </data>
+  <data name="CreateEditJob_Validation_PhoneMaxLength" xml:space="preserve">
+    <value>Le numéro de téléphone doit contenir 15 caractères ou moins</value>
+  </data>
+  <data name="CreateEditJob_Validation_PhoneMinLength" xml:space="preserve">
+    <value>Le numéro de téléphone doit contenir au moins 7 caractères</value>
+  </data>
+  <data name="CreateEditJob_Validation_PhoneRequired" xml:space="preserve">
+    <value>Le numéro de téléphone est obligatoire</value>
+  </data>
+  <data name="CreateEditJob_Validation_QuickDescriptionMaxLength" xml:space="preserve">
+    <value>La description rapide doit contenir 10 caractères ou moins</value>
+  </data>
+  <data name="CreateEditJob_Validation_ShippingBarcodesMaxItems" xml:space="preserve">
+    <value>Les codes-barres d'expédition ne peuvent pas dépasser 15 éléments</value>
+  </data>
+  <data name="CreateEditJob_Validation_TargetDateRequired" xml:space="preserve">
+    <value>La date est obligatoire lorsque 'À définir' n'est pas coché</value>
+  </data>
+  <data name="CreateEditJob_Validation_TimeWindowEndAfterStart" xml:space="preserve">
+    <value>L'heure de fin doit être postérieure à l'heure de début</value>
+  </data>
+  <data name="CreateEditJob_Validation_TotalHandleTimePositive" xml:space="preserve">
+    <value>Le temps total de manutention ne peut pas être négatif</value>
+  </data>
+  <data name="CreateEditJob_Validation_TotalPieceCountPositive" xml:space="preserve">
+    <value>Le nombre total de pièces ne peut pas être négatif</value>
+  </data>
+  <data name="CreateEditJob_Validation_TotalQuantityPositive" xml:space="preserve">
+    <value>La quantité totale ne peut pas être négative</value>
+  </data>
+  <data name="CreateEditJob_Validation_TotalValuePositive" xml:space="preserve">
+    <value>La valeur totale ne peut pas être négative</value>
+  </data>
+  <data name="CreateEditJob_Validation_TotalValueScale" xml:space="preserve">
+    <value>La valeur totale ne doit pas avoir plus de 2 décimales</value>
+  </data>
+  <data name="CreateEditJob_Validation_TotalVolumePositive" xml:space="preserve">
+    <value>Le volume total ne peut pas être négatif</value>
+  </data>
+  <data name="CreateEditJob_Validation_TotalWeightPositive" xml:space="preserve">
+    <value>Le poids total ne peut pas être négatif</value>
+  </data>
+  <data name="CreateEditJob_Validation_TypeInvalid" xml:space="preserve">
+    <value>Le type n'est pas valide</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Ability_To_Clone_From_Planner" xml:space="preserve">
+    <value>Possibilité de cloner des itinéraires et de reprogrammer des tâches en attente depuis le planificateur.</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Ability_To_Delete_From_Planner" xml:space="preserve">
+    <value>Possibilité de supprimer les itinéraires non commencés du planificateur</value>
+  </data>
+  <data name="CreateEditEmployee_Ability_To_Delete_Pending_Jobs" xml:space="preserve">
+    <value>Possibilité de supprimer toutes les tâches en attente du planificateur</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Access_To_Managment" xml:space="preserve">
+    <value>Accès aux pages des opérateurs de la direction (lecture seule)</value>
+  </data>
+  <data name="CreateEditEmployee_Access_Reported_Incompleted_Page" xml:space="preserve">
+    <value>Accès à la page signalée comme incomplète</value>
+  </data>
+  <data name="CreateEditEmployee_Access_Reported_Damages_Page" xml:space="preserve">
+    <value>Accès à la page des dommages signalés</value>
+  </data>
+  <data name="CreateEditEmployee_Access_As_Administrator" xml:space="preserve">
+    <value>Accès à toutes les mêmes pages que l'administrateur (à l'exception des pages Paramètres et de la page Transactions).</value>
+  </data>
+  <data name="CRM" xml:space="preserve">
+    <value>CRM</value>
+  </data>
+  <data name="Crud.Actions" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Crud.Add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="Crud.ConfirmDeleteMessageHtml" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer &lt;b&gt;{0}&lt;/b&gt; ?</value>
+  </data>
+  <data name="Crud.ConfirmDeleteTitle" xml:space="preserve">
+    <value>Supprimer {0}</value>
+  </data>
+  <data name="Crud.Created" xml:space="preserve">
+    <value>Créé.</value>
+  </data>
+  <data name="Crud.Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="Crud.DeletedSuccessfully" xml:space="preserve">
+    <value>Supprimé.</value>
+  </data>
+  <data name="Crud.DeleteFailedStatus" xml:space="preserve">
+    <value>Échec de la suppression ({0}).</value>
+  </data>
+  <data name="Crud.DeleteMissingIdentifier" xml:space="preserve">
+    <value>Impossible de supprimer {0} : identifiant manquant.</value>
+  </data>
+  <data name="Crud.DeleteUnable" xml:space="preserve">
+    <value>Impossible de supprimer {0}.</value>
+  </data>
+  <data name="Crud.Details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="Crud.Edit" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="Crud.ItemsPerPage" xml:space="preserve">
+    <value>Éléments par page :</value>
+  </data>
+  <data name="Crud.Loading" xml:space="preserve">
+    <value>Chargement...</value>
+  </data>
+  <data name="Crud.NoRecords" xml:space="preserve">
+    <value>Aucun enregistrement correspondant</value>
+  </data>
+  <data name="Crud.NoRecords.Subtitle" xml:space="preserve">
+    <value>Essayez d'ajuster vos critères de recherche ou de filtre.</value>
+  </data>
+  <data name="Crud.PagerInfoFormat" xml:space="preserve">
+    <value>{first_item} à {last_item} sur {all_items}</value>
+  </data>
+  <data name="Crud.SearchPlaceholder" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="Crud.TryAgainLater" xml:space="preserve">
+    <value>Veuillez réessayer ultérieurement</value>
+  </data>
+  <data name="Crud.Updated" xml:space="preserve">
+    <value>Mis à jour.</value>
+  </data>
+  <data name="Crud_TryAgainLater" xml:space="preserve">
+    <value>Veuillez réessayer ultérieurement</value>
+  </data>
+  <data name="Crypto" xml:space="preserve">
+    <value>Crypto</value>
+  </data>
+  <data name="Currency Exchange" xml:space="preserve">
+    <value>Change de devises</value>
+  </data>
+  <data name="Customers &amp; Jobs" xml:space="preserve">
+    <value>Clients &amp; travaux</value>
+  </data>
+  <data name="CustomerServiceEmail" xml:space="preserve">
+    <value>Courriel du service client</value>
+  </data>
+  <data name="CustomerServiceEmailHelperText" xml:space="preserve">
+    <value>Courriel affiché aux clients sur le suivi Web pour le service client.</value>
+  </data>
+  <data name="CustomerServiceEmailRequired" xml:space="preserve">
+    <value>L'e-mail du service client est obligatoire</value>
+  </data>
+  <data name="CustomerServicePhoneNumber" xml:space="preserve">
+    <value>Téléphone du service client</value>
+  </data>
+  <data name="CustomersJobs.Action.AddJob" xml:space="preserve">
+    <value>Ajouter un travail</value>
+  </data>
+  <data name="CustomersJobs.Breadcrumb.CustomersJobs" xml:space="preserve">
+    <value>Clients &amp; travaux</value>
+  </data>
+  <data name="CustomersJobs.Breadcrumb.Overview" xml:space="preserve">
+    <value>Aperçu</value>
+  </data>
+  <data name="CustomersJobs.Day.Fri" xml:space="preserve">
+    <value>Ven</value>
+  </data>
+  <data name="CustomersJobs.Day.Mon" xml:space="preserve">
+    <value>Lun</value>
+  </data>
+  <data name="CustomersJobs.Day.Sat" xml:space="preserve">
+    <value>Sam</value>
+  </data>
+  <data name="CustomersJobs.Day.Sun" xml:space="preserve">
+    <value>Dim</value>
+  </data>
+  <data name="CustomersJobs.Day.Thu" xml:space="preserve">
+    <value>Jeu</value>
+  </data>
+  <data name="CustomersJobs.Day.Tue" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+  <data name="CustomersJobs.Day.Wed" xml:space="preserve">
+    <value>Mer</value>
+  </data>
+  <data name="CustomersJobs.Empty.SearchCustomers" xml:space="preserve">
+    <value>Rechercher des clients</value>
+  </data>
+  <data name="CustomersJobs.Filter.All" xml:space="preserve">
+    <value>Tous</value>
+  </data>
+  <data name="CustomersJobs.Filter.CurrentWeek" xml:space="preserve">
+    <value>Semaine en cours</value>
+  </data>
+  <data name="CustomersJobs.Filter.LastWeek" xml:space="preserve">
+    <value>Semaine dernière</value>
+  </data>
+  <data name="CustomersJobs.Filter.Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="CustomersJobs.Filter.NextWeek" xml:space="preserve">
+    <value>Semaine prochaine</value>
+  </data>
+  <data name="CustomersJobs.Hint.MinChars" xml:space="preserve">
+    <value>Minimum de 3 caractères requis pour le nom.</value>
+  </data>
+  <data name="CustomersJobs.Placeholder.SearchByName" xml:space="preserve">
+    <value>Rechercher par nom</value>
+  </data>
+  <data name="CustomersJobs.Status.Delivery" xml:space="preserve">
+    <value>Livraison</value>
+  </data>
+  <data name="CustomersJobs.Tab.RecentJobs" xml:space="preserve">
+    <value>Travaux récents</value>
+  </data>
+  <data name="CustomersJobs.Tab.RecentReviews" xml:space="preserve">
+    <value>Avis récents</value>
+  </data>
+  <data name="CustomersJobs.Tab.UpcomingJobs" xml:space="preserve">
+    <value>Travaux à venir</value>
+  </data>
+  <data name="CustomersJobs.Title" xml:space="preserve">
+    <value>Clients &amp; travaux</value>
+  </data>
+  <data name="Dashboards" xml:space="preserve">
+    <value>Tableaux de bord</value>
+  </data>
+  <data name="Data Tables" xml:space="preserve">
+    <value>Tables de données</value>
+  </data>
+  <data name="Date,Time Picker" xml:space="preserve">
+    <value>Sélecteur de date/heure</value>
+  </data>
+  <data name="Deals" xml:space="preserve">
+    <value>Offres</value>
+  </data>
+  <data name="Donut Charts" xml:space="preserve">
+    <value>Graphiques en anneau</value>
+  </data>
+  <data name="Draggable Cards" xml:space="preserve">
+    <value>Cartes déplaçables</value>
+  </data>
+  <data name="Drawer" xml:space="preserve">
+    <value>Tiroir</value>
+  </data>
+  <data name="Dropdowns" xml:space="preserve">
+    <value>Listes déroulantes</value>
+  </data>
+  <data name="Ecommerce" xml:space="preserve">
+    <value>E-commerce</value>
+  </data>
+  <data name="Edit Products" xml:space="preserve">
+    <value>Modifier des produits</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>L’adresse courriel n’est pas valide</value>
+  </data>
+  <data name="Email_Is_Required" xml:space="preserve">
+    <value>L'adresse courriel est requise</value>
+  </data>
+  <data name="Employees" xml:space="preserve">
+    <value>Employés</value>
+  </data>
+  <data name="Employees.Actions.AddButton" xml:space="preserve">
+    <value>+ Ajouter un utilisateur web</value>
+  </data>
+  <data name="Employees.Columns.ApiID" xml:space="preserve">
+    <value>API ID</value>
+  </data>
+  <data name="Employees.Columns.Branch" xml:space="preserve">
+    <value>Branche</value>
+  </data>
+  <data name="Employees.Columns.Email" xml:space="preserve">
+    <value>Courriel</value>
+  </data>
+  <data name="Employees.Columns.FirstName" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Employees.Columns.FullName" xml:space="preserve">
+    <value>Nom complet</value>
+  </data>
+  <data name="Employees.Columns.IsActive" xml:space="preserve">
+    <value>Actif</value>
+  </data>
+  <data name="Employees.Columns.LastActive" xml:space="preserve">
+    <value>Dernière activité</value>
+  </data>
+  <data name="Employees.Columns.LastName" xml:space="preserve">
+    <value>Nom de famille</value>
+  </data>
+  <data name="Employees.Columns.PhoneNumber" xml:space="preserve">
+    <value>Numéro de téléphone</value>
+  </data>
+  <data name="Employees.Columns.PlatformLanguage" xml:space="preserve">
+    <value>Langue de la plateforme</value>
+  </data>
+  <data name="Employees.Columns.ReferenceId" xml:space="preserve">
+    <value>ID de référence</value>
+  </data>
+  <data name="Employees.Columns.Role" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
+  <data name="Employees.Columns.TimeZone" xml:space="preserve">
+    <value>Fuseau horaire</value>
+  </data>
+  <data name="Employees.Columns.Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Employees.Details.AccessCustomerSMS" xml:space="preserve">
+    <value>Accès aux SMS clients</value>
+  </data>
+  <data name="Employees.Details.Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Employees.Details.ChatAccess" xml:space="preserve">
+    <value>Accès au chat</value>
+  </data>
+  <data name="Employees.Details.ChatVisibility" xml:space="preserve">
+    <value>Visibilité du chat</value>
+  </data>
+  <data name="Employees.Details.EnforceEmailVerification" xml:space="preserve">
+    <value>Exiger la vérification de l'email</value>
+  </data>
+  <data name="Employees.Details.IpBlockExemption" xml:space="preserve">
+    <value>Exemption de blocage IP</value>
+  </data>
+  <data name="Employees.Details.Preferences" xml:space="preserve">
+    <value>Préférences</value>
+  </data>
+  <data name="Employees.Details.Security" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="Employee_Successfully_Created" xml:space="preserve">
+    <value>L'employé a réussi à créer</value>
+  </data>
+  <data name="Employee_Successfully_Updated" xml:space="preserve">
+    <value>Mise à jour réussie par l'employé</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Vide</value>
+  </data>
+  <data name="Enter_Duration_Time" xml:space="preserve">
+    <value>Saisissez la durée</value>
+  </data>
+  <data name="Entities.Employee" xml:space="preserve">
+    <value>Employé</value>
+  </data>
+  <data name="Entities.Location" xml:space="preserve">
+    <value>Emplacement</value>
+  </data>
+  <data name="Entities.Operator" xml:space="preserve">
+    <value>Opérateur</value>
+  </data>
+  <data name="Entities.Vehicle" xml:space="preserve">
+    <value>Véhicule</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="Error 401" xml:space="preserve">
+    <value>Erreur 401</value>
+  </data>
+  <data name="Error 404" xml:space="preserve">
+    <value>Erreur 404</value>
+  </data>
+  <data name="Error 500" xml:space="preserve">
+    <value>Erreur 500</value>
+  </data>
+  <data name="Error401.Description" xml:space="preserve">
+    <value>Nous sommes désolés pour le désagrément, vous n'avez pas la permission d'accéder à cette page.</value>
+  </data>
+  <data name="Error401.Title" xml:space="preserve">
+    <value>Oups 😭, Vous n'êtes pas autorisé à accéder à cette page.</value>
+  </data>
+  <data name="Error404.Description" xml:space="preserve">
+    <value>Nous sommes désolés pour le désagrément, la page que vous essayez d'accéder a été supprimée ou n'a jamais existé.</value>
+  </data>
+  <data name="Error404.Title" xml:space="preserve">
+    <value>Oups 😭, La page que vous recherchez n'est pas disponible.</value>
+  </data>
+  <data name="Error500.Description" xml:space="preserve">
+    <value>Nous sommes désolés pour le désagrément, la page que vous essayez d'accéder a été supprimée ou n'a jamais existé.</value>
+  </data>
+  <data name="Error500.Title" xml:space="preserve">
+    <value>Oups 😭, La page que vous recherchez n'est pas disponible.</value>
+  </data>
+  <data name="ErrorLoadingSettings" xml:space="preserve">
+    <value>Une erreur s’est produite lors du chargement des paramètres.</value>
+  </data>
+  <data name="Errors.UnableToSaveEntity" xml:space="preserve">
+    <value>Impossible d'enregistrer {0}.</value>
+  </data>
+  <data name="ErrorSavingSettings" xml:space="preserve">
+    <value>Une erreur s’est produite lors de l’enregistrement des paramètres</value>
+  </data>
+  <data name="FailedToSaveSettings" xml:space="preserve">
+    <value>Échec de l’enregistrement des paramètres</value>
+  </data>
+  <data name="FAQ's" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="File Manager" xml:space="preserve">
+    <value>Gestionnaire de fichiers</value>
+  </data>
+  <data name="File Uploads" xml:space="preserve">
+    <value>Téléversements de fichiers</value>
+  </data>
+  <data name="First_Name_Cannot_Be_Empty" xml:space="preserve">
+    <value>Le prénom ne peut pas être vide</value>
+  </data>
+  <data name="Flex" xml:space="preserve">
+    <value>Flex</value>
+  </data>
+  <data name="Flexible_Time_Windows" xml:space="preserve">
+    <value>Fenêtre temporelle flexible</value>
+  </data>
+  <data name="Floating Labels" xml:space="preserve">
+    <value>Étiquettes flottantes</value>
+  </data>
+  <data name="Form Editor" xml:space="preserve">
+    <value>Éditeur de formulaire</value>
+  </data>
+  <data name="Form Elements" xml:space="preserve">
+    <value>Éléments de formulaire</value>
+  </data>
+  <data name="Form Layouts" xml:space="preserve">
+    <value>Dispositions de formulaire</value>
+  </data>
+  <data name="Form Select" xml:space="preserve">
+    <value>Sélection de formulaire</value>
+  </data>
+  <data name="Form Wizards" xml:space="preserve">
+    <value>Assistants de formulaire</value>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>Formulaires</value>
+  </data>
+  <data name="Full Calendar" xml:space="preserve">
+    <value>Calendrier complet</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>Galerie</value>
+  </data>
+  <data name="GENERAL" xml:space="preserve">
+    <value>GÉNÉRAL</value>
+  </data>
+  <data name="Google Maps" xml:space="preserve">
+    <value>Google Maps</value>
+  </data>
+  <data name="Grid Tables" xml:space="preserve">
+    <value>Tables en grille</value>
+  </data>
+  <data name="Heatmap Charts" xml:space="preserve">
+    <value>Graphiques de carte thermique</value>
+  </data>
+  <data name="HRM" xml:space="preserve">
+    <value>GRH</value>
+  </data>
+  <data name="Icons" xml:space="preserve">
+    <value>Icônes</value>
+  </data>
+  <data name="Images &amp; Figures" xml:space="preserve">
+    <value>Images &amp; figures</value>
+  </data>
+  <data name="ImageUpload.ButtonText" xml:space="preserve">
+    <value>Choisir un fichier</value>
+  </data>
+  <data name="ImageUpload.ChangeImage" xml:space="preserve">
+    <value>Changer l’image</value>
+  </data>
+  <data name="ImageUpload.Crop.CancelButton" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="ImageUpload.Crop.ConfirmButton" xml:space="preserve">
+    <value>Recadrer et enregistrer</value>
+  </data>
+  <data name="ImageUpload.Crop.DialogTitle" xml:space="preserve">
+    <value>Recadrer l’image</value>
+  </data>
+  <data name="ImageUpload.CurrentImageFallback" xml:space="preserve">
+    <value>Image actuelle</value>
+  </data>
+  <data name="ImageUpload.DefaultDescription" xml:space="preserve">
+    <value>Glissez-déposez ou cliquez pour choisir une image</value>
+  </data>
+  <data name="ImageUpload.DefaultDescriptionForSave" xml:space="preserve">
+    <value>Image de logo</value>
+  </data>
+  <data name="ImageUpload.DefaultFileName" xml:space="preserve">
+    <value>image</value>
+  </data>
+  <data name="ImageUpload.DefaultHelperText" xml:space="preserve">
+    <value>Min : 1700x1980px · Max : 4096x2160px · Limite de 2 Mo</value>
+  </data>
+  <data name="ImageUpload.Description.EmployeeLogo" xml:space="preserve">
+    <value>Logo de l’employé</value>
+  </data>
+  <data name="ImageUpload.Description.LocationLogo" xml:space="preserve">
+    <value>Logo de l’emplacement</value>
+  </data>
+  <data name="ImageUpload.Description.OperatorLogo" xml:space="preserve">
+    <value>Logo de l’opérateur</value>
+  </data>
+  <data name="ImageUpload.Error.CropProcessFailed" xml:space="preserve">
+    <value>Impossible de traiter l’image recadrée. Veuillez réessayer.</value>
+  </data>
+  <data name="ImageUpload.Error.InvalidContentType" xml:space="preserve">
+    <value>Type de contenu invalide « {0} ». Autorisés : {1}.</value>
+  </data>
+  <data name="ImageUpload.Error.InvalidFileType" xml:space="preserve">
+    <value>Type de fichier invalide « {0} ». Autorisés : {1}.</value>
+  </data>
+  <data name="ImageUpload.Error.OwnerRequired" xml:space="preserve">
+    <value>Un propriétaire de fichier est requis.</value>
+  </data>
+  <data name="ImageUpload.Error.ReadDroppedFile" xml:space="preserve">
+    <value>Impossible de lire le fichier déposé. Veuillez réessayer.</value>
+  </data>
+  <data name="ImageUpload.Error.ReadSelectedFile" xml:space="preserve">
+    <value>Impossible de lire le fichier sélectionné. Veuillez réessayer.</value>
+  </data>
+  <data name="ImageUpload.Error.SizeExceeded" xml:space="preserve">
+    <value>Le fichier dépasse la limite de {0} Mo.</value>
+  </data>
+  <data name="ImageUpload.LogoIdealHelperText" xml:space="preserve">
+    <value>Ideal: 500x500px • 2 MB limit</value>
+  </data>
+  <data name="ImageUpload.PreviewAlt" xml:space="preserve">
+    <value>Aperçu</value>
+  </data>
+  <data name="ImageUpload.RemoveImageAriaLabel" xml:space="preserve">
+    <value>Supprimer l’image</value>
+  </data>
+  <data name="Import Tools" xml:space="preserve">
+    <value>Outils d’importation</value>
+  </data>
+  <data name="Input Group" xml:space="preserve">
+    <value>Groupe de saisie</value>
+  </data>
+  <data name="Input Masks" xml:space="preserve">
+    <value>Masques de saisie</value>
+  </data>
+  <data name="Inputs" xml:space="preserve">
+    <value>Champs de saisie</value>
+  </data>
+  <data name="Invalid_Country_Calling_Code" xml:space="preserve">
+    <value>Indicatif d'appel du pays invalide</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Facture</value>
+  </data>
+  <data name="Invoice Details" xml:space="preserve">
+    <value>Détails de la facture</value>
+  </data>
+  <data name="Invoice List" xml:space="preserve">
+    <value>Liste des factures</value>
+  </data>
+  <data name="Job Details" xml:space="preserve">
+    <value>Détails du travail</value>
+  </data>
+  <data name="Job Post" xml:space="preserve">
+    <value>Offre d’emploi</value>
+  </data>
+  <data name="Job_Successfully_Created" xml:space="preserve">
+    <value>Travail créé avec succès</value>
+  </data>
+  <data name="Job_Successfully_Updated" xml:space="preserve">
+    <value>Travail mis à jour avec succès</value>
+  </data>
+  <data name="Jobs" xml:space="preserve">
+    <value>Travaux</value>
+  </data>
+  <data name="Jobs Landing" xml:space="preserve">
+    <value>Page emplois</value>
+  </data>
+  <data name="Jobs List" xml:space="preserve">
+    <value>Liste des travaux</value>
+  </data>
+  <data name="JobType.Custom" xml:space="preserve">
+    <value>Personnalisé</value>
+  </data>
+  <data name="JobType.Delivery" xml:space="preserve">
+    <value>Livraison</value>
+  </data>
+  <data name="JobType.Exchange" xml:space="preserve">
+    <value>Échange</value>
+  </data>
+  <data name="JobType.Installation" xml:space="preserve">
+    <value>Installation</value>
+  </data>
+  <data name="JobType.PickUp" xml:space="preserve">
+    <value>Ramassage</value>
+  </data>
+  <data name="JobType.Return" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="JobType.Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Jsvector Maps" xml:space="preserve">
+    <value>Cartes JSVector</value>
+  </data>
+  <data name="Kanban Board" xml:space="preserve">
+    <value>Tableau Kanban</value>
+  </data>
+  <data name="Landing" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="Last_Name_Cannot_Be_Empty" xml:space="preserve">
+    <value>Le nom de famille ne peut pas être vide.</value>
+  </data>
+  <data name="Latitude_Required" xml:space="preserve">
+    <value>La latitude est obligatoire.</value>
+  </data>
+  <data name="Leads" xml:space="preserve">
+    <value>Prospects</value>
+  </data>
+  <data name="Leaflet Maps" xml:space="preserve">
+    <value>Cartes Leaflet</value>
+  </data>
+  <data name="Line Charts" xml:space="preserve">
+    <value>Graphiques en lignes</value>
+  </data>
+  <data name="Links &amp; Interactions" xml:space="preserve">
+    <value>Liens &amp; interactions</value>
+  </data>
+  <data name="List Group" xml:space="preserve">
+    <value>Groupe de listes</value>
+  </data>
+  <data name="List View" xml:space="preserve">
+    <value>Vue liste</value>
+  </data>
+  <data name="Live Auction" xml:space="preserve">
+    <value>Enchère en direct</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>Emplacements</value>
+  </data>
+  <data name="Locations.Actions.AddButton" xml:space="preserve">
+    <value>+ Ajouter un emplacement</value>
+  </data>
+  <data name="Locations.Columns.Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Locations.Columns.CustomerServiceEmail" xml:space="preserve">
+    <value>Courriel du service client</value>
+  </data>
+  <data name="Locations.Columns.CustomerServicePhoneNumber" xml:space="preserve">
+    <value>Téléphone du service client</value>
+  </data>
+  <data name="Locations.Columns.Email" xml:space="preserve">
+    <value>Courriel</value>
+  </data>
+  <data name="Locations.Columns.FacebookId" xml:space="preserve">
+    <value>Facebook ID</value>
+  </data>
+  <data name="Locations.Columns.GooglePlaceId" xml:space="preserve">
+    <value>Google Place ID</value>
+  </data>
+  <data name="Locations.Columns.Logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="Locations.Columns.Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Locations.Columns.PhoneNumber" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="Locations.Columns.ReferenceId" xml:space="preserve">
+    <value>ID de référence</value>
+  </data>
+  <data name="Locations.Columns.Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Locations.CustomerServiceEmail.HelperText" xml:space="preserve">
+    <value>Courriel affiché aux clients sur le suivi web pour le service à la clientèle.</value>
+  </data>
+  <data name="Locations.Details.Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Locations.Errors.LogoUploadFailed" xml:space="preserve">
+    <value>L’emplacement a été enregistré, mais l’envoi du logo a échoué : {0}</value>
+  </data>
+  <data name="Locations.Logo.Current" xml:space="preserve">
+    <value>Logo actuel — sélectionnez un nouveau fichier ci-dessous pour le remplacer</value>
+  </data>
+  <data name="Locations.Placeholders.Name" xml:space="preserve">
+    <value>Nom d’emplacement connu par votre équipe</value>
+  </data>
+  <data name="Locations.Placeholders.ReferenceId" xml:space="preserve">
+    <value>Numéro de référence provenant d’un système externe...</value>
+  </data>
+  <data name="Locations.Placeholders.Type" xml:space="preserve">
+    <value>Sélectionnez un type d’emplacement</value>
+  </data>
+  <data name="Locations.Success.Added" xml:space="preserve">
+    <value>{0} a été ajouté.</value>
+  </data>
+  <data name="Locations.Success.Updated" xml:space="preserve">
+    <value>{0} a été mis à jour.</value>
+  </data>
+  <data name="Lock Screen" xml:space="preserve">
+    <value>Écran verrouillé</value>
+  </data>
+  <data name="LoginEmail" xml:space="preserve">
+    <value>Courriel de connexion</value>
+  </data>
+  <data name="LoginEmailRequired" xml:space="preserve">
+    <value>Le courriel de connexion est requis</value>
+  </data>
+  <data name="LoginEmail_Placeholder" xml:space="preserve">
+    <value>example@domaine.com</value>
+  </data>
+  <data name="Longitude_Required" xml:space="preserve">
+    <value>La longitude est obligatoire.</value>
+  </data>
+  <data name="Mail App" xml:space="preserve">
+    <value>Application mail</value>
+  </data>
+  <data name="Mail Settings" xml:space="preserve">
+    <value>Paramètres de messagerie</value>
+  </data>
+  <data name="MainMessage" xml:space="preserve">
+    <value>Bonjour le monde !</value>
+  </data>
+  <data name="Maps" xml:space="preserve">
+    <value>Cartes</value>
+  </data>
+  <data name="MAPS &amp; ICONS" xml:space="preserve">
+    <value>CARTES &amp; ICÔNES</value>
+  </data>
+  <data name="Market Place" xml:space="preserve">
+    <value>Marketplace</value>
+  </data>
+  <data name="Marketcap" xml:space="preserve">
+    <value>Capitalisation boursière</value>
+  </data>
+  <data name="Mixed Charts" xml:space="preserve">
+    <value>Graphiques mixtes</value>
+  </data>
+  <data name="Modals &amp; Closes" xml:space="preserve">
+    <value>Modales &amp; fermeture</value>
+  </data>
+  <data name="Mudblazor Charts" xml:space="preserve">
+    <value>Graphiques MudBlazor</value>
+  </data>
+  <data name="Navs &amp; Tabs" xml:space="preserve">
+    <value>Navigations &amp; onglets</value>
+  </data>
+  <data name="Nested Menu" xml:space="preserve">
+    <value>Menu imbriqué</value>
+  </data>
+  <data name="Nested-1" xml:space="preserve">
+    <value>Imbriqué-1</value>
+  </data>
+  <data name="Nested-2" xml:space="preserve">
+    <value>Imbriqué-2</value>
+  </data>
+  <data name="Nested-2-1" xml:space="preserve">
+    <value>Imbriqué-2-1</value>
+  </data>
+  <data name="Nested-2-2" xml:space="preserve">
+    <value>Imbriqué-2-2</value>
+  </data>
+  <data name="Nested-2-2-1" xml:space="preserve">
+    <value>Imbriqué-2-2-1</value>
+  </data>
+  <data name="Nested-2-2-2" xml:space="preserve">
+    <value>Imbriqué-2-2-2</value>
+  </data>
+  <data name="NFT" xml:space="preserve">
+    <value>NFT</value>
+  </data>
+  <data name="NFT Details" xml:space="preserve">
+    <value>Détails NFT</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Object Fit" xml:space="preserve">
+    <value>Ajustement d’objet</value>
+  </data>
+  <data name="Operators" xml:space="preserve">
+    <value>Opérateurs</value>
+  </data>
+  <data name="Operators.Actions.AddButton" xml:space="preserve">
+    <value>+ Ajouter un opérateur</value>
+  </data>
+  <data name="Operators.Columns.ApiId" xml:space="preserve">
+    <value>API ID</value>
+  </data>
+  <data name="Operators.Columns.Bio" xml:space="preserve">
+    <value>Bio</value>
+  </data>
+  <data name="Operators.Columns.Email" xml:space="preserve">
+    <value>Courriel</value>
+  </data>
+  <data name="Operators.Columns.FullName" xml:space="preserve">
+    <value>Nom complet</value>
+  </data>
+  <data name="Operators.Columns.LastActive" xml:space="preserve">
+    <value>Dernière activité</value>
+  </data>
+  <data name="Operators.Columns.PhoneNumber" xml:space="preserve">
+    <value>Numéro de téléphone</value>
+  </data>
+  <data name="Operators.Columns.PlatformLanguage" xml:space="preserve">
+    <value>Langue de la plateforme</value>
+  </data>
+  <data name="Operators.Columns.ReferenceId" xml:space="preserve">
+    <value>ID de référence</value>
+  </data>
+  <data name="Operators.Columns.ShortDescription" xml:space="preserve">
+    <value>Courte description</value>
+  </data>
+  <data name="Operators.Columns.TimeZone" xml:space="preserve">
+    <value>Fuseau horaire</value>
+  </data>
+  <data name="Operators.Details.Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Operators.Details.Bio" xml:space="preserve">
+    <value>Bio</value>
+  </data>
+  <data name="Operators.Details.IsActive" xml:space="preserve">
+    <value>Est actif</value>
+  </data>
+  <data name="Operators.Details.ModifiedBy" xml:space="preserve">
+    <value>Modifié par</value>
+  </data>
+  <data name="Operators.Details.ModifiedDate" xml:space="preserve">
+    <value>Date de modification</value>
+  </data>
+  <data name="Operators.Form.Title.Add" xml:space="preserve">
+    <value>Ajouter un opérateur</value>
+  </data>
+  <data name="Operators.Form.Title.Edit" xml:space="preserve">
+    <value>Modifier l’opérateur</value>
+  </data>
+  <data name="Operators.Form.Section.PrimaryInformation" xml:space="preserve">
+    <value>Informations principales</value>
+  </data>
+  <data name="Operators.Form.Section.AddressDetails" xml:space="preserve">
+    <value>Détails de l’adresse</value>
+  </data>
+  <data name="Operators.Form.Section.Preferences" xml:space="preserve">
+    <value>Préférences</value>
+  </data>
+  <data name="Operators.Form.Section.AdditionalInfo" xml:space="preserve">
+    <value>Informations supplémentaires</value>
+  </data>
+  <data name="Operators.Form.Section.LoginCredentials" xml:space="preserve">
+    <value>Identifiants de connexion</value>
+  </data>
+  <data name="Operators.Form.Section.LocationTimezone" xml:space="preserve">
+    <value>Emplacement et fuseau horaire</value>
+  </data>
+  <data name="Operators.Form.Section.ProfilePhoto" xml:space="preserve">
+    <value>Photo de profil</value>
+  </data>
+  <data name="Operators.Form.Label.LoginEmail" xml:space="preserve">
+    <value>Courriel de connexion</value>
+  </data>
+  <data name="Operators.Form.Label.Password" xml:space="preserve">
+    <value>Nouveau mot de passe</value>
+  </data>
+  <data name="Operators.Form.Label.ConfirmPassword" xml:space="preserve">
+    <value>Confirmer le mot de passe</value>
+  </data>
+  <data name="Operators.Form.Label.ShortDescription" xml:space="preserve">
+    <value>Courte description</value>
+  </data>
+  <data name="Operators.Form.AriaLabel.ShowPassword" xml:space="preserve">
+    <value>Afficher le mot de passe</value>
+  </data>
+  <data name="Operators.Form.Description.TimezoneOverride" xml:space="preserve">
+    <value>Si vous avez défini une adresse pour cet utilisateur, le fuseau horaire défini ici sera remplacé. Sinon, s’il n’y a pas d’adresse associée à cet utilisateur, le fuseau horaire prendra la valeur de cette liste déroulante.</value>
+  </data>
+  <data name="Operators.Form.Saved.Create" xml:space="preserve">
+    <value>Opérateur créé avec succès</value>
+  </data>
+  <data name="Operators.Form.Saved.Update" xml:space="preserve">
+    <value>Opérateur mis à jour avec succès</value>
+  </data>
+  <data name="Operators.Form.NotFound" xml:space="preserve">
+    <value>Opérateur introuvable</value>
+  </data>
+  <data name="Operators.Form.Deactivate" xml:space="preserve">
+    <value>Désactiver</value>
+  </data>
+  <data name="Optional" xml:space="preserve">
+    <value>Optionnel</value>
+  </data>
+  <data name="Order Details" xml:space="preserve">
+    <value>Détails de commande</value>
+  </data>
+  <data name="Order Management" xml:space="preserve">
+    <value>Gestion des commandes</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Commandes</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organisation</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Vue d’ensemble</value>
+  </data>
+  <data name="Page.Employees.ListTitle" xml:space="preserve">
+    <value>Employés</value>
+  </data>
+  <data name="Page.Employees.OverviewSubtitle" xml:space="preserve">
+    <value>Aperçu des employés</value>
+  </data>
+  <data name="Page.Jobs.ToBeDated.Title" xml:space="preserve">
+    <value>À planifier</value>
+  </data>
+  <data name="Page.Locations.ListTitle" xml:space="preserve">
+    <value>Emplacements</value>
+  </data>
+  <data name="Page.Operators.ListTitle" xml:space="preserve">
+    <value>Opérateurs</value>
+  </data>
+  <data name="Page.Vehicles.ListTitle" xml:space="preserve">
+    <value>Véhicules</value>
+  </data>
+  <data name="Pages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="PAGES_SECTION" xml:space="preserve">
+    <value>PAGES</value>
+  </data>
+  <data name="Pagination" xml:space="preserve">
+    <value>Pagination</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="Password_Strength_Result_Label_Empty" xml:space="preserve">
+    <value>Vide</value>
+  </data>
+  <data name="Password_Strength_Result_Label_Medium" xml:space="preserve">
+    <value>Moyen</value>
+  </data>
+  <data name="Password_Strength_Result_Label_Strong" xml:space="preserve">
+    <value>Fort</value>
+  </data>
+  <data name="Password_Strength_Result_Label_Very_Strong" xml:space="preserve">
+    <value>Très fort</value>
+  </data>
+  <data name="Password_Strength_Result_Label_Weak" xml:space="preserve">
+    <value>Faible</value>
+  </data>
+  <data name="Password_Validation_ConfirmPassword_MustMatch" xml:space="preserve">
+    <value>Les mots de passe ne correspondent pas</value>
+  </data>
+  <data name="Password_Validation_ConfirmPassword_Required" xml:space="preserve">
+    <value>Confirmer le mot de passe est requis</value>
+  </data>
+  <data name="Password_Validation_Length" xml:space="preserve">
+    <value>Le mot de passe doit comporter au moins 8 caractères.</value>
+  </data>
+  <data name="Password_Validation_LowercaseRequired" xml:space="preserve">
+    <value>Le mot de passe doit comporter entre 8 et 256 caractères.</value>
+  </data>
+  <data name="Password_Validation_NumberRequired" xml:space="preserve">
+    <value>Le mot de passe doit contenir au moins un chiffre.</value>
+  </data>
+  <data name="Password_Validation_Password_Required" xml:space="preserve">
+    <value>Un mot de passe est requis.</value>
+  </data>
+  <data name="Password_Validation_Password_Strength" xml:space="preserve">
+    <value>Le mot de passe n'est pas suffisamment sécurisé.</value>
+  </data>
+  <data name="Password_Validation_SymbolRequired" xml:space="preserve">
+    <value>Le mot de passe doit contenir au moins un caractère spécial.</value>
+  </data>
+  <data name="Password_Validation_UppercaseRequired" xml:space="preserve">
+    <value>Le mot de passe doit contenir au moins une lettre majuscule.</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personnel</value>
+  </data>
+  <data name="PhoneInput_CountryCodeLabel" xml:space="preserve">
+    <value>Code pays</value>
+  </data>
+  <data name="PhoneInput_PhoneNumberLabel" xml:space="preserve">
+    <value>Numéro de téléphone</value>
+  </data>
+  <data name="PhoneInput_PhoneNumberPlaceholder" xml:space="preserve">
+    <value>p. ex. 2015550123</value>
+  </data>
+  <data name="PhoneNumber_Appears_To_Be_Missing_Area_Or_Mobile_Code" xml:space="preserve">
+    <value>Le numéro de téléphone semble ne pas comporter d'indicatif régional ou mobile</value>
+  </data>
+  <data name="PhoneNumber_Invalid" xml:space="preserve">
+    <value>Le numéro de téléphone est invalide</value>
+  </data>
+  <data name="PhoneNumber_Invalid_Characters" xml:space="preserve">
+    <value>Le numéro de téléphone contient des caractères invalides</value>
+  </data>
+  <data name="PhoneNumber_Invalid_Format" xml:space="preserve">
+    <value>Le format du numéro de téléphone est invalide</value>
+  </data>
+  <data name="PhoneNumber_Is_Necessary" xml:space="preserve">
+    <value>Un numéro de téléphone est nécessaire</value>
+  </data>
+  <data name="PhoneNumber_Is_Too_Long" xml:space="preserve">
+    <value>Le numéro de téléphone est trop long</value>
+  </data>
+  <data name="PhoneNumber_Is_Too_Short" xml:space="preserve">
+    <value>Le numéro de téléphone est trop court</value>
+  </data>
+  <data name="PhoneNumber_Length_Invalid_For_Selected_Country" xml:space="preserve">
+    <value>Le numéro de téléphone n'est pas valide pour le pays sélectionné</value>
+  </data>
+  <data name="PhoneNumber_Too_Long_For_Selected_Country" xml:space="preserve">
+    <value>Le numéro de téléphone est trop long pour le pays sélectionné</value>
+  </data>
+  <data name="PhoneNumber_Too_Short_For_Selected_Country" xml:space="preserve">
+    <value>Le numéro de téléphone est trop court pour le pays sélectionné</value>
+  </data>
+  <data name="PhonePlaceholder" xml:space="preserve">
+    <value>p. ex. 2015550123</value>
+  </data>
+  <data name="Pie Charts" xml:space="preserve">
+    <value>Graphiques en secteurs</value>
+  </data>
+  <data name="Placeholders" xml:space="preserve">
+    <value>Espaces réservés</value>
+  </data>
+  <data name="Planner" xml:space="preserve">
+    <value>Planificateur</value>
+  </data>
+  <data name="PleaseCorrectAddressErrors" xml:space="preserve">
+    <value>Veuillez corriger les erreurs d’adresse</value>
+  </data>
+  <data name="PleaseSelectValidAddress" xml:space="preserve">
+    <value>Veuillez sélectionner une adresse valide</value>
+  </data>
+  <data name="Please_Enter_Valid_Email_Address" xml:space="preserve">
+    <value>Veuillez indiquer une adresse courriel valide</value>
+  </data>
+  <data name="Polararea Charts" xml:space="preserve">
+    <value>Graphiques en aires polaires</value>
+  </data>
+  <data name="Popovers" xml:space="preserve">
+    <value>Popovers</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Tarifs</value>
+  </data>
+  <data name="Product Details" xml:space="preserve">
+    <value>Détails du produit</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Produits</value>
+  </data>
+  <data name="Products List" xml:space="preserve">
+    <value>Liste des produits</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profile_AccountInformationTitle" xml:space="preserve">
+    <value>Informations du compte</value>
+  </data>
+  <data name="Profile_ActiveSinceLabel" xml:space="preserve">
+    <value>Actif Depuis</value>
+  </data>
+  <data name="Profile_AddressLabel" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Profile_BranchLabel" xml:space="preserve">
+    <value>Succursale</value>
+  </data>
+  <data name="Profile_EmailLabel" xml:space="preserve">
+    <value>Courriel</value>
+  </data>
+  <data name="Profile_GoBack" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="Profile_LastActiveLabel" xml:space="preserve">
+    <value>Dernière Activité</value>
+  </data>
+  <data name="Profile_LastPasswordChangeLabel" xml:space="preserve">
+    <value>Dernier Changement de Mot de Passe</value>
+  </data>
+  <data name="Profile_NotSpecified" xml:space="preserve">
+    <value>Non spécifié</value>
+  </data>
+  <data name="Profile_NoUserDataToSave" xml:space="preserve">
+    <value>Aucune donnée utilisateur à enregistrer.</value>
+  </data>
+  <data name="Profile_PhoneLabel" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="Profile_SaveSuccess" xml:space="preserve">
+    <value>Mise à jour réussie par l'employé</value>
+  </data>
+  <data name="Profile_SetToAutoDetected" xml:space="preserve">
+    <value>Définir sur détecté automatiquement:</value>
+  </data>
+  <data name="Profile_TimezoneLabel" xml:space="preserve">
+    <value>Fuseau Horaire</value>
+  </data>
+  <data name="Profile_TimezonePlaceholder" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="Profile_UnableToInitialize" xml:space="preserve">
+    <value>Impossible d'initialiser le profil.</value>
+  </data>
+  <data name="Profile_UnableToSave" xml:space="preserve">
+    <value>Impossible d'enregistrer le profil.</value>
+  </data>
+  <data name="Profile_WebUserIDLabel" xml:space="preserve">
+    <value>ID d'utilisateur Web</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progression</value>
+  </data>
+  <data name="Project Overview" xml:space="preserve">
+    <value>Aperçu du projet</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Projets</value>
+  </data>
+  <data name="Projects List" xml:space="preserve">
+    <value>Liste des projets</value>
+  </data>
+  <data name="Quill Editor" xml:space="preserve">
+    <value>Éditeur Quill</value>
+  </data>
+  <data name="Radar Charts" xml:space="preserve">
+    <value>Graphiques radar</value>
+  </data>
+  <data name="Radialbar Charts" xml:space="preserve">
+    <value>Graphiques en barres radiales</value>
+  </data>
+  <data name="Range Slider" xml:space="preserve">
+    <value>Curseur de plage</value>
+  </data>
+  <data name="RangeArea Charts" xml:space="preserve">
+    <value>Graphiques en aires de plage</value>
+  </data>
+  <data name="Ratings" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Rapports</value>
+  </data>
+  <data name="Reports.Action.Export" xml:space="preserve">
+    <value>Exporter</value>
+  </data>
+  <data name="Reports.Badge.Reporting" xml:space="preserve">
+    <value>Rapports</value>
+  </data>
+  <data name="Reports.Empty.NoData" xml:space="preserve">
+    <value>Aucune donnée trouvée.</value>
+  </data>
+  <data name="Reports.Filter.DateRange" xml:space="preserve">
+    <value>Période</value>
+  </data>
+  <data name="Reports.Filter.Operators" xml:space="preserve">
+    <value>Opérateurs</value>
+  </data>
+  <data name="Reports.Filter.OperatorsPlaceholder" xml:space="preserve">
+    <value>Sélectionner un opérateur...</value>
+  </data>
+  <data name="Reports.Filter.Vehicles" xml:space="preserve">
+    <value>Véhicules</value>
+  </data>
+  <data name="Reports.Filter.VehiclesPlaceholder" xml:space="preserve">
+    <value>Sélectionner un ou des véhicules...</value>
+  </data>
+  <data name="Reports.Kpi.AvgScore" xml:space="preserve">
+    <value>Note moy.</value>
+  </data>
+  <data name="Reports.Kpi.DistanceTraveled" xml:space="preserve">
+    <value>Distance parcourue</value>
+  </data>
+  <data name="Reports.Kpi.Itineraries" xml:space="preserve">
+    <value>Itinéraires</value>
+  </data>
+  <data name="Reports.Kpi.Stops" xml:space="preserve">
+    <value>Arrêts</value>
+  </data>
+  <data name="Reports.Kpi.TimeOnRoad" xml:space="preserve">
+    <value>Temps sur la route</value>
+  </data>
+  <data name="Reports.Kpi.TimeOnSite" xml:space="preserve">
+    <value>Temps sur site</value>
+  </data>
+  <data name="Reports.LowerTab.JobStatuses" xml:space="preserve">
+    <value>États des tâches</value>
+  </data>
+  <data name="Reports.LowerTab.Overview" xml:space="preserve">
+    <value>Aperçu</value>
+  </data>
+  <data name="Reports.LowerTab.Reviews" xml:space="preserve">
+    <value>Avis</value>
+  </data>
+  <data name="Reports.LowerTab.Stops" xml:space="preserve">
+    <value>Arrêts</value>
+  </data>
+  <data name="Reports.LowerTab.Time" xml:space="preserve">
+    <value>Temps</value>
+  </data>
+  <data name="Reports.LowerTab.Usage" xml:space="preserve">
+    <value>Utilisation</value>
+  </data>
+  <data name="Reports.Tab.Operators" xml:space="preserve">
+    <value>Opérateurs</value>
+  </data>
+  <data name="Reports.Tab.Vehicles" xml:space="preserve">
+    <value>Véhicules</value>
+  </data>
+  <data name="Reset Password" xml:space="preserve">
+    <value>Réinitialiser le mot de passe</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Avis</value>
+  </data>
+  <data name="Role_Cant_Be_Null" xml:space="preserve">
+    <value>Le rôle ne peut pas être nul.</value>
+  </data>
+  <data name="Role_Is_Required" xml:space="preserve">
+    <value>Le rôle est requis</value>
+  </data>
+  <data name="Route Builder" xml:space="preserve">
+    <value>Constructeur d’itinéraires</value>
+  </data>
+  <data name="Sales" xml:space="preserve">
+    <value>Ventes</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="Scatter Charts" xml:space="preserve">
+    <value>Nuage de points</value>
+  </data>
+  <data name="Scheduled Jobs" xml:space="preserve">
+    <value>Travaux planifiés</value>
+  </data>
+  <data name="Search Candidate" xml:space="preserve">
+    <value>Rechercher un candidat</value>
+  </data>
+  <data name="Search Company" xml:space="preserve">
+    <value>Rechercher une entreprise</value>
+  </data>
+  <data name="Search Jobs" xml:space="preserve">
+    <value>Rechercher des emplois</value>
+  </data>
+  <data name="Select2" xml:space="preserve">
+    <value>Select2</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="SettingsSavedSuccessfully" xml:space="preserve">
+    <value>Paramètres enregistrés avec succès</value>
+  </data>
+  <data name="Shared.TimeZone.AutoDetectPrefix" xml:space="preserve">
+    <value>Défini sur la détection automatique :</value>
+  </data>
+  <data name="Shared.TimeZone.Label" xml:space="preserve">
+    <value>Fuseau horaire</value>
+  </data>
+  <data name="Sign In" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="Sign Up" xml:space="preserve">
+    <value>Inscription</value>
+  </data>
+  <data name="Spinners" xml:space="preserve">
+    <value>Indicateurs</value>
+  </data>
+  <data name="Stocks" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Sweet Alerts" xml:space="preserve">
+    <value>Alertes Sweet</value>
+  </data>
+  <data name="Start_Time" xml:space="preserve">
+    <value>Heure de début</value>
+  </data>
+  <data name="The_Suggested_Routing_Should_Generally" xml:space="preserve">
+    <value>L'itinéraire suggéré doit généralement respecter les restrictions applicables aux véhicules dans les limites des dimensions suivantes :</value>
+  </data>
+  <data name="Tables" xml:space="preserve">
+    <value>Tables</value>
+  </data>
+  <data name="TABLES &amp; CHARTS" xml:space="preserve">
+    <value>TABLEAUX &amp; GRAPHIQUES</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>Tâche</value>
+  </data>
+  <data name="Task Details" xml:space="preserve">
+    <value>Détails de la tâche</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Équipe</value>
+  </data>
+  <data name="TEMPLATE" xml:space="preserve">
+    <value>MODÈLE</value>
+  </data>
+  <data name="Templates" xml:space="preserve">
+    <value>Modèles</value>
+  </data>
+  <data name="Terms &amp; Conditions" xml:space="preserve">
+    <value>Conditions générales</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>Chronologie</value>
+  </data>
+  <data name="Timeline Charts" xml:space="preserve">
+    <value>Graphiques chronologiques</value>
+  </data>
+  <data name="To Be Dated" xml:space="preserve">
+    <value>À planifier</value>
+  </data>
+  <data name="To Be Dated Jobs" xml:space="preserve">
+    <value>Travaux à planifier</value>
+  </data>
+  <data name="To Do List" xml:space="preserve">
+    <value>Liste de tâches</value>
+  </data>
+  <data name="Toasts" xml:space="preserve">
+    <value>Toasts</value>
+  </data>
+  <data name="ToBeDated.Columns.Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="ToBeDated.Columns.ConfirmationStatus" xml:space="preserve">
+    <value>Statut de confirmation</value>
+  </data>
+  <data name="ToBeDated.Columns.CreationTime" xml:space="preserve">
+    <value>Date de création</value>
+  </data>
+  <data name="ToBeDated.Columns.FullName" xml:space="preserve">
+    <value>Nom complet</value>
+  </data>
+  <data name="ToBeDated.Columns.InvoiceNumber" xml:space="preserve">
+    <value>Numéro de facture</value>
+  </data>
+  <data name="ToBeDated.Columns.PhoneNumber" xml:space="preserve">
+    <value>Numéro de téléphone</value>
+  </data>
+  <data name="ToBeDated.Columns.PostalCode" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="ToBeDated.Columns.QuickDescription" xml:space="preserve">
+    <value>Description rapide</value>
+  </data>
+  <data name="ToBeDated.Columns.Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ToBeDated.Status.Confirmed" xml:space="preserve">
+    <value>Confirmé</value>
+  </data>
+  <data name="ToBeDated.Status.Pending" xml:space="preserve">
+    <value>En attente</value>
+  </data>
+  <data name="Tooltips" xml:space="preserve">
+    <value>Infobulles</value>
+  </data>
+  <data name="Tooltips.Filters.EmailVerification" xml:space="preserve">
+    <value>Vérification par e-mail</value>
+  </data>
+  <data name="Tooltips.Filters.LocationType" xml:space="preserve">
+    <value>Type de Site</value>
+  </data>
+  <data name="Tooltips.Filters.Role" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
+  <data name="Tooltips.Filters.Search" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="Tooltips.Filters.Status" xml:space="preserve">
+    <value>Statut</value>
+  </data>
+  <data name="Tooltips.Filters.VehicleType" xml:space="preserve">
+    <value>Type de Véhicule</value>
+  </data>
+  <data name="Transactions" xml:space="preserve">
+    <value>Transactions</value>
+  </data>
+  <data name="Treemap Charts" xml:space="preserve">
+    <value>Graphiques treemap</value>
+  </data>
+  <data name="Two Step Verification" xml:space="preserve">
+    <value>Vérification en deux étapes</value>
+  </data>
+  <data name="Typography" xml:space="preserve">
+    <value>Typographie</value>
+  </data>
+  <data name="Ui Elements" xml:space="preserve">
+    <value>Éléments UI</value>
+  </data>
+  <data name="UnableToIdentifyTenant" xml:space="preserve">
+    <value>Impossible d’identifier le locataire.</value>
+  </data>
+  <data name="UnableToIdentifyUser" xml:space="preserve">
+    <value>Impossible d’identifier l’utilisateur.</value>
+  </data>
+  <data name="UnableToLoadSettings" xml:space="preserve">
+    <value>Impossible de charger les paramètres.</value>
+  </data>
+  <data name="Under Maintenance" xml:space="preserve">
+    <value>En maintenance</value>
+  </data>
+  <data name="Utilities" xml:space="preserve">
+    <value>Utilitaires</value>
+  </data>
+  <data name="Validation.InvalidEmail" xml:space="preserve">
+    <value>Le courriel n'est pas valide</value>
+  </data>
+  <data name="Validation.PasswordComplexity" xml:space="preserve">
+    <value>Le mot de passe doit contenir au moins une lettre majuscule, une lettre minuscule, un chiffre et un symbole.</value>
+  </data>
+  <data name="Validation.PasswordConfirmationMismatch" xml:space="preserve">
+    <value>Le mot de passe et sa confirmation ne correspondent pas.</value>
+  </data>
+  <data name="Validation.PasswordInvalidCharacters" xml:space="preserve">
+    <value>Le mot de passe contient des caractères invalides. Seules les lettres ASCII, les chiffres et les symboles sont autorisés.</value>
+  </data>
+  <data name="Validation.PasswordMaxLength" xml:space="preserve">
+    <value>Le mot de passe ne doit pas dépasser {0} caractères.</value>
+  </data>
+  <data name="Validation.MaxLength" xml:space="preserve">
+    <value>{0} ne doit pas dépasser {1} caractères</value>
+  </data>
+  <data name="Validation.PasswordMinLength" xml:space="preserve">
+    <value>Le mot de passe doit contenir au moins {0} caractères.</value>
+  </data>
+  <data name="Validation.PhoneNumberMaxLength" xml:space="preserve">
+    <value>Le numéro de téléphone ne doit pas dépasser 15 caractères</value>
+  </data>
+  <data name="Validation.PhoneNumberMinLength" xml:space="preserve">
+    <value>Le numéro de téléphone doit contenir au moins 7 caractères</value>
+  </data>
+  <data name="Validation.Required" xml:space="preserve">
+    <value>{0} est requis</value>
+  </data>
+  <data name="Validations" xml:space="preserve">
+    <value>Validations</value>
+  </data>
+  <data name="Vehicles" xml:space="preserve">
+    <value>Véhicules</value>
+  </data>
+  <data name="Vehicles.Actions.AddButton" xml:space="preserve">
+    <value>+ Ajouter un véhicule</value>
+  </data>
+  <data name="Vehicles.Columns.Buffer" xml:space="preserve">
+    <value>Marge</value>
+  </data>
+  <data name="Vehicles.Columns.Departure" xml:space="preserve">
+    <value>Départ</value>
+  </data>
+  <data name="Vehicles.Columns.DepartureTime" xml:space="preserve">
+    <value>Heure de départ</value>
+  </data>
+  <data name="Vehicles.Columns.LicensePlate" xml:space="preserve">
+    <value>Plaque</value>
+  </data>
+  <data name="Vehicles.Columns.MaxWorkTime" xml:space="preserve">
+    <value>Temps max</value>
+  </data>
+  <data name="Vehicles.Columns.Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Vehicles.Columns.ReferenceId" xml:space="preserve">
+    <value>ID de référence</value>
+  </data>
+  <data name="Vehicles.Columns.Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Vehicles.Columns.Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Vehicles.Columns.Weight" xml:space="preserve">
+    <value>Poids</value>
+  </data>
+  <data name="Vehicles.Details.Buffer" xml:space="preserve">
+    <value>Marge (%)</value>
+  </data>
+  <data name="Vehicles.Details.VolumeCapacity" xml:space="preserve">
+    <value>Capacité de volume (pi³)</value>
+  </data>
+  <data name="Vehicles.Details.WeightCapacity" xml:space="preserve">
+    <value>Capacité de poids (lb)</value>
+  </data>
+  <data name="Vehicles_Volume_Capacity_PlaceHolder" xml:space="preserve">
+    <value>Capacité de volume pour véhicule</value>
+  </data>
+  <data name="Vehicles_Weight_Capacity_PlaceHolder" xml:space="preserve">
+    <value>Capacité de pesée pour véhicule</value>
+  </data>
+  <data name="Vehicles_Capacity_Buffer_Title" xml:space="preserve">
+    <value>Capacité Tampon</value>
+  </data>
+  <data name="Vehicles_Columns_MaxWorkTime" xml:space="preserve">
+    <value>Temps max</value>
+  </data>
+  <data name="Vehicles_Departure_Time_Title" xml:space="preserve">
+    <value>Heure de départ</value>
+  </data>
+  <data name="Vehicles_Weight_Capacity_Title" xml:space="preserve">
+    <value>Capacité de poids</value>
+  </data>
+  <data name="Vehicle_Ideal_For_Cars_Small_Vans_SUVs" xml:space="preserve">
+    <value>Idéal pour les voitures, les petites camionnettes et les SUV.</value>
+  </data>
+  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_" xml:space="preserve">
+    <value>L'itinéraire suggéré pour cette sélection est limité aux zones accessibles aux voitures.</value>
+  </data>
+  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_1" xml:space="preserve">
+    <value>L'itinéraire suggéré pour cette sélection est limité aux zones accessibles aux voitures.</value>
+  </data>
+  <data name="Vehicles_Good_Choice_For_Vehicles" xml:space="preserve">
+    <value>Un excellent choix pour des véhicules tels que Mercedes Sprinter, Ford Transit, HINO légers et moyens, ISUZU, etc.</value>
+  </data>
+  <data name="Vehicles_Return_To_Helper_Text" xml:space="preserve">
+    <value>1, rue King Ouest, Toronto (Ontario), Canada</value>
+  </data>
+  <data name="Vehicles_Start_From_Helper_Text" xml:space="preserve">
+    <value>1, rue King Ouest, Toronto (Ontario), Canada</value>
+  </data>
+  <data name="Vehicles_PlaceHolder_License_Plate1" xml:space="preserve">
+    <value>Plaque d'immatriculation du véhicule</value>
+  </data>
+  <data name="Vehicles_PlaceHolder_Name" xml:space="preserve">
+    <value>Vehicle name known by your team</value>
+  </data>
+  <data name="Vehicles_PlaceHolder_Reference_ID" xml:space="preserve">
+    <value>Identifiant de référence provenant d'un système externe</value>
+  </data>
+  <data name="Vehicles_Schedule_Break_Blocks_Helper_Text" xml:space="preserve">
+    <value>Configurez jusqu'à 3 points de contrôle pour ce véhicule. Ces points de contrôle permettent de garantir le respect des consignes et une planification d'itinéraire réaliste.</value>
+  </data>
+  <data name="Vehicles_Maximun_Work_Time_Helper_Text" xml:space="preserve">
+    <value>La valeur saisie dans ces champs sera prise en compte pour ce véhicule lors de l'utilisation de la fonction de répartition automatique. Si aucune limitation de ce type n'est requise, veuillez indiquer « 0 » dans les deux champs.</value>
+  </data>
+  <data name="Vehicles_Start_From_Column" xml:space="preserve">
+    <value>Commencez par</value>
+  </data>
+  <data name="Vehicles_Return_To_Column" xml:space="preserve">
+    <value>Retour à</value>
+  </data>
+  <data name="Vehicles_Default_Operators_Column" xml:space="preserve">
+    <value>Opérateurs par défaut</value>
+  </data>
+  <data name="Vehicles_Default_Operators_Helper_Text" xml:space="preserve">
+    <value>Limité à 4 opérateurs.</value>
+  </data>
+  <data name="Vehicles_Volume_Capacity_Title" xml:space="preserve">
+    <value>Capacité volumique</value>
+  </data>
+  <data name="Vehicle_Same_As_Car_Profile_But_Specifically" xml:space="preserve">
+    <value>Identique au profil Voiture, mais spécifiquement pour la livraison et nécessitant l'accès aux voies privées.</value>
+  </data>
+  <data name="Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted" xml:space="preserve">
+    <value>L'itinéraire suggéré pour cette sélection est limité aux zones accessibles aux voitures.</value>
+  </data>
+  <data name="Vehicles_Schedule_Break_Blocks" xml:space="preserve">
+    <value>Blocs de pause programmés</value>
+  </data>
+  <data name="Vehicles_Default_Operators_PlaceHolder" xml:space="preserve">
+    <value>Rien sélectionné</value>
+  </data>
+  <data name="Vehicles_PlaceHolder_License_Plate" xml:space="preserve">
+    <value>Plaque d'immatriculation du véhicule</value>
+  </data>
+  <data name="Vehicles_Start_From_PlaceHolder" xml:space="preserve">
+    <value>Choisissez un point de départ</value>
+  </data>
+  <data name="Vehicles_Return_To_PlaceHolder" xml:space="preserve">
+    <value>Sélectionnez un lieu de retour</value>
+  </data>
+  <data name="Vehicle_Name_Length_Validation" xml:space="preserve">
+    <value>Le nom du véhicule ne peut pas comporter plus de 200 caractères.</value>
+  </data>
+  <data name="Vehicles_License_Plate_Validation_Not_Empty" xml:space="preserve">
+    <value>La plaque d'immatriculation est obligatoire.</value>
+  </data>
+  <data name="Vehicle_License_Plate_Length_Validation" xml:space="preserve">
+    <value>La plaque d'immatriculation ne peut pas comporter plus de 100 caractères.</value>
+  </data>
+  <data name="Vehicle_Vehicle_Reference_Id_Length_Validation" xml:space="preserve">
+    <value>L'identifiant de référence du véhicule ne peut pas comporter plus de 100 caractères.</value>
+  </data>
+  <data name="Vehicle_Weight_Capacity_Validation_OutOfRange" xml:space="preserve">
+    <value>La capacité de pesée est hors plage. Veuillez choisir une valeur comprise entre 0 et 99999999999999999 livres.</value>
+  </data>
+  <data name="Vehicle_Volume_Capacity_Validation_OutOfRange1" xml:space="preserve">
+    <value>La capacité volumétrique est hors plage. Veuillez choisir une valeur comprise entre 0 et 99999999999999999 livres.</value>
+  </data>
+  <data name="Vehicle_Capacity_Buffer_Percent" xml:space="preserve">
+    <value>La capacité tampon doit être comprise entre 0 et 999.</value>
+  </data>
+  <data name="Vehicle_Buffer_PlaceHolder" xml:space="preserve">
+    <value>Pourcentage d'espace libre dans le véhicule</value>
+  </data>
+  <data name="Vehicle_Successfully_Updated" xml:space="preserve">
+    <value>Mise à jour du véhicule réussie</value>
+  </data>
+  <data name="Vehicle_Successfully_Created" xml:space="preserve">
+    <value>Véhicule créé avec succès</value>
+  </data>
+  <data name="Vehicle_Not_Found" xml:space="preserve">
+    <value>Véhicule introuvable</value>
+  </data>
+  <data name="Vehicle_Types" xml:space="preserve">
+    <value>Types de véhicules</value>
+  </data>
+  <data name="Vehicle_Title_Create_New_Vehicle" xml:space="preserve">
+    <value>Créer un nouveau véhicule</value>
+  </data>
+  <data name="Vehicle_Title_Update_New_Vehicle" xml:space="preserve">
+    <value>Modifier le véhicule</value>
+  </data>
+  <data name="Vehicle_Name_Is_Required" xml:space="preserve">
+    <value>Le nom du véhicule est requis.</value>
+  </data>
+  <data name="VehicleType_Car" xml:space="preserve">
+    <value>Voiture</value>
+  </data>
+  <data name="VehicleType_CarEnhanced" xml:space="preserve">
+    <value>Voiture Améliorée</value>
+  </data>
+  <data name="VehicleType_MountainBike" xml:space="preserve">
+    <value>Vélo de Montagne</value>
+  </data>
+  <data name="VehicleType_OnFoot" xml:space="preserve">
+    <value>À Pied</value>
+  </data>
+  <data name="VehicleType_RoadBike" xml:space="preserve">
+    <value>Vélo de Route</value>
+  </data>
+  <data name="VehicleType_Scooter" xml:space="preserve">
+    <value>Scooter</value>
+  </data>
+  <data name="VehicleType_SmallTruck" xml:space="preserve">
+    <value>Petit Camion</value>
+  </data>
+  <data name="VehicleType_SmallTruckEnhanced" xml:space="preserve">
+    <value>Petit Camion Amélioré</value>
+  </data>
+  <data name="VehicleType_Truck" xml:space="preserve">
+    <value>Camion</value>
+  </data>
+  <data name="VehicleType_UrbanBike" xml:space="preserve">
+    <value>Vélo Urbain</value>
+  </data>
+  <data name="Wallet" xml:space="preserve">
+    <value>Portefeuille</value>
+  </data>
+  <data name="Wallet Integration" xml:space="preserve">
+    <value>Intégration du portefeuille</value>
+  </data>
+  <data name="WEB APPS" xml:space="preserve">
+    <value>APPLICATIONS WEB</value>
+  </data>
+  <data name="What's New?" xml:space="preserve">
+    <value>Quoi de neuf ?</value>
+  </data>
+  <data name="Widgets" xml:space="preserve">
+    <value>Widgets</value>
+  </data>
+  <data name="Wishlist" xml:space="preserve">
+    <value>Liste de souhaits</value>
+  </data>
+  <data name="Zone Management" xml:space="preserve">
+    <value>Gestion des zones</value>
+  </data>
+</root>

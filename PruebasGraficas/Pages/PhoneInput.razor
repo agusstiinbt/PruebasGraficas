@@ -1,0 +1,120 @@
+﻿@using PruebasGraficas.Classes
+@using PruebasGraficas.Classes.Validator
+@using System.Linq.Expressions
+
+<div>
+
+    <MudText Align="Align.Left" Typo="Typo.subtitle2">
+        <b>@Label</b>
+    </MudText>
+
+    <MudGrid Spacing="2">
+
+        <MudItem xs="4">
+
+            <MudSelect T="CountryPhoneInfo"
+                       Value="@Country"
+                       For="ForCountry"
+                       ValueChanged="HandleCountryChanged"
+                       Clearable="true"
+                       Placeholder="CA (+1)"
+                       Variant="Variant.Outlined">
+
+                @foreach (var country in CountriesPhoneInfo)
+                {
+                    <MudSelectItem Value="@country">
+                        @country.IsoCode (+@country.DialCode)
+                    </MudSelectItem>
+                }
+
+            </MudSelect>
+
+        </MudItem>
+
+        <MudItem xs="6">
+
+            <MudTextField T="string"
+                          Value="@PhoneNumber"
+                          ValueChanged="HandlePhoneChanged"
+                          For="ForPhoneNumber"
+                          Variant="Variant.Outlined"
+                          Placeholder="@Placeholder"
+                          InputType="InputType.Telephone"
+                          FullWidth="true" />
+
+        </MudItem>
+
+    </MudGrid>
+
+</div>
+
+
+@code {
+
+    #region Phone number
+    [Parameter]
+    public EventCallback<string?> PhoneNumberChanged { get; set; }
+
+    [Parameter]
+    public Expression<Func<string?>>? ForPhoneNumber { get; set; }
+
+    [Parameter]
+    public string? PhoneNumber { get; set; }
+
+    private async Task HandlePhoneChanged(string? value)
+    {
+        if (PhoneNumber == value)
+            return;
+
+        PhoneNumber = value;
+
+        await PhoneNumberChanged.InvokeAsync(value);
+    }
+
+    #endregion
+
+    #region Country
+
+    [Parameter]
+    public EventCallback<CountryPhoneInfo?> CountryChanged { get; set; }
+
+    [Parameter]
+    public Expression<Func<CountryPhoneInfo?>>? ForCountry { get; set; }
+
+    [Parameter]
+    public CountryPhoneInfo? Country { get; set; }
+
+    [Parameter]
+    public List<CountryPhoneInfo> CountriesPhoneInfo { get; set; }
+
+    private async Task HandleCountryChanged(CountryPhoneInfo? info)
+    {
+        if (Country == info)
+            return;
+
+        Country = info;
+
+        await CountryChanged.InvokeAsync(Country);
+    }
+
+    #endregion
+
+
+    protected override void OnInitialized()
+    {
+        if (CountriesPhoneInfo?.Any() == true)
+        {
+            CountriesPhoneInfo = CountriesPhoneInfo
+              .OrderBy(x => x.CountryName)
+              .ToList();
+        }
+
+        Country = null;
+    }
+
+
+    public string Label => "Phone Number ";
+
+    public string Placeholder => "phone number";
+
+}

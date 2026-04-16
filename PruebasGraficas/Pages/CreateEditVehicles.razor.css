@@ -1,0 +1,197 @@
+﻿::deep .personalSelect .mud-input-slot,
+::deep .employee-style .mud-input-slot {
+    background-color: transparent !important;
+}
+
+::deep .personalSelect .mud-input-root,
+::deep .employee-style .mud-input-root {
+    display: flex;
+    height: 40px;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+/*	↑↑↑↑↑↑ Custom styling for MudBlazor inputs (MudSelect / MudTextField) to match Figma design.
+	Do NOT move this to shared components (like PhoneInput) to keep them reusable
+	These styles are page-specific (CreateEditEmployee layout consistency)*/
+
+.greyText {
+    font-weight: 400;
+    color: #9CA3AF;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.vehicle-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: -10px;
+}
+
+.vehicle-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.vehicle-list {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin: 0;
+    color: #6c757d;
+}
+
+    .vehicle-list li {
+        margin-bottom: 6px;
+        line-height: 20px;
+    }
+
+::deep .weight-input .mud-input-adornment-text {
+    color: rgba(3, 143, 253, 0.60);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 133.333% */
+}
+
+::deep .mudPaperCard {
+    background-color: #FAFBFC;
+    border-radius: 20px !important;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+::deep .mudContainerCard {
+    border-radius: 12px;
+    padding-bottom: 0px;
+}
+
+
+::deep .mudGridInputsCard {
+    margin-top: 24px;
+}
+
+::deep .label-text {
+    align-self: stretch;
+    color: #333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 133.333% */
+    padding-bottom: 8px;
+}
+
+::deep .placeHolderText {
+    color: #A5A5A5;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px; /* 133.333% */
+}
+
+
+.itemStyle {
+    color: var(--Grey-Body-text, #585858);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.importantStyle {
+    color: red;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+    margin-left: 2px;
+}
+
+
+::deep .mudTitleStyle {
+    color: #028FFF;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.pageTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #5F6D7B;
+    white-space: nowrap;
+    width: auto;
+}
+
+::deep .deactivateText {
+    /* Layout */
+    width: 195px;
+    height: 20px;
+    opacity: 1;
+    /* Typography */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    /* Color */
+    color: #585858;
+    white-space: nowrap;
+}
+
+::deep .password-input .mud-input-error {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 13.5px;
+    line-height: 22px;
+    max-width: 580px;
+    color: #999999 !important;
+}
+
+::deep .enforceTexts {
+    font-weight: bold;
+    color: grey;
+}
+
+::deep .whiteBackgroundSelect .mud-input-control-input-container,
+::deep .whiteBackgroundSelect .mud-input-slot,
+::deep .whiteBackgroundSelect .mud-input-root,
+::deep .whiteBackgroundSelect input {
+    background-color: #fff !important;
+}
+
+::deep .whiteBackgroundSelect .mud-select-input,
+::deep .whiteBackgroundSelect input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #111827;
+}
+
+    ::deep .whiteBackgroundSelect input::placeholder,
+    ::deep .whiteBackgroundSelect .mud-select-input.mud-input-placeholder {
+        color: #9ca3af;
+        opacity: 1;
+    }

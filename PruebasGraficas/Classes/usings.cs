@@ -1,0 +1,12 @@
+﻿global using System.Globalization;
+global using System.Text.RegularExpressions;
+global using CigoWeb.Core.Helpers;
+global using CigoWeb.Core.Localization;
+global using CigoWeb.Core.Models.Geocoding;
+global using FluentValidation;
+global using Microsoft.AspNetCore.Components;
+global using Microsoft.Extensions.Localization;
+global using Microsoft.JSInterop;
+global using PhoneNumbers;
+global using PruebasGraficas.Classes;
+global using PruebasGraficas.Classes.Enums;

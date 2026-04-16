@@ -1,0 +1,204 @@
+﻿.field-label {
+    margin-bottom: 4px;
+    color: var(--custom-black, var(--mud-palette-text-primary));
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+    .field-label.has-error {
+        color: var(--mud-palette-error);
+    }
+
+.required-indicator {
+    color: var(--mud-palette-error);
+    margin-left: 2px;
+}
+
+.address-input-shell {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid var(--default-border);
+    border-radius: 0.375rem;
+    background-color: var(--form-control-bg);
+    min-height: 34px;
+    overflow: hidden;
+    transition: border-color 0.15s ease;
+}
+
+[data-theme-mode="dark"] .address-input-shell,
+[data-theme-mode="dark"] .address-input-flag {
+    background-color: var(--form-control-bg);
+}
+
+[data-theme-mode="dark"] .address-input-shell {
+    border-color: var(--default-border);
+}
+
+.address-input-shell:focus-within {
+    border-color: var(--input-border);
+}
+
+.address-input-shell.has-error {
+    border-color: var(--mud-palette-error);
+}
+
+.address-input-flag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    background-color: var(--form-control-bg);
+    color: var(--mud-palette-text-secondary);
+    user-select: none;
+}
+
+.address-input-flag-sprite {
+    transform: scale(0.95);
+    transform-origin: center;
+}
+
+.address-input-flag-fallback {
+    font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.address-input-text {
+    flex: 1;
+    min-width: 0;
+    height: 32px;
+    padding: 5px 38px 5px 10px;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    background: transparent;
+    color: var(--default-text-color);
+}
+
+    .address-input-text::placeholder {
+        color: var(--default-text-color);
+        opacity: 0.9;
+    }
+
+    .address-input-text:read-only {
+        background-color: var(--mud-palette-gray-light);
+        color: var(--mud-palette-text-secondary);
+        cursor: not-allowed;
+    }
+
+        .address-input-text:read-only::placeholder {
+            color: var(--mud-palette-text-disabled, var(--mud-palette-text-secondary));
+        }
+
+    .address-input-text.has-error {
+        box-shadow: inset 0 0 0 1px var(--mud-palette-error);
+        background-color: rgba(var(--danger-rgb), 0.08);
+    }
+
+.address-input-explore-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--mud-palette-primary);
+    color: var(--mud-palette-primary-text);
+    cursor: pointer;
+}
+
+    .address-input-explore-button:hover {
+        background-color: var(--mud-palette-primary-darken);
+    }
+
+    .address-input-explore-button ::deep .mud-icon-root,
+    .address-input-explore-button ::deep .mud-svg-icon {
+        color: var(--mud-palette-primary-text) !important;
+        fill: var(--mud-palette-primary-text) !important;
+        font-size: 18px;
+    }
+
+.address-suggestion-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    border: 1px solid var(--mud-palette-lines-default);
+    border-radius: 4px;
+    background-color: var(--form-control-bg, var(--mud-palette-surface));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 3;
+    position: relative;
+}
+
+.address-suggestion-item {
+    padding: 10px 12px;
+    border: 0;
+    border-bottom: 1px solid var(--mud-palette-lines-default);
+    background: transparent;
+    text-align: left;
+    color: var(--custom-black, var(--mud-palette-text-primary));
+    cursor: pointer;
+}
+
+    .address-suggestion-item:last-child {
+        border-bottom: 0;
+    }
+
+    .address-suggestion-item:hover,
+    .address-suggestion-item.active {
+        background-color: var(--list-hover-focus-bg, var(--mud-palette-action-default-hover));
+    }
+
+.address-input-helper {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    min-height: 18px;
+    padding: 3px 14px 0;
+    color: var(--text-muted);
+    opacity: 0.85;
+}
+
+    .address-input-helper.has-error {
+        color: var(--mud-palette-error);
+    }
+
+.coordinate-search-button:hover {
+    background-color: var(--mud-palette-primary-darken);
+}
+
+::deep .coordinate-search-tooltip {
+    width: 30px;
+    height: 30px;
+}
+
+::deep .coordinate-search-button {
+    border-radius: 4px;
+}
+
+.auto-suggestion-toggle-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auto-suggestion-toggle-control {
+    flex: 0 0 auto;
+}
+
+.auto-suggestion-toggle-label {
+    user-select: none;
+}
+
+@media (max-width: 959.98px) {
+    .coordinate-field-item {
+        max-width: none;
+    }
+}

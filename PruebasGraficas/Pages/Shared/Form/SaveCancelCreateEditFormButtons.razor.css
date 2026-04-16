@@ -1,0 +1,9 @@
+﻿.ce-actions-title {
+    color: var(--mud-palette-text-secondary);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}

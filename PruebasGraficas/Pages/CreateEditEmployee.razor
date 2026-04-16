@@ -1,0 +1,605 @@
+﻿@page "/employee"
+
+<MudForm @ref="_form" Model="_model" Validation="@(_validationRules.ValidateValue())" Class="@(_loading ? "cursor-wait" : "")">
+
+    <div class="create-edit-page">
+
+
+        @if (!string.IsNullOrWhiteSpace(_error))
+        {
+            <MudAlert Severity="MudBlazor.Severity.Error" Class="mb-4">@_error</MudAlert>
+        }
+
+        <SaveCancelCreateEditFormButtons Id="Id"
+                                         @bind-Deactivate="_deactivate"
+                                         OnCancel="Cancel"
+                                         OnSubmit="Submit"
+                                         Loading="_loading"
+                                         Title="@(Id == 0 ? _localizer["CreateEditEmployee_Title_AddWebUser"] : _localizer["CreateEditEmployee_Title_EditWebUser"])" />
+
+       
+        <br />
+
+        @* Primary Information *@
+        <MudCard Class="custom-card mb-6">
+
+            <MudCardContent>
+
+                @* Primary Information : Title *@
+                <div>
+                    <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_PrimaryInformation"]</MudText>
+                </div>
+
+                @* Role,FirsName,LastName, PhoneNumber *@
+                <MudGrid Class="mt-4" Spacing="4">
+
+                    @* Role *@
+                    <MudItem xs="3">
+
+                        <div>
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["CreateEditEmployee_Label_Role"] </b>
+                                <span class="ce-required">*</span>
+                                <MudLink Href="#" Typo="Typo.body1">@_localizer["CreateEditEmployee_Link_WhatIsRole"]</MudLink>
+                            </MudText>
+
+                            <MudSelect T="string"
+                                       @bind-Value="_model.Role"
+                                       Placeholder="@_localizer["CreateEditEmployee_Placeholder_SelectRole"]"
+                                       For="@(() => _model.Role)"
+                                       Clearable="true"
+                                       Class="ce-white-select input">
+
+                                
+                                @foreach (var role in EnumHelper.EnumToListGeneric<EmployeeRole>())
+                                {
+                                    <MudSelectItem T="string" Value="@role.key.ToString()">
+                                        @role.value
+                                    </MudSelectItem>
+                                }
+
+                            </MudSelect>
+                        </div>
+
+                    </MudItem>
+
+                    @* First Name *@
+                    <MudItem xs="3">
+                        <div>
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["CreateEditEmployee_Label_FirstName"]</b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.FirstName"
+                                          For="@(() => _model.FirstName)"
+                                          Placeholder="@_localizer["CreateEditEmployee_Placeholder_FirstName"]"
+                                          Variant="Variant.Outlined"></MudTextField>
+                        </div>
+                    </MudItem>
+
+                    @* Last Name *@
+                    <MudItem xs="3">
+                        <div>
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["CreateEditEmployee_Label_LastName"] </b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.LastName"
+                                          For="@(() => _model.LastName)"
+                                          Placeholder="@_localizer["CreateEditEmployee_Placeholder_LastName"]"
+                                          Variant="Variant.Outlined"></MudTextField>
+                        </div>
+                    </MudItem>
+
+                    @* Phone Number *@
+                    <MudItem xs="3">
+                        <PhoneInput @bind-Country="_model.CountryPhoneInfo"
+                                    ForCountry="@(() => _model.CountryPhoneInfo)"
+                                    @bind-PhoneNumber="_model.PhoneNumber"
+                                    ForPhoneNumber="@(() => _model.PhoneNumber)"
+                                    Class="employee-style" />
+                    </MudItem>
+                </MudGrid>
+
+                <div>
+
+                    @* Address fields handled by shared AddressInput component *@
+                    @* <MudGrid  Spacing="4"> *@
+
+                    <MudItem xs="12">
+                        @*  <AddressInput @bind-Address="_model.AddressStreet"
+                                      @bind-Unit="_model.UnitNumber"
+                                      @bind-PostalCode="_model.PostalCode"
+                                      @bind-Province="_model.ProvinceState"
+                                      Country="@_selectedCountryCode"
+                                      CountryChanged="OnCountryChanged"
+                                      Latitude="@_latitude"
+                                      LatitudeChanged="OnLatitudeChanged"
+                                      Longitude="@_longitude"
+                                      LongitudeChanged="OnLongitudeChanged"
+                                      AllowManualAddressEntry="@_model.AllowManualAddressEntry"
+                                      AllowManualAddressEntryChanged="OnAllowManualAddressEntryChanged" /> *@
+
+                    </MudItem>
+
+                    @* </MudGrid> *@
+                </div>
+
+            </MudCardContent>
+
+        </MudCard>
+
+        @* Login Credentials *@
+        <MudCard Class="custom-card mb-6">
+            <MudCardContent>
+                @* Login Credentials : Title *@
+                <div>
+                    <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_LoginCredentials"]</MudText>
+                </div>
+
+                @* Login Email, New Password, Confirm Password *@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.Center">
+
+                    @* Login Email *@
+                    <MudItem xs="5">
+                        <div>
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["CreateEditEmployee_Label_LoginEmail"] </b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.Email"
+                                          For="@(() => _model.Email)"
+                                          Placeholder="Email"
+                                          Variant="Variant.Outlined"></MudTextField>
+                        </div>
+                    </MudItem>
+
+                    @* Empty *@
+                    <MudItem xs="7">
+
+                    </MudItem>
+
+                    @* New Password *@
+                    <MudItem xs="5">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Class="ce-label">
+                                <b>@_localizer["CreateEditEmployee_Label_NewPassword"] </b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.Password"
+                                          @bind-Value:after="OnPasswordChanged"
+                                          T="string"
+                                          For="@(() => _model.Password)"
+                                          DebounceInterval="150"
+                                          Placeholder="@_localizer["CreateEditEmployee_Placeholder_Password"]"
+                                          Variant="Variant.Outlined"
+                                          InputType="@_passwordVis.InputType"
+                                          Adornment="Adornment.End"
+                                          AdornmentIcon="@_passwordVis.Icon"
+                                          OnAdornmentClick="(() => TogglePasswordVisibility(false))"
+                                          Immediate="true"
+                                          Class="password-input" />
+
+                            @if (!string.IsNullOrWhiteSpace(_model.Password))
+                            {
+                                <MudProgressLinear Class="my-6" Rounded="true" Size="Size.Medium" Value="_passwordStrength.Value" Color="_passwordStrength.Color" />
+
+                                <MudText Class="ce-grey-text" Typo="Typo.body1">@_passwordStrength.Label</MudText>
+                            }
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Confirm Password *@
+                    <MudItem xs="5">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Class="ce-label">
+                                <b>@_localizer["CreateEditEmployee_Label_ConfirmPassword"] </b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.ConfirmPassword"
+                                          For="@(() => _model.ConfirmPassword)"
+                                          DebounceInterval="150"
+                                          Placeholder="@_localizer["CreateEditEmployee_Placeholder_ConfirmPassword"]"
+                                          Variant="Variant.Outlined"
+                                          InputType="@_confirmPasswordVis.InputType"
+                                          Adornment="Adornment.End"
+                                          AdornmentIcon="@_confirmPasswordVis.Icon"
+                                          OnAdornmentClick="(() => TogglePasswordVisibility(true))"
+                                          AdornmentAriaLabel="@_localizer["CreateEditEmployee_AriaLabel_ShowPassword"]"></MudTextField>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Empty *@
+                    <MudItem xs="2">
+
+                    </MudItem>
+
+                </MudGrid>
+            </MudCardContent>
+        </MudCard>
+
+        @* Location & Timezone *@
+        <MudCard Class="custom-card mb-6">
+            <MudCardContent>
+                @* Location & Timezone : Title *@
+                <div>
+                    <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_LocationTimezone"]</MudText>
+                </div>
+
+                @* Branch, TimeZone, Platform Language*@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.FlexStart">
+
+                    @* Branch *@
+                    <MudItem xs="3">
+                        <div>
+                            <MudText Align="Align.Left" Class="ce-label">
+                                <b>@_localizer["CreateEditEmployee_Label_Branch"] </b>
+                            </MudText>
+
+                            <MudSelect T="int?"
+                                       @bind-Value="_model.LocationId"
+                                       Text="@(GetLocationDisplayName(_model.LocationId))"
+                                       ToStringFunc="GetLocationDisplayName"
+                                       Placeholder="@_localizer["CreateEditEmployee_Placeholder_AssignBranch"]"
+                                       Clearable="true"
+                                       Class="ce-white-select input"
+                                       Variant="Variant.Outlined">
+
+                                @foreach (LocationResponse location in _locations)
+                                {
+                                    <MudSelectItem T="int?" Value="@((int?)location.Id)">@location.Name</MudSelectItem>
+                                }
+
+                            </MudSelect>
+
+                            <MudText Typo="Typo.body2" Class="text-muted ce-location-helper">
+                                @_localizer["CreateEditEmployee_Description_AssignBranchToUser"]
+                            </MudText>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Time Zone*@
+                    <MudItem xs="3">
+
+                        <div>
+                            <MudText Align="Align.Left" Class="ce-label">
+                                <b>@_localizer["CreateEditEmployee_Label_Timezone"] </b>
+                            </MudText>
+
+                            <MudSelect @bind-Value="_stringValue" T="string" Placeholder="(UTC - 5 - 6:00) American/North Dakota/Beulah" Variant="Variant.Outlined">
+                            </MudSelect>
+
+                            <MudText Typo="Typo.body2" Class="text-muted ce-location-helper">
+                                @_localizer["CreateEditEmployee_Description_TimezoneOverride"]
+                            </MudText>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Platform Language *@
+                    <MudItem xs="3">
+
+                        <div>
+                            <MudText Align="Align.Left" Class="ce-label">
+                                <b>@_localizer["CreateEditEmployee_Placeholder_Platform"] </b>
+                            </MudText>
+
+                            <MudSelect @bind-Value="_stringValue" T="string" Placeholder="English" Class="ce-white-select input" Variant="Variant.Outlined">
+                            </MudSelect>
+
+                        </div>
+
+                    </MudItem>
+
+                </MudGrid>
+            </MudCardContent>
+        </MudCard>
+
+        @* Security *@
+        <MudCard Class="custom-card mb-6">
+            <MudCardContent>
+                @* Security : Title *@
+                <div>
+                    <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_Security"]</MudText>
+                </div>
+
+                @* IpBlock Exemption, Ip Whitelist *@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.FlexStart">
+
+                    @*IpBlock Exemption*@
+                    <MudItem xs="3">
+                        <div>
+
+                            <MudText Typo="Typo.subtitle2" Class="ce-label">@_localizer["CreateEditEmployee_Switch_IpBlockExemption"]</MudText>
+                            <MudSwitch T="bool" Size="Size.Large" Color="Color.Info" />
+
+                            <MudText Typo="Typo.body2" Class="text-muted">
+                                @_localizer["CreateEditEmployee_Description_IpBlockExemption"]
+                            </MudText>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* IP Whitelist*@
+                    <MudItem xs="6">
+                        <MudStack Spacing="1">
+
+                            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
+
+                                <MudText Typo="Typo.subtitle2" Class="ce-label">
+                                    @_localizer["CreateEditEmployee_Label_IpWhitelist"]
+                                </MudText>
+
+                                <MudText Typo="Typo.subtitle2" Color="Color.Info">
+                                    0/5
+                                </MudText>
+
+                            </MudStack>
+
+                            <MudText Typo="Typo.body2">
+                            </MudText>
+
+                            <MudText Typo="Typo.body2" Class="text-muted">
+                                @_localizer["CreateEditEmployee_Description_IpWhitelist"]
+                            </MudText>
+
+                        </MudStack>
+
+                        @* Set a label, Add and IP address*@
+                        <MudStack Spacing="1">
+
+                            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
+                                <MudTextField @bind-Value="_textValue" PlaceHolder=" Set a label" Style="border: dashed 2px;border-radius:5px;height:40px"></MudTextField>
+                                <MudTextField @bind-Value="_textValue" PlaceHolder=" Add an IP address" Style="border: dashed 2px;border-radius:5px;height:40px"></MudTextField>
+                                <MudFab Color="Color.Success" Size="Size.Small" StartIcon="@Icons.Material.Filled.Add" IconSize="Size.Large" />
+                            </MudStack>
+
+                        </MudStack>
+
+                    </MudItem>
+
+                </MudGrid>
+
+            </MudCardContent>
+        </MudCard>
+
+        @* Profile Photo *@
+        <MudCard Class="custom-card mb-6">
+            <MudCardContent>
+                @* Profile Photo : Title *@
+                <div>
+                    <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_ProfilePhoto"]</MudText>
+                </div>
+
+                @* Upload profile photo, chat visibility, access, allow access to customer sms *@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.FlexStart">
+
+                    @* Section to upload picture *@
+                    <MudItem xs="6">
+
+                        @*  <ManagedFileUpload @ref="_logoUpload"
+                                           Label="@_localizer["CreateEditEmployee_Label_ProfilePhoto"]"
+                                           Description="@_localizer["CreateEditEmployee_Description_ProfilePhotoUpload"]"
+                                           HelperText="@_localizer["ImageUpload.LogoIdealHelperText"]"
+                                           DescriptionForSave="@_localizer["ImageUpload.Description.EmployeeLogo"]"
+                                           EmployeeId="@(_model.Id > 0 ? _model.Id : Id)"
+                                           CropAspectRatio="1:1"
+                                           MaxFileSizeBytes="@(2 * 1024 * 1024)"
+                                           Height="400px" /> *@
+
+                    </MudItem>
+
+                    @* Slide buttons *@
+                    <MudItem xs="6">
+                        <MudGrid Class="mt-8">
+
+                            @* Chat Visibility *@
+                            <MudItem xs="6">
+
+                                <MudText Typo="Typo.subtitle2">@_localizer["CreateEditEmployee_Label_ChatVisibility"]</MudText>
+                                <MudSwitch T="bool" Size="Size.Large" />
+                                <MudText Typo="Typo.body2" Class="text-muted">
+                                    @_localizer["CreateEditEmployee_Description_ChatVisibility"]
+                                </MudText>
+
+                            </MudItem>
+
+                            @* Chat Access *@
+                            <MudItem xs="6">
+                                <MudText Typo="Typo.subtitle2">@_localizer["CreateEditEmployee_Label_ChatAccess"]</MudText>
+                                <MudSwitch T="bool" Size="Size.Large" />
+                                <MudText Typo="Typo.body2" Class="text-muted">
+                                    @_localizer["CreateEditEmployee_Description_ChatAccess"]
+                                </MudText>
+                            </MudItem>
+
+
+                            @* Allow access to Customer SMS *@
+                            <MudItem xs="6">
+
+                                <MudText Typo="Typo.subtitle2">@_localizer["CreateEditEmployee_Label_AllowAccessCustomerSms"] </MudText>
+                                <MudSwitch T="bool" Size="Size.Large" />
+                                <MudText Typo="Typo.body2" Class="text-muted">
+                                    @_localizer["CreateEditEmployee_Description_AllowAccessCustomerSms"]
+                                </MudText>
+                            </MudItem>
+
+                            @* Empty *@
+                            <MudItem xs="6">
+                            </MudItem>
+
+                        </MudGrid>
+
+                    </MudItem>
+
+                </MudGrid>
+            </MudCardContent>
+        </MudCard>
+
+        @* EndSection: Permission by Role *@
+        <MudPaper class="ce-section-group">
+
+            <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_PermissionByRole"]</MudText>
+
+            <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="ce-section-group-container">
+
+                <MudGrid Class="ce-section-group-inputs">
+
+                    <!-- COLUMN 1 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Label_Dispatcher"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_AccessDashboard"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_CreateUpdateItineraries"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_SearchCreateUpdateDeleteJobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_AccessImportTool"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_NotificationsNewMessagesOperators"]</li>
+                        </ul>
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_Manager"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_DispatcherPoint_FullAccess"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_Ability_To_Clone_From_Planner"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_Ability_To_Delete_From_Planner"]</li>
+                            <li>@_localizer["CreateEditEmployee_Ability_To_Delete_Pending_Jobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_AccessReportsSection"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_Access_To_Managment"]</li>>
+                            <li>@_localizer["CreateEditEmployee_Access_Reported_Incompleted_Page"]</li>
+                            <li>@_localizer["CreateEditEmployee_Access_Reported_Damages_Page"]</li>
+                        </ul>
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_SubAdministrator"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Access_As_Administrator"]</li>
+                            <li>@_localizer["CreateEditEmployee_AccessManagementPagesUpdateOnly"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_NotificationsNewMessagesOperators"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_Ability_To_Clone_From_Planner"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_Ability_To_Delete_From_Planner"]</li>
+                            <li>@_localizer["CreateEditEmployee_Ability_To_Delete_Pending_Jobs"]</li>
+                        </ul>
+
+                    </MudStack>
+
+                    <!-- COLUMN 2 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_SalesLevel1"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_SearchCustomersCreateJobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_UpdateDeleteOwnJobs"]</li>
+                        </ul>
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_SalesLevel2"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_SearchCustomersCreateJobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_UpdateDeleteOwnJobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_AccessDashboardLimitedVisibility"]</li>
+                        </ul>
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_SalesLevel3"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_SearchCustomersCreateJobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_UpdateDeleteOwnJobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_AccessDashboard"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_NotificationsNewMessagesOperators"]</li>
+                        </ul>
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_CustomerSupportLevel1"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_SearchCustomersAndJobs"]</li>
+                        </ul>
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_CustomerSupportLevel2"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_SearchCustomersAndJobs"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_AccessDashboard"]</li>
+                            <li>@_localizer["CreateEditEmployee_Label_NotificationsNewMessagesOperators"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_Accounting"]</li>
+                            <li>@_localizer["CreateEditEmployee_Span_AccessTransactionsPage"]</li>
+                        </ul>
+
+
+                    </MudStack>
+
+                    <!-- COLUMN 3 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Span_Accounting"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_AccessTransactionsPage"]</li>
+                        </ul>
+
+                        <div class="ce-section-group-header">
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["CreateEditEmployee_Title_BusinessAnalyst"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["CreateEditEmployee_Span_AccessReportsSection"]</li>
+                        </ul>
+
+                    </MudStack>
+
+                </MudGrid>
+
+            </MudContainer>
+
+        </MudPaper>
+
+    </div>
+
+</MudForm>

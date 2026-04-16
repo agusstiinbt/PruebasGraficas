@@ -1,0 +1,222 @@
+﻿
+<div class="address-input-root">
+
+    <MudGrid Spacing="2" Justify="Justify.SpaceBetween">
+
+        <MudItem lg="3" md="3" sm="6" xs="12">
+
+            @if (ShowAddressLabel)
+            {
+                <MudText Typo="Typo.subtitle2" Class="@AddressLabelClass">
+                    <b>@_localizer["AddressInput_AddressLabel"]</b>
+                    @if (Required)
+                    {
+                        <span class="required-indicator">*</span>
+                    }
+                </MudText>
+            }
+
+            <div class="@AddressShellClass">
+
+                <span class="address-input-flag">
+                    @if (!string.IsNullOrWhiteSpace(GetCountryFlagIso2()))
+                    {
+                        <span class="address-input-flag-sprite iti__flag @GetCountryFlagCssClass()"></span>
+                    }
+                    else
+                    {
+                        <span class="address-input-flag-fallback" role="img" aria-label="Unknown country flag">🏳</span>
+                    }
+                </span>
+
+
+                <input id="@AddressInputElementId"
+                       class="@AddressInputClass"
+                       type="text"
+                       value="@_currentAddress"
+                       placeholder="@_localizer["AddressInput_AddressPlaceholder"]"
+                       autocomplete="off"
+                       readonly="@(_useCoordinates && UseAutoAddressSuggestions)"
+                       aria-readonly="@(_useCoordinates && UseAutoAddressSuggestions)"
+                       aria-invalid="@HasValidationError" />
+
+
+                <button type="button"
+                        class="address-input-explore-button"
+                        aria-label="@_localizer["AddressInput_Tooltip_EnterCoordinates"]"
+                        @onclick="ToggleCoordinatesAndSuggestionMode">
+
+                    <MudIcon Icon="@Icons.Material.Outlined.Explore" />
+
+                </button>
+
+            </div>
+
+            @if (_showAddressSuggestions)
+            {
+                <div class="address-suggestion-list" role="listbox" aria-labelledby="@AddressInputElementId">
+                    @for (var i = 0; i < _addressSuggestions.Count; i++)
+                    {
+                        var suggestion = _addressSuggestions[i];
+                        <button type="button"
+                                class="address-suggestion-item @(i == _activeSuggestionIndex ? "active" : string.Empty)"
+                                role="option"
+                                aria-selected="@(i == _activeSuggestionIndex)"
+                                @onmousedown="OnSuggestionMouseDown"
+                                @onclick="() => OnAddressSuggestionClicked(suggestion)">
+                            @suggestion.Description
+                        </button>
+                    }
+                </div>
+            }
+
+            <div class="address-input-helper @(HasValidationError ? "has-error" : "")">
+                @AddressHelperText
+            </div>
+
+            @if (_useCoordinates)
+            {
+                <MudGrid Spacing="1" Justify="Justify.SpaceBetween">
+                    <MudItem lg="5" md="5" sm="6" xs="12">
+                        <MudTextField Value="@_latitude"
+                                      ValueChanged="@((string value) => OnLatitudeChanged(value))"
+                                      Placeholder="@_localizer["AddressInput_LatitudeLabel"]"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      Error="@(!string.IsNullOrWhiteSpace(_latitudeValidationError))"
+                                      ErrorText="@_latitudeValidationError"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@Icons.Material.Filled.MyLocation"
+                                      DebounceInterval="500" />
+                    </MudItem>
+                    <MudItem lg="5" md="5" sm="6" xs="12">
+                        <MudTextField Value="@_longitude"
+                                      ValueChanged="@((string value) => OnLongitudeChanged(value))"
+                                      Placeholder="@_localizer["AddressInput_LongitudeLabel"]"
+                                      Variant="Variant.Outlined"
+                                      Margin="Margin.Dense"
+                                      Error="@(!string.IsNullOrWhiteSpace(_longitudeValidationError))"
+                                      ErrorText="@_longitudeValidationError"
+                                      Adornment="Adornment.End"
+                                      AdornmentIcon="@Icons.Material.Filled.MyLocation"
+                                      DebounceInterval="500" />
+                    </MudItem>
+                    <MudItem lg="2" md="2" sm="6" xs="12" Class="coordinate-search-item pt-2">
+                        <MudTooltip Class="coordinate-search-tooltip" Text="@_localizer["AddressInput_Tooltip_UseAddressSearch"]">
+                            <MudIconButton Icon="@Icons.Material.Filled.Search"
+                                           Color="Color.Primary"
+                                           OnClick="@TriggerReverseGeocoding"
+                                           Size="Size.Small"
+                                           Variant="Variant.Filled"
+                                           Class="coordinate-search-button" />
+                        </MudTooltip>
+                    </MudItem>
+                </MudGrid>
+            }
+
+            @if (_showAutoSuggestionToggle)
+            {
+                <div class="auto-suggestion-toggle-row mt-2 mb-2">
+                    <MudSwitch T="bool"
+                               Value="@UseAutoAddressSuggestions"
+                               ValueChanged="@OnAutoSuggestionChanged"
+                               Color="Color.Primary"
+                               Class="auto-suggestion-toggle-control"
+                               aria-label="@_localizer["AddressInput_UseAutoSuggestions"]" />
+                    <MudText Typo="Typo.body2" Class="auto-suggestion-toggle-label">@_localizer["AddressInput_UseAutoSuggestions"]</MudText>
+                </div>
+            }
+
+        </MudItem>
+
+        <MudItem lg="1" md="2" sm="6" xs="12">
+
+            <MudText Typo="Typo.subtitle2" Class="field-label"><b>@_localizer["AddressInput_UnitLabel"]</b></MudText>
+
+            <MudTextField T="string"
+                          Value="@Unit"
+                          ValueChanged="@OnUnitChanged"
+                          Label=""
+                          Placeholder="@_localizer["AddressInput_UnitPlaceholder"]"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.None"
+                          Error="@(!string.IsNullOrWhiteSpace(_unitValidationError))"
+                          ErrorText="@_unitValidationError" />
+        </MudItem>
+
+        <MudItem lg="2" md="3" sm="6" xs="12">
+
+            <MudText Typo="Typo.subtitle2" Class="field-label"><b>@_localizer["AddressInput_PostalCodeLabel"]</b></MudText>
+
+            <MudTextField T="string"
+                          Value="@PostalCode"
+                          ValueChanged="@OnPostalCodeChanged"
+                          Label=""
+                          Placeholder="@_localizer["AddressInput_PostalCodePlaceholder"]"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.None"
+                          Error="@(!string.IsNullOrWhiteSpace(_postalCodeValidationError))"
+                          ErrorText="@_postalCodeValidationError" />
+        </MudItem>
+
+        <MudItem lg="3" md="4" sm="6" xs="12">
+
+            <MudText Typo="Typo.subtitle2" Class="field-label"><b>@_localizer["AddressInput_ProvinceLabel"]</b></MudText>
+
+            <MudTextField T="string"
+                          Value="@(_allowManualAddressEntry ? _currentProvince : Province)"
+                          ValueChanged="@OnProvinceChanged"
+                          Label=""
+                          Placeholder="@_localizer["AddressInput_ProvincePlaceholder"]"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.None"
+                          Error="@(!string.IsNullOrWhiteSpace(_stateValidationError))"
+                          ErrorText="@_stateValidationError" />
+
+        </MudItem>
+
+        <MudItem lg="3" md="4" sm="6" xs="12">
+
+            <MudText Typo="Typo.subtitle2" Class="field-label"><b>@_localizer["AddressInput_CountryLabel"]</b></MudText>
+
+            @if (_allowManualAddressEntry)
+            {
+                <MudAutocomplete T="string"
+                                 Value="@_currentCountry"
+                                 ValueChanged="@OnCountryChanged"
+                                 SearchFunc="@SearchCountries"
+                                 Label=""
+                                 Placeholder="@_localizer["AddressInput_CountryPlaceholder"]"
+                                 Variant="Variant.Outlined"
+                                 Margin="Margin.None"
+                                 Error="@(!string.IsNullOrWhiteSpace(_countryValidationError))"
+                                 ErrorText="@_countryValidationError"
+                                 MinCharacters="0"
+                                 ResetValueOnEmptyText="true"
+                                 CoerceText="false"
+                                 CoerceValue="false"
+                                 MaxItems="50"
+                                 DebounceInterval="200" />
+            }
+            else
+            {
+                <MudTextField Value="@CountryHelper.GetCountryDisplayName(Country)"
+                              Label=""
+                              Placeholder="@_localizer["AddressInput_CountryPlaceholder"]"
+                              Variant="Variant.Outlined"
+                              Margin="Margin.None"
+                              Error="@(!string.IsNullOrWhiteSpace(_countryValidationError))"
+                              ErrorText="@_countryValidationError"
+                              ReadOnly="true" />
+            }
+        </MudItem>
+
+    </MudGrid>
+
+    @if (_apiError)
+    {
+        <MudAlert Severity="Severity.Warning" Class="mt-2">
+            @_localizer["AddressInput_GoogleApiUnavailable"]
+        </MudAlert>
+    }
+</div>

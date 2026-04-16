@@ -1,0 +1,198 @@
+﻿/* ============================================================================
+   CreateEdit Pages - Shared Styles
+   Used by: CreateEditEmployee, CreateEditJob, and future CreateEdit pages.
+   Source of truth: CreateEditEmployee design (PR 932 / commit 41a761c)
+   ============================================================================ */
+
+/* -- CSS Variables ---------------------------------------------------------- */
+
+.create-edit-page {
+    --ce-page-bg: rgba(245, 245, 245, 1);
+    --ce-card-bg: rgba(250, 251, 252, 1);
+    --ce-page-gutter: 16px;
+}
+
+[data-theme-mode="dark"] .create-edit-page {
+    --ce-card-bg: rgb(26, 28, 30);
+}
+
+@media (min-width: 600px) {
+    .create-edit-page {
+        --ce-page-gutter: 24px;
+    }
+}
+
+/* -- Page container --------------------------------------------------------- */
+
+.create-edit-page {
+    margin-inline: calc(var(--ce-page-gutter) * -1);
+    padding: 0.5rem var(--ce-page-gutter) 1rem;
+}
+
+[data-theme-mode="light"] .create-edit-page {
+    background-color: var(--ce-page-bg);
+}
+
+va
+/* -- Section cards (MudCard.custom-card overrides) -------------------------- */
+.create-edit-page .mud-card.custom-card {
+    border-radius: 20px;
+    box-shadow: none;
+    background-color: var(--ce-card-bg);
+}
+
+/* -- Restore picker adornment icon (hidden globally by template styles) ----- */
+
+.create-edit-page .mud-picker .mud-input-adornment-icon-button {
+    display: flex !important;
+    color: var(--text-muted);
+}
+
+/* -- Section title (blue heading inside each card) -------------------------- */
+
+.create-edit-page .ce-section-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: var(--mud-palette-primary);
+}
+
+/* -- Required-field asterisk ------------------------------------------------ */
+
+.create-edit-page .ce-required {
+    color: var(--mud-palette-error);
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+    margin-left: 2px;
+}
+
+/* -- Field label ------------------------------------------------------------ */
+
+.create-edit-page .ce-label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/* -- Helper text below fields ----------------------------------------------- */
+
+.create-edit-page .ce-helper-text {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.create-edit-page .ce-helper-text-list {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    list-style-type: disc;
+    padding-left: 1rem;
+}
+
+/* -- Location / branch helper text (extra top margin) ----------------------- */
+
+.create-edit-page .ce-location-helper {
+    margin-top: 6px;
+}
+
+/* -- Grey muted text variant ------------------------------------------------ */
+.create-edit-page .ce-grey-text {
+    font-weight: 400;
+    color: #9CA3AF;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* -- End Section of page (normally where we see list of items divided in 2 columns )--------------- */
+.create-edit-page .ce-section-group {
+    background-color: var(--ce-card-bg);
+    border-radius: 20px !important;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.create-edit-page .ce-section-group-container {
+    border-radius: 12px;
+    padding-bottom: 0px;
+}
+
+.create-edit-page .ce-section-group-inputs {
+    margin-top: 24px;
+    background-color: transparent;
+}
+
+.create-edit-page .ce-section-group-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: -10px;
+    background-color: transparent;
+}
+
+.create-edit-page .ce-section-group-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.create-edit-page .ce-section-group-title {
+    color: var(--mud-palette-text-primary);
+    font-weight: 500;
+    margin: 0;
+    background-color: transparent;
+}
+
+
+.create-edit-page .ce-section-group-list {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin: 0;
+    color: var(--mud-palette-text-secondary);
+    background-color: transparent;
+}
+
+
+/* -- White-background select (light mode) ----------------------------------- */
+
+.create-edit-page .ce-white-select .mud-input-control-input-container,
+.create-edit-page .ce-white-select .mud-input-slot,
+.create-edit-page .ce-white-select .mud-input-root,
+.create-edit-page .ce-white-select input {
+    background-color: #fff !important;
+}
+
+.create-edit-page .ce-white-select .mud-select-input,
+.create-edit-page .ce-white-select input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #111827;
+}
+
+    .create-edit-page .ce-white-select input::placeholder,
+    .create-edit-page .ce-white-select .mud-select-input.mud-input-placeholder {
+        color: #9ca3af;
+        opacity: 1;
+    }
+
+/* -- White-background select (dark mode) ------------------------------------ */
+
+[data-theme-mode="dark"] .create-edit-page .ce-white-select .mud-input-control-input-container,
+[data-theme-mode="dark"] .create-edit-page .ce-white-select .mud-input-slot,
+[data-theme-mode="dark"] .create-edit-page .ce-white-select .mud-input-root,
+[data-theme-mode="dark"] .create-edit-page .ce-white-select input {
+    background-color: transparent !important;
+}
+
+[data-theme-mode="dark"] .create-edit-page .ce-white-select .mud-select-input,
+[data-theme-mode="dark"] .create-edit-page .ce-white-select input {
+    color: var(--mud-palette-text-primary);
+}
+
+    [data-theme-mode="dark"] .create-edit-page .ce-white-select input::placeholder,
+    [data-theme-mode="dark"] .create-edit-page .ce-white-select .mud-select-input.mud-input-placeholder {
+        color: var(--mud-palette-text-secondary);
+    }

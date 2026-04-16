@@ -1,0 +1,42 @@
+﻿<MudText Align="Align.Left" Typo="Typo.subtitle2">
+    <b>@_localizer["Vehicles_Default_Operators_Column"] </b>
+</MudText>
+
+<MudSelect T="string"
+           @bind-Value="Title"
+           Placeholder="Nothing selected"
+           Class="mud-input-root mud-input-root-outlined mud-input-root-adorned-end mud-select-input"
+           Variant="Variant.Outlined"
+           Disabled="true">
+
+</MudSelect>
+
+<p class="ce-grey-text ">
+    @_localizer["Vehicles_Default_Operators_Helper_Text"]
+</p>
+
+@code {
+
+    [Parameter] public int IntervalMinutes { get; set; } = 15;
+
+    [Parameter] public required string Title { get; set; } = "Nothing selected";
+
+    #region Time Functionality
+    [Parameter] public TimeOnly Time { get; set; } = new TimeOnly(8, 0);
+
+    [Parameter] public EventCallback<TimeOnly> TimeChanged { get; set; }
+
+    [Parameter] public required Expression<Func<TimeOnly>> ForTime { get; set; }
+
+    public async Task HandleTimeChanged(TimeOnly value)
+    {
+        if (Time == value)
+            return;
+
+        Time = value;
+
+        await TimeChanged.InvokeAsync(Time);
+    }
+    #endregion
+
+}

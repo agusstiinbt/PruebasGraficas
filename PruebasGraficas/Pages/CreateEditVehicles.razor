@@ -1,0 +1,564 @@
+﻿@using CigoWeb.Core.Helpers;
+
+@page "/"
+
+<MudForm @ref="_form" Model="_model" Validation="@(_validationRules.ValidateValue())" Class="@(_loading ? "cursor-wait" : "")">
+
+    <div class="create-edit-page">
+
+        
+        @if (!string.IsNullOrWhiteSpace(_error))
+        {
+            <MudAlert Severity="MudBlazor.Severity.Error" Class="mb-4">@_error</MudAlert>
+        }
+
+        <SaveCancelCreateEditFormButtons Id="Id"
+                                         @bind-Deactivate="_deactivate"
+                                         OnCancel="Cancel"
+                                         OnSubmit="Submit"
+                                         Loading="_loading"
+                                         Title="@(Id == 0?_localizer["Vehicle_Title_Create_New_Vehicle"]: _localizer["Vehicle_Title_Update_New_Vehicle"])" />
+
+        <br />
+
+        @* Primary Information *@
+        <MudCard Class="custom-card mb-6">
+
+            <MudCardContent>
+
+                @* Primary Information : Title *@
+                <div>
+                    <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_PrimaryInformation"]</MudText>
+                </div>
+
+                @* Name, Type,License Plate,Reference ID *@
+                <MudGrid Class="mt-4" Spacing="4">
+
+                    @* Name *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles.Columns.Name"] </b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.Name"
+                                          For="@(()=>_model.Name)"
+                                          Class="ce-white-select input"
+                                          Placeholder="@_localizer["Vehicles_PlaceHolder_Name"]"
+                                          Variant="Variant.Outlined"></MudTextField>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Type *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles.Columns.Type"]</b>
+                            </MudText>
+
+                            <MudSelect T="VehicleType" @bind-Value="_model.Type" Class="ce-white-select input">
+
+                                @foreach (var item in Enum.GetValues<VehicleType>())
+                                {
+                                    <MudSelectItem Value="item">
+                                        <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="1">
+                                            <span class="@item.GetIconClass("default-icon") icon"></span>
+                                            <span>@item.GetDescription()</span>
+                                        </MudStack>
+                                    </MudSelectItem>
+                                }
+
+                            </MudSelect>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* License Plate *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles.Columns.LicensePlate"] </b>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.LicensePlate"
+                                          For="@(()=>_model.LicensePlate)"
+                                          Class="ce-white-select input"
+                                          Placeholder="@_localizer["Vehicles_PlaceHolder_License_Plate"]"
+                                          Variant="Variant.Outlined"></MudTextField>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Reference ID *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles.Columns.ReferenceId"] </b>
+                            </MudText>
+
+                            <MudTextField @bind-Value="_model.VehicleRefId"
+                                          Class="ce-white-select input"
+                                          For="@(()=>_model.VehicleRefId)"
+                                          Placeholder="@_localizer["Vehicles_PlaceHolder_Reference_ID"]"
+                                          Variant="Variant.Outlined"></MudTextField>
+
+                        </div>
+
+                    </MudItem>
+
+                </MudGrid>
+
+                @* Weight, Volume, Buffer, Departure *@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.Center">
+
+                    @* Weight Capacity *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles_Weight_Capacity_Title"] </b>
+                            </MudText>
+
+                            <MudNumericField HideSpinButtons="true"
+                                             @bind-Value="_model.WeightCapacityLbs"
+                                             For="@(()=>_model.WeightCapacityLbs)"
+                                             Label=""
+                                             Placeholder="@_localizer["Vehicles_Weight_Capacity_PlaceHolder"]"
+                                             Variant="Variant.Outlined"
+                                             Adornment="Adornment.End"
+                                             AdornmentText="lbs"
+                                             AdornmentColor="Color.Info"
+                                             Class="ce-white-select input" />
+                        </div>
+
+                    </MudItem>
+
+                    @* Volume Capacity *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles_Volume_Capacity_Title"]</b>
+                            </MudText>
+
+                            <MudNumericField T="decimal?"
+                                             HideSpinButtons="true"
+                                             @bind-Value="_model.VolumeCapacityFt3"
+                                             For="@(()=>_model.VolumeCapacityFt3)"
+                                             Placeholder="@_localizer["Vehicles_Volume_Capacity_PlaceHolder"]"
+                                             Variant="Variant.Outlined"
+                                             Adornment="Adornment.End"
+                                             AdornmentText="ft"
+                                             AdornmentColor="Color.Info"
+                                             Class="ce-white-select input" />
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Capacity Buffer *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles_Capacity_Buffer_Title"]</b>
+                            </MudText>
+
+                            <MudNumericField HideSpinButtons="true"
+                                             T="decimal?"
+                                             @bind-Value="_model.CapacityBufferPercent"
+                                             For="@(()=>_model.CapacityBufferPercent)"
+                                             Placeholder="@_localizer["Vehicle_Buffer_PlaceHolder"]"
+                                             Variant="Variant.Outlined"
+                                             Adornment="Adornment.End"
+                                             AdornmentText="%"
+                                             AdornmentColor="Color.Info"
+                                             Class="ce-white-select input" />
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Departure Time *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <SelectTime @bind-Time="_model.DepartureTime"
+                                        ForTime="@(()=>_model.DepartureTime)"
+                                        Title="Nothing selected" />
+
+                        </div>
+
+                    </MudItem>
+
+                </MudGrid>
+
+                @* Work time, start from, return to, default operators *@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.Center">
+
+                    @* Maximun Work Time *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles_Columns_MaxWorkTime"] </b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudStack Spacing="0" Row="true">
+
+                                <MudNumericField HideSpinButtons="true"
+                                                 @bind-Value="_model.MaxWorkTimeMinutes"
+                                                 Disabled="true"
+                                                 For="@(()=>_model.MaxWorkTimeMinutes)"
+                                                 Class="ce-white-select input"
+                                                 AdornmentText="hr"
+                                                 Adornment="Adornment.End"
+                                                 AdornmentColor="Color.Info"
+                                                 Variant="Variant.Outlined" />
+
+                                <MudNumericField HideSpinButtons="true"
+                                                 @bind-Value="_model.MaxWorkTimeMinutes"
+                                                 Disabled="true"
+                                                 For="@(()=>_model.MaxWorkTimeMinutes)"
+                                                 Class="ce-white-select input"
+                                                 AdornmentText="min"
+                                                 Adornment="Adornment.End"
+                                                 AdornmentColor="Color.Info"
+                                                 Variant="Variant.Outlined" />
+
+                            </MudStack>
+
+                            <p class="ce-grey-text ">
+                                @_localizer["Vehicles_Maximun_Work_Time_Helper_Text"]
+                            </p>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Start From *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles_Start_From_Column"]</b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField T="string"
+                                          Placeholder="@_localizer["Vehicles_Start_From_PlaceHolder"]"
+                                          Class="ce-white-select input"
+                                          Variant="Variant.Outlined"
+                                          Disabled="true"></MudTextField>
+
+                            <p class="ce-grey-text ">
+                                @_localizer["Vehicles_Start_From_Helper_Text"]
+                            </p>
+
+                        </div>
+
+                    </MudItem>
+
+                    @* Return To *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles_Return_To_Column"]</b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <MudTextField T="string"
+                                          Placeholder="@_localizer["Vehicles_Return_To_PlaceHolder"]"
+                                          Class="ce-white-select input"
+                                          Variant="Variant.Outlined"
+                                          Disabled="true"></MudTextField>
+
+                            <p class="ce-grey-text ">
+                                @_localizer["Vehicles_Return_To_Helper_Text"]
+                            </p>
+                        </div>
+
+                    </MudItem>
+
+                    @* Default Operators *@
+                    <MudItem xs="3">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Vehicles_Default_Operators_Column"] </b>
+                            </MudText>
+
+                            <MudSelect T="string"
+                                       @bind-Value="_model.LicensePlate"
+                                       Placeholder="Nothing selected"
+                                       Class="ce-white-select input"
+                                       Variant="Variant.Outlined"
+                                       Disabled="true">
+                            </MudSelect>
+
+                            <p class="ce-grey-text ">
+                                @_localizer["Vehicles_Default_Operators_Helper_Text"]
+                            </p>
+
+                        </div>
+
+                    </MudItem>
+
+                </MudGrid>
+
+                @* Schedule Break Blocks *@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.FlexStart">
+
+                    @* Schedule Break Blocks *@
+                    <MudItem xs="6">
+
+                        <div>
+
+                            <MudText Align="Align.Left" Class="label-text">
+                                <b>@_localizer["Vehicles_Schedule_Break_Blocks"] </b>
+                                <span class="ce-required">*</span>
+                            </MudText>
+
+                            <p class="ce-grey-text ">
+                                @_localizer["Vehicles_Schedule_Break_Blocks_Helper_Text"]
+                            </p>
+
+                        </div>
+
+                    </MudItem>
+
+                </MudGrid>
+
+                @* Start Time, Duration *@
+                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.FlexStart">
+
+                    @* Start Time *@
+                    <MudItem xs="3">
+
+                        <MudStack Spacing="1">
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Start_Time"] </b>
+                            </MudText>
+
+                            <MudSelect T="string"
+                                       Style="border-radius: 2px;
+                                border: 0.25px dashed #A5A5A5;
+                                background: #FFF;"
+                                       @bind-Value="_model.LicensePlate"
+                                       Placeholder="8:00 am"
+                                       Variant="Variant.Outlined"
+                                       Disabled="true">
+                            </MudSelect>
+
+                            <MudStack Row="true" Spacing="0" AlignItems="AlignItems.Center" Class="ml-n4">
+
+                                <MudSwitch T="bool" Size="Size.Large" Class="ma-0 pa-0" />
+
+                                <MudText Class="ml-2 pt-1" Typo="Typo.subtitle2">
+                                    @_localizer["Flexible_Time_Windows"]
+                                </MudText>
+
+                            </MudStack>
+
+                        </MudStack>
+
+                    </MudItem>
+
+                    @* Duration *@
+                    <MudItem xs="3">
+
+                        @* Title *@
+                        <MudStack Spacing="1">
+
+                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                                <b>@_localizer["Duration"] </b>
+                            </MudText>
+
+                        </MudStack>
+
+                        @* Duration input and + button*@
+                        <MudStack Spacing="1">
+
+                            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
+                                <MudTextField T="string"
+                                              Style="border-radius: 2px;
+                                border: 0.25px dashed #A5A5A5;
+                                background: #FFF;"
+                                              Placeholder="@_localizer["Enter_Duration_Time"]"
+                                              Variant="Variant.Outlined"></MudTextField>
+                                <MudFab Color="Color.Success" Size="Size.Small" StartIcon="@Icons.Material.Filled.Add" IconSize="Size.Large" />
+                            </MudStack>
+
+                        </MudStack>
+
+                    </MudItem>
+
+                </MudGrid>
+
+            </MudCardContent>
+
+        </MudCard>
+
+        @* EndSection: Vehicle types *@
+        <MudPaper class="ce-section-group">
+
+            <MudText Align="Align.Start" Typo="Typo.h4" Class="ce-section-title">@_localizer["Vehicle_Types"]</MudText>
+
+            <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="ce-section-group-container">
+
+                @* Points *@
+                <MudGrid Class="ce-section-group-inputs" Spacing="8">
+
+                    <!-- COLUMN 1 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        @* Car  🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/car.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["VehicleType_Car"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Ideal_For_Cars_Small_Vans_SUVs"]</li>
+                            <li>@_localizer["Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_"]</li>
+                        </ul>
+
+                        @* Car Enhanced 🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/car.svg" class="ce-section-group-icon" />
+
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_CarEnhanced"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Same_As_Car_Profile_But_Specifically"]</li>
+                            <li>@_localizer["Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted"]</li>
+                        </ul>
+
+                        @* Small Truck 🚚 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/small-truck.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_SmallTruck"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                        </ul>
+
+                    
+                        @* Small Truck Enhanced 🚛 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/truck.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_SmallTruckEnhanced"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                        </ul>
+
+                        @* Trucks 🚛🚛 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/small-truck.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_Truck"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                        </ul>
+
+
+                    </MudStack>
+
+                    <!-- COLUMN 2 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        @* Scooter  🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/scooter.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["VehicleType_Scooter"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Ideal_For_Cars_Small_Vans_SUVs"]</li>
+                            <li>@_localizer["Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_"]</li>
+                        </ul>
+
+                        @* Road Bike 🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/road-bike.svg" class="ce-section-group-icon" />
+
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_RoadBike"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Same_As_Car_Profile_But_Specifically"]</li>
+                            <li>@_localizer["Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted"]</li>
+                        </ul>
+
+                        @* Urban bike 🚚 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/urban-bike.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_UrbanBike"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                        </ul>
+
+                    
+                        @* Mountain Bike 🚵 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/mountain-bike.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_MountainBike"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                        </ul>
+
+                        @* On Foot 🚶 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/on-foot.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_OnFoot"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                        </ul>
+
+
+                    </MudStack>
+
+                </MudGrid>
+
+            </MudContainer>
+
+        </MudPaper>
+
+    </div>
+
+</MudForm>
