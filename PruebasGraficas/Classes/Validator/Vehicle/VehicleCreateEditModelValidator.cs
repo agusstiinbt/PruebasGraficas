@@ -4,7 +4,7 @@ public class VehicleCreateEditModelValidator : AbstractValidator<VehicleCreateEd
 {
     public VehicleCreateEditModelValidator(IStringLocalizer<LocalResources> localizer)
     {
-        // Some properties like DepartureTime and VehicleType dont need validations because they have default values and UI doesnt allow clearence
+        // Some properties like VehicleType dont need validations because they have default values and UI doesnt allow clearence
 
 
         #region Primary Information
@@ -40,6 +40,12 @@ public class VehicleCreateEditModelValidator : AbstractValidator<VehicleCreateEd
             .InclusiveBetween(0m, 999.99m)
             .WithMessage(localizer["Vehicle_Capacity_Buffer_Percent"])
             .When(x => x.CapacityBufferPercent.HasValue && x.CapacityBufferPercent.Value != 0m);
+
+        RuleFor(x => x.DepartureTime)
+            .NotNull()
+            .WithMessage(localizer["Vehicle_Departure_Time_Required"])
+            .NotEmpty()
+            .WithMessage(localizer["Vehicle_Departure_Time_Required"]);
 
         #endregion
 

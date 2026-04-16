@@ -6,11 +6,11 @@
     </MudText>
 }
 
-<MudSelect T="TimeOnly" Value="@Time" For="@ForTime" ValueChanged="HandleTimeChanged">
+<MudSelect T="TimeOnly?" Value="@Time" For="@ForTime" ValueChanged="HandleTimeChanged" Class="ce-white-select input" Placeholder="@Placeholder">
 
     @foreach (var option in TimeHelper.GenerateTimeOptions(IntervalMinutes))
     {
-        <MudSelectItem Value="@option.Value">
+        <MudSelectItem Value="@((TimeOnly?)option.Value)">
             @option.Display
         </MudSelectItem>
     }
@@ -21,16 +21,18 @@
 
     [Parameter] public int IntervalMinutes { get; set; } = 15;
 
+    [Parameter] public string Placeholder { get; set; } = string.Empty;
+
     [Parameter] public required string Title { get; set; } = string.Empty;
 
     #region Time Functionality
-    [Parameter] public TimeOnly Time { get; set; } = new TimeOnly(8, 0);
+    [Parameter] public TimeOnly? Time { get; set; }
 
-    [Parameter] public EventCallback<TimeOnly> TimeChanged { get; set; }
+    [Parameter] public EventCallback<TimeOnly?> TimeChanged { get; set; }
 
-    [Parameter] public required Expression<Func<TimeOnly>> ForTime { get; set; }
+    [Parameter] public required Expression<Func<TimeOnly?>> ForTime { get; set; }
 
-    public async Task HandleTimeChanged(TimeOnly value)
+    public async Task HandleTimeChanged(TimeOnly? value)
     {
         if (Time == value)
             return;

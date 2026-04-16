@@ -17,7 +17,7 @@ public class VehicleCreateEditModel : BaseEntity
     public decimal? VolumeCapacityFt3 { get; set; }
 
     public decimal? CapacityBufferPercent { get; set; }
-    public TimeOnly DepartureTime { get; set; } = TimeOnly.FromTimeSpan(TimeSpan.FromHours(8));
+    public TimeOnly? DepartureTime { get; set; }
     public int MaxWorkTimeMinutes { get; set; }
 
 }
