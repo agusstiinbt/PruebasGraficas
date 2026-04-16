@@ -177,6 +177,12 @@
         opacity: 1;
     }
 
+/* -- This should only be used for shared componentss like TimeSelect ------------------------- */
+   
+.create-edit-page .departure-time-default .mud-select-input {
+    color: #9ca3af !important;
+}
+
 /* -- White-background select (dark mode) ------------------------------------ */
 
 [data-theme-mode="dark"] .create-edit-page .ce-white-select .mud-input-control-input-container,

@@ -6,12 +6,15 @@
     </MudText>
 }
 
-<MudSelect T="string"
-           @bind-Value="Title"
-           Placeholder="Nothing selected"
-           Class="ce-white-select input"
-           Variant="Variant.Outlined"
-           Disabled="true">
+<MudSelect T="TimeOnly" Value="@Time" For="@ForTime" ValueChanged="HandleTimeChanged" Class="departure-time-default">
+
+    @foreach (var option in TimeHelper.GenerateTimeOptions(IntervalMinutes))
+    {
+        <MudSelectItem Value="@option.Value">
+            @option.Display
+        </MudSelectItem>
+    }
+
 </MudSelect>
 
 @code {
