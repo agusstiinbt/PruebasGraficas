@@ -1,25 +1,27 @@
-﻿<MudText Align="Align.Left" Typo="Typo.subtitle2">
-    <b>@_localizer["Vehicles_Default_Operators_Column"] </b>
-</MudText>
+﻿@if (!string.IsNullOrEmpty(Title))
+{
+    <MudText Align="Align.Left" Typo="Typo.subtitle2">
+        <b>@Title</b>
+        <span class="ce-required">*</span>
+    </MudText>
+}
 
-<MudSelect T="string"
-           @bind-Value="Title"
-           Placeholder="Nothing selected"
-           Class="mud-input-root mud-input-root-outlined mud-input-root-adorned-end mud-select-input"
-           Variant="Variant.Outlined"
-           Disabled="true">
+<MudSelect T="TimeOnly" Value="@Time" For="@ForTime" ValueChanged="HandleTimeChanged">
+
+    @foreach (var option in TimeHelper.GenerateTimeOptions(IntervalMinutes))
+    {
+        <MudSelectItem Value="@option.Value">
+            @option.Display
+        </MudSelectItem>
+    }
 
 </MudSelect>
-
-<p class="ce-grey-text ">
-    @_localizer["Vehicles_Default_Operators_Helper_Text"]
-</p>
 
 @code {
 
     [Parameter] public int IntervalMinutes { get; set; } = 15;
 
-    [Parameter] public required string Title { get; set; } = "Nothing selected";
+    [Parameter] public required string Title { get; set; } = string.Empty;
 
     #region Time Functionality
     [Parameter] public TimeOnly Time { get; set; } = new TimeOnly(8, 0);
