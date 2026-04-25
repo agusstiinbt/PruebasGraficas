@@ -36,14 +36,7 @@ public class VehicleCreateEditModelValidator : AbstractValidator<VehicleCreateEd
             .WithMessage(localizer["Vehicle_Volume_Capacity_Validation_OutOfRange"])
             .When(x => x.VolumeCapacityFt3.HasValue && x.VolumeCapacityFt3 != null && x.VolumeCapacityFt3.Value != 0m);
 
-        RuleFor(x => x.CapacityBufferPercent)
-            .InclusiveBetween(0m, 999.99m)
-            .WithMessage(localizer["Vehicle_Capacity_Buffer_Percent"])
-            .When(x => x.CapacityBufferPercent.HasValue && x.CapacityBufferPercent.Value != 0m);
-
         #endregion
 
     }
 }
-
-

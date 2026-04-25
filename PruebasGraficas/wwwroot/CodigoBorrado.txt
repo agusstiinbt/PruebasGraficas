@@ -1,0 +1,164 @@
+@* EndSection: Vehicle types *@
+        <MudPaper class="ce-section-group">
+
+            <MudText Align="Align.Start" Typo="Typo.h4" Class="ce-section-title">@_localizer["Vehicle_Types"]</MudText>
+
+            <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="ce-section-group-container">
+
+                @* Points *@
+                <MudGrid Class="ce-section-group-inputs" Spacing="8">
+
+                    <!-- COLUMN 1 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        @* Car  🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/car.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["VehicleType_Car"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Ideal_For_Cars_Small_Vans_SUVs"]</li>
+                            <li>@_localizer["Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_"]</li>
+                        </ul>
+
+
+                        @* Small Truck Enhanced 🚛 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/greenSmalTruck.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_SmallTruckEnhanced"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                        </ul>
+
+                       
+                        @* Road Bike 🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/road-bike.svg" class="ce-section-group-icon" />
+
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_RoadBike"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Same_As_Car_Profile_But_Specifically"]</li>
+                            <li>@_localizer["Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted"]</li>
+                        </ul>
+
+                        @* On Foot 🚶 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/on-foot.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_OnFoot"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                        </ul>
+
+
+                    </MudStack>
+
+                    <!-- COLUMN 2 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+
+                        @* Car Enhanced 🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/greenCar.svg" class="ce-section-group-icon" />
+
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_CarEnhanced"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Same_As_Car_Profile_But_Specifically"]</li>
+                            <li>@_localizer["Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted"]</li>
+                        </ul>
+
+                        @* Truck 🚛 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/small-truck.svg"
+                                 class="ce-section-group-icon" />
+
+                            <MudText Typo="Typo.h6"
+                                     Class="ce-section-group-title">
+                                @_localizer["VehicleType_SmallTruck"]
+                            </MudText>
+                        </div>
+
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+
+                        </ul>
+
+                        <MudSimpleTable Dense="true">
+                            <tbody>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>2.7m</td>
+                                    <td>8.9ft</td>
+                                </tr>
+                                <tr>
+                                    <td>Width</td>
+                                    <td>2.4m</td>
+                                    <td>7.9ft</td>
+                                </tr>
+                            </tbody>
+                        </MudSimpleTable>
+
+
+                        @* Urban bike 🚚 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/urban-bike.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_UrbanBike"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                        </ul>
+
+                    </MudStack>
+
+                    <!-- COLUMN 3 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        @* Small Truck 🚚 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/small-truck.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_SmallTruck"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                        </ul>
+
+                        @* Scooter  🚗 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/scooter.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">
+                                @_localizer["VehicleType_Scooter"]
+                            </MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicle_Ideal_For_Cars_Small_Vans_SUVs"]</li>
+                            <li>@_localizer["Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_"]</li>
+                        </ul>
+
+                        @* Mountain Bike 🚵 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/mountain-bike.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_MountainBike"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                        </ul>
+
+                      
+                    </MudStack>
+
+                </MudGrid>
+
+            </MudContainer>
+
+        </MudPaper>

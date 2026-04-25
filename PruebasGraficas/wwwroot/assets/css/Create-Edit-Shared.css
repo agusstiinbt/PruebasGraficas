@@ -33,6 +33,7 @@
     background-color: var(--ce-page-bg);
 }
 
+
 /* -- Section cards (MudCard.custom-card overrides) -------------------------- */
 .create-edit-page .mud-card.custom-card {
     border-radius: 20px;
@@ -138,7 +139,7 @@
 }
 
 .create-edit-page .ce-section-group-title {
-    color: var(--mud-palette-text-primary);
+    color: var(--Grey-Body-text, #585858);
     font-weight: 500;
     margin: 0;
     background-color: transparent;
@@ -177,11 +178,7 @@
         opacity: 1;
     }
 
-/* -- This should only be used for shared componentss like TimeSelect ------------------------- */
-   
-.create-edit-page .departure-time-default .mud-select-input {
-    color: #9ca3af !important;
-}
+
 
 /* -- White-background select (dark mode) ------------------------------------ */
 
@@ -201,3 +198,7 @@
     [data-theme-mode="dark"] .create-edit-page .ce-white-select .mud-select-input.mud-input-placeholder {
         color: var(--mud-palette-text-secondary);
     }
+/* -- End Section of page dark mode (normally where we see list of items divided in 2 columns )--------------- */
+[data-theme-mode="dark"] .create-edit-page .ce-section-group-list {
+    color: var(--var-muted-text);
+}

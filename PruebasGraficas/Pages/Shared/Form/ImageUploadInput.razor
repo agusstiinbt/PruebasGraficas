@@ -1,0 +1,114 @@
+﻿@if (!string.IsNullOrWhiteSpace(Label))
+{
+    <MudText Typo="Typo.subtitle2" Class="mb-1">@Label</MudText>
+}
+
+<div @ref="_dropZoneRef"
+     @ondragover:preventDefault
+     @ondrop:preventDefault
+     class="@WrapperClass"
+     style="height:@Height;">
+    <MudPaper id="@_wrapperId"
+              Height="100%"
+              Class="image-upload-surface d-flex flex-column align-center justify-center"
+              Elevation="0">
+
+        <InputFile id="@_inputId"
+                   OnChange="OnInputFileSelectedAsync"
+                   accept="image/png,image/jpeg"
+                   style="display:none;"
+                   multiple="false" />
+
+        @if (HasPreview)
+        {
+            <div class="image-loaded-layout">
+                <div class="image-preview-container">
+                    <img src="@_previewDataUrl"
+                         alt="@Localizer["ImageUpload.PreviewAlt"]"
+                         class="image-preview" />
+
+                    @if (IsProcessing)
+                    {
+                        <div class="image-processing-overlay">
+                            <MudProgressCircular Color="Color.Primary" Indeterminate="true" Size="Size.Large" />
+                        </div>
+                    }
+
+                    <div class="image-preview-hover-dim"></div>
+
+                    <div class="image-preview-hover-action">
+                        <MudButton Variant="Variant.Filled"
+                                   Color="Color.Default"
+                                   StartIcon="@Icons.Material.Filled.Edit"
+                                   OnClick="OpenFilePickerAsync"
+                                   Disabled="@IsProcessing"
+                                   Class="change-image-button">
+                            @Localizer["ImageUpload.ChangeImage"]
+                        </MudButton>
+                    </div>
+                </div>
+
+                <div class="image-footer-band">
+                    <div class="image-footer-meta">
+                        <MudIcon Icon="@Icons.Material.Filled.Image" Size="Size.Small" Class="image-footer-icon" />
+                        <MudText Typo="Typo.caption" Class="image-footer-name">@_currentFileName</MudText>
+                    </div>
+
+                    <MudIconButton Icon="@Icons.Material.Filled.Close"
+                                   Size="Size.Small"
+                                   Color="Color.Default"
+                                   OnClick="RemoveImageAsync"
+                                   Disabled="@IsProcessing"
+                                   Class="image-footer-remove"
+                                   aria-label="@Localizer["ImageUpload.RemoveImageAriaLabel"]" />
+                </div>
+            </div>
+        }
+        else
+        {
+            <MudIcon Icon="@Icons.Material.Filled.Image" Size="Size.Large" Color="Color.Default" Class="mb-2 image-empty-icon" />
+            <MudText Typo="Typo.body1" Align="Align.Center" Class="image-empty-description">@EffectiveDescription</MudText>
+
+            @if (!string.IsNullOrWhiteSpace(EffectiveHelperText) || !string.IsNullOrWhiteSpace(EffectiveSecondaryHelperText))
+            {
+                <div class="image-empty-helper-block">
+                    @if (!string.IsNullOrWhiteSpace(EffectiveHelperText))
+                    {
+                        <MudText Typo="Typo.caption" Align="Align.Center" Class="image-empty-helper image-empty-helper-primary">@EffectiveHelperText</MudText>
+                    }
+
+                    @if (!string.IsNullOrWhiteSpace(EffectiveSecondaryHelperText))
+                    {
+                        <MudText Typo="Typo.caption" Align="Align.Center" Class="image-empty-helper image-empty-helper-secondary">@EffectiveSecondaryHelperText</MudText>
+                    }
+                </div>
+            }
+
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       StartIcon="@Icons.Material.Filled.Upload"
+                       OnClick="OpenFilePickerAsync"
+                       Disabled="@IsProcessing"
+                       Class="image-empty-button">
+                @EffectiveButtonText
+            </MudButton>
+
+            @if (IsProcessing)
+            {
+                <div class="image-processing-overlay">
+                    <MudProgressCircular Color="Color.Primary" Indeterminate="true" Size="Size.Large" />
+                </div>
+            }
+        }
+    </MudPaper>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(FooterText))
+{
+    <MudText Typo="Typo.caption" Class="image-upload-footer">@FooterText</MudText>
+}
+
+@if (!string.IsNullOrWhiteSpace(_validationError))
+{
+    <MudAlert Severity="Severity.Warning" Dense="true" Class="mt-2">@_validationError</MudAlert>
+}

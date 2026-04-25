@@ -3,7 +3,7 @@
 namespace PruebasGraficas.Classes.Validator.Employee
 {
 
-    public sealed class EmployeeCreateEditModel : BaseEntity
+    public sealed class EmployeeCreateEditModel : BaseEntity, IHasCountryPhoneInfo
     {
         public int? LocationId { get; set; }
 
@@ -18,8 +18,8 @@ namespace PruebasGraficas.Classes.Validator.Employee
         public string Email { get; set; } = string.Empty;
 
         #region PhoneNumber
-        public string PhoneNumber { get; set; } = string.Empty;
-        public CountryPhoneInfo CountryPhoneInfo { get; set; }
+        public string? PhoneNumber { get; set; } = string.Empty;
+        public CountryPhoneInfo? CountryPhoneInfo { get; set; }
         #endregion
 
         #region Address
@@ -44,6 +44,7 @@ namespace PruebasGraficas.Classes.Validator.Employee
         /// This is better to be a string because otherwise it will show zero (0) in the frontend
         /// </summary>
         public string Longitude { get; set; } = string.Empty;
+        public bool AllowManualAddressEntry { get; set; }
 
         #endregion
 
@@ -51,4 +52,5 @@ namespace PruebasGraficas.Classes.Validator.Employee
         public string ConfirmPassword { get; set; } = string.Empty;
 
     }
+
 }

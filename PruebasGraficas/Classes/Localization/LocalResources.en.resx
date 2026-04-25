@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -138,39 +138,6 @@
   <data name="AddressInformation" xml:space="preserve">
     <value>Address Information</value>
   </data>
-  <data name="AdvancedFilters.Actions.Apply" xml:space="preserve">
-    <value>Apply</value>
-  </data>
-  <data name="AdvancedFilters.Actions.Filter" xml:space="preserve">
-    <value>Filter</value>
-  </data>
-  <data name="AdvancedFilters.Actions.Reset" xml:space="preserve">
-    <value>Reset</value>
-  </data>
-  <data name="AdvancedFilters.DeselectAll" xml:space="preserve">
-    <value>Deselect all</value>
-  </data>
-  <data name="AdvancedFilters.Placeholder.NothingSelected" xml:space="preserve">
-    <value>Nothing selected</value>
-  </data>
-  <data name="AdvancedFilters.Placeholder.Search" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="AdvancedFilters.SelectAll" xml:space="preserve">
-    <value>Select all</value>
-  </data>
-  <data name="AdvancedFilters.SelectedCount" xml:space="preserve">
-    <value>{0} selected</value>
-  </data>
-  <data name="AdvancedFilters.TimePreference.AM" xml:space="preserve">
-    <value>AM</value>
-  </data>
-  <data name="AdvancedFilters.TimePreference.None" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="AdvancedFilters.TimePreference.PM" xml:space="preserve">
-    <value>PM</value>
-  </data>
   <data name="AddressInput_AddressHelper_Default" xml:space="preserve">
     <value>Select an address from the suggestions</value>
   </data>
@@ -197,6 +164,9 @@
   </data>
   <data name="AddressInput_Error_AddressRequired" xml:space="preserve">
     <value>Address is required</value>
+  </data>
+  <data name="AddressInput_Error_InvalidCoordinates" xml:space="preserve">
+    <value>Address coordinates are invalid</value>
   </data>
   <data name="AddressInput_Error_InvalidLatitudeRange" xml:space="preserve">
     <value>Latitude must be between -90 and 90.</value>
@@ -269,6 +239,39 @@
   </data>
   <data name="Advanced Ui" xml:space="preserve">
     <value>Advanced Ui</value>
+  </data>
+  <data name="AdvancedFilters.Actions.Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="AdvancedFilters.Actions.Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="AdvancedFilters.Actions.Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="AdvancedFilters.DeselectAll" xml:space="preserve">
+    <value>Deselect all</value>
+  </data>
+  <data name="AdvancedFilters.Placeholder.NothingSelected" xml:space="preserve">
+    <value>Nothing selected</value>
+  </data>
+  <data name="AdvancedFilters.Placeholder.Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="AdvancedFilters.SelectAll" xml:space="preserve">
+    <value>Select all</value>
+  </data>
+  <data name="AdvancedFilters.SelectedCount" xml:space="preserve">
+    <value>{0} selected</value>
+  </data>
+  <data name="AdvancedFilters.TimePreference.AM" xml:space="preserve">
+    <value>AM</value>
+  </data>
+  <data name="AdvancedFilters.TimePreference.None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="AdvancedFilters.TimePreference.PM" xml:space="preserve">
+    <value>PM</value>
   </data>
   <data name="Alerts" xml:space="preserve">
     <value>Alerts</value>
@@ -381,6 +384,9 @@
   <data name="CIGO TRACKER" xml:space="preserve">
     <value>CIGO TRACKER</value>
   </data>
+  <data name="Clipboard.CopyFailed" xml:space="preserve">
+    <value>Failed to copy to clipboard</value>
+  </data>
   <data name="Color Picker" xml:space="preserve">
     <value>Color Picker</value>
   </data>
@@ -405,6 +411,9 @@
   <data name="Common.ExampleCanada" xml:space="preserve">
     <value>e.g. Canada</value>
   </data>
+  <data name="Common.HourAbbreviation" xml:space="preserve">
+    <value>h</value>
+  </data>
   <data name="Common.Inactive" xml:space="preserve">
     <value>Inactive</value>
   </data>
@@ -417,11 +426,17 @@
   <data name="Common.LocationType" xml:space="preserve">
     <value>Location Type</value>
   </data>
+  <data name="Common.MinuteAbbreviation" xml:space="preserve">
+    <value>m</value>
+  </data>
   <data name="Common.No" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="Common.Role" xml:space="preserve">
     <value>Role</value>
+  </data>
+  <data name="Common.VehicleType" xml:space="preserve">
+    <value>Vehicle Type</value>
   </data>
   <data name="Common.Yes" xml:space="preserve">
     <value>Yes</value>
@@ -486,8 +501,20 @@
   <data name="Create Project" xml:space="preserve">
     <value>Create Project</value>
   </data>
+  <data name="CreateEditEmployee_Ability_To_Delete_Pending_Jobs" xml:space="preserve">
+    <value>Ability to delete all Pending Jobs from the Planner</value>
+  </data>
   <data name="CreateEditEmployee_AccessManagementPagesUpdateOnly" xml:space="preserve">
     <value>Access to Management pages (update only)</value>
+  </data>
+  <data name="CreateEditEmployee_Access_As_Administrator" xml:space="preserve">
+    <value>Access to all the same pages as the Administrator (except for the Settings pages and the Transactions page)</value>
+  </data>
+  <data name="CreateEditEmployee_Access_Reported_Damages_Page" xml:space="preserve">
+    <value>Access to the Reported Damages page</value>
+  </data>
+  <data name="CreateEditEmployee_Access_Reported_Incompleted_Page" xml:space="preserve">
+    <value>Access to the Reported Incomplete page</value>
   </data>
   <data name="CreateEditEmployee_AriaLabel_ShowPassword" xml:space="preserve">
     <value>Show password</value>
@@ -550,8 +577,17 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="CreateEditEmployee_Error_Create" xml:space="preserve">
     <value>Error trying to create employee.</value>
   </data>
+  <data name="CreateEditEmployee_Label_Ability_To_Clone_From_Planner" xml:space="preserve">
+    <value>Ability to clone itineraries and reschedule pending jobs from the Planner</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Ability_To_Delete_From_Planner" xml:space="preserve">
+    <value>Ability to delete non-started itineraries from the Planner</value>
+  </data>
   <data name="CreateEditEmployee_Label_AccessImportTool" xml:space="preserve">
     <value>Access the import tool</value>
+  </data>
+  <data name="CreateEditEmployee_Label_Access_To_Managment" xml:space="preserve">
+    <value>Access to Management's Operators pages (view only)</value>
   </data>
   <data name="CreateEditEmployee_Label_Address" xml:space="preserve">
     <value>Address</value>
@@ -700,9 +736,6 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="CreateEditEmployee_Span_UpdateDeleteOwnJobs" xml:space="preserve">
     <value>Update and delete jobs they created</value>
   </data>
-  <data name="Deactivate_Switch" xml:space="preserve">
-    <value>Deactivate</value>
-  </data>
   <data name="CreateEditEmployee_Switch_IpBlockExemption" xml:space="preserve">
     <value>IP Block Exemption</value>
   </data>
@@ -743,9 +776,6 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
     <value>Permission by Role</value>
   </data>
   <data name="CreateEditEmployee_Title_PrimaryInformation" xml:space="preserve">
-    <value>Primary Information</value>
-  </data>
-  <data name="CreateEditVehicle_Title_PrimaryInformation" xml:space="preserve">
     <value>Primary Information</value>
   </data>
   <data name="CreateEditEmployee_Title_ProfilePhoto" xml:space="preserve">
@@ -1066,26 +1096,8 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="CreateEditJob_Validation_TypeInvalid" xml:space="preserve">
     <value>Type is invalid</value>
   </data>
-  <data name="CreateEditEmployee_Label_Ability_To_Clone_From_Planner" xml:space="preserve">
-    <value>Ability to clone itineraries and reschedule pending jobs from the Planner</value>
-  </data>
-  <data name="CreateEditEmployee_Label_Ability_To_Delete_From_Planner" xml:space="preserve">
-    <value>Ability to delete non-started itineraries from the Planner</value>
-  </data>
-  <data name="CreateEditEmployee_Ability_To_Delete_Pending_Jobs" xml:space="preserve">
-    <value>Ability to delete all Pending Jobs from the Planner</value>
-  </data>
-  <data name="CreateEditEmployee_Label_Access_To_Managment" xml:space="preserve">
-    <value>Access to Management's Operators pages (view only)</value>
-  </data>
-  <data name="CreateEditEmployee_Access_Reported_Incompleted_Page" xml:space="preserve">
-    <value>Access to the Reported Incomplete page</value>
-  </data>
-  <data name="CreateEditEmployee_Access_Reported_Damages_Page" xml:space="preserve">
-    <value>Access to the Reported Damages page</value>
-  </data>
-  <data name="CreateEditEmployee_Access_As_Administrator" xml:space="preserve">
-    <value>Access to all the same pages as the Administrator (except for the Settings pages and the Transactions page)</value>
+  <data name="CreateEditVehicle_Title_PrimaryInformation" xml:space="preserve">
+    <value>Primary Information</value>
   </data>
   <data name="CRM" xml:space="preserve">
     <value>CRM</value>
@@ -1155,6 +1167,9 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="Crypto" xml:space="preserve">
     <value>Crypto</value>
+  </data>
+  <data name="CSV Mapping Tool" xml:space="preserve">
+    <value>CSV Mapping Tool</value>
   </data>
   <data name="Currency Exchange" xml:space="preserve">
     <value>Currency Exchange</value>
@@ -1244,13 +1259,16 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
     <value>Customers &amp; Jobs</value>
   </data>
   <data name="Dashboards" xml:space="preserve">
-    <value>Dashboards</value>
+    <value>Dashboard</value>
   </data>
   <data name="Data Tables" xml:space="preserve">
     <value>Data Tables</value>
   </data>
   <data name="Date,Time Picker" xml:space="preserve">
     <value>Date,Time Picker</value>
+  </data>
+  <data name="Deactivate_Switch" xml:space="preserve">
+    <value>Deactivate</value>
   </data>
   <data name="Deals" xml:space="preserve">
     <value>Deals</value>
@@ -1283,7 +1301,7 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
     <value>Email is required</value>
   </data>
   <data name="Employees" xml:space="preserve">
-    <value>Employees</value>
+    <value>Web Users</value>
   </data>
   <data name="Employees.Actions.AddButton" xml:space="preserve">
     <value>+ Add Web User</value>
@@ -1410,6 +1428,9 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="ErrorLoadingSettings" xml:space="preserve">
     <value>An error occurred while loading settings.</value>
+  </data>
+  <data name="Errors.EntityNotFound" xml:space="preserve">
+    <value>{0} not found</value>
   </data>
   <data name="Errors.UnableToSaveEntity" xml:space="preserve">
     <value>Unable to save {0}.</value>
@@ -1555,6 +1576,15 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="ImageUpload.RemoveImageAriaLabel" xml:space="preserve">
     <value>Remove image</value>
   </data>
+  <data name="ImageUpload.UploadFormats" xml:space="preserve">
+    <value>Supported formats: PNG, JPG, JPEG</value>
+  </data>
+  <data name="ImageUpload.UploadRules" xml:space="preserve">
+    <value>500x500px, max file size: 2 MB</value>
+  </data>
+  <data name="Import Tool" xml:space="preserve">
+    <value>Import Tool</value>
+  </data>
   <data name="Import Tools" xml:space="preserve">
     <value>Import Tools</value>
   </data>
@@ -1566,6 +1596,9 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="Inputs" xml:space="preserve">
     <value>Inputs</value>
+  </data>
+  <data name="Integrations" xml:space="preserve">
+    <value>Integrations</value>
   </data>
   <data name="Invalid_Country_Calling_Code" xml:space="preserve">
     <value>Invalid country calling code</value>
@@ -1584,12 +1617,6 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="Job Post" xml:space="preserve">
     <value>Job Post</value>
-  </data>
-  <data name="Job_Successfully_Created" xml:space="preserve">
-    <value>Job successfully created</value>
-  </data>
-  <data name="Job_Successfully_Updated" xml:space="preserve">
-    <value>Job successfully updated</value>
   </data>
   <data name="Jobs" xml:space="preserve">
     <value>Jobs</value>
@@ -1620,6 +1647,12 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="JobType.Service" xml:space="preserve">
     <value>Service</value>
+  </data>
+  <data name="Job_Successfully_Created" xml:space="preserve">
+    <value>Job successfully created</value>
+  </data>
+  <data name="Job_Successfully_Updated" xml:space="preserve">
+    <value>Job successfully updated</value>
   </data>
   <data name="Jsvector Maps" xml:space="preserve">
     <value>Jsvector Maps</value>
@@ -1707,6 +1740,21 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="Locations.Logo.Current" xml:space="preserve">
     <value>Current logo — select a new file below to replace it</value>
+  </data>
+  <data name="Locations.Logo.HelperText" xml:space="preserve">
+    <value>Logo that will be displayed on the Web Tracker used by your customers for jobs assigned to this location. We recommend that you upload a square image compressed for the web (ideal dimensions: 512x512; max file size: 2 MB).</value>
+  </data>
+  <data name="Locations.Logo.Label" xml:space="preserve">
+    <value>Location Logo</value>
+  </data>
+  <data name="Locations.Logo.UploadDescription" xml:space="preserve">
+    <value>Drag and drop your image here or click to browse</value>
+  </data>
+  <data name="Locations.Logo.UploadFormats" xml:space="preserve">
+    <value>Supported formats: PNG, JPG, JPEG</value>
+  </data>
+  <data name="Locations.Logo.UploadRules" xml:space="preserve">
+    <value>500x500px, max file size: 2 MB</value>
   </data>
   <data name="Locations.Placeholders.Name" xml:space="preserve">
     <value>Location name known by your team</value>
@@ -1855,32 +1903,20 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="Operators.Details.ModifiedDate" xml:space="preserve">
     <value>Modified Date</value>
   </data>
-  <data name="Operators.Form.Title.Add" xml:space="preserve">
-    <value>Add Operator</value>
+  <data name="Operators.Form.AriaLabel.ShowPassword" xml:space="preserve">
+    <value>Show Password</value>
   </data>
-  <data name="Operators.Form.Title.Edit" xml:space="preserve">
-    <value>Edit Operator</value>
+  <data name="Operators.Form.Deactivate" xml:space="preserve">
+    <value>Deactivate</value>
   </data>
-  <data name="Operators.Form.Section.PrimaryInformation" xml:space="preserve">
-    <value>Primary Information</value>
+  <data name="Operators.Form.Description.ProfilePhotoUpload" xml:space="preserve">
+    <value>Drag and drop your image here or click to browse</value>
   </data>
-  <data name="Operators.Form.Section.AddressDetails" xml:space="preserve">
-    <value>Address Details</value>
+  <data name="Operators.Form.Description.TimezoneOverride" xml:space="preserve">
+    <value>If you've set an address for this user, the timezone you set here will be overwritten. Otherwise, if there is no address attributed to this user, the timezone will be set as the value from this dropdown.</value>
   </data>
-  <data name="Operators.Form.Section.Preferences" xml:space="preserve">
-    <value>Preferences</value>
-  </data>
-  <data name="Operators.Form.Section.AdditionalInfo" xml:space="preserve">
-    <value>Additional Information</value>
-  </data>
-  <data name="Operators.Form.Section.LoginCredentials" xml:space="preserve">
-    <value>Login Credentials</value>
-  </data>
-  <data name="Operators.Form.Section.LocationTimezone" xml:space="preserve">
-    <value>Location &amp; Time Zone</value>
-  </data>
-  <data name="Operators.Form.Section.ProfilePhoto" xml:space="preserve">
-    <value>Profile Photo</value>
+  <data name="Operators.Form.Label.ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
   </data>
   <data name="Operators.Form.Label.LoginEmail" xml:space="preserve">
     <value>Login Email</value>
@@ -1888,17 +1924,11 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="Operators.Form.Label.Password" xml:space="preserve">
     <value>New Password</value>
   </data>
-  <data name="Operators.Form.Label.ConfirmPassword" xml:space="preserve">
-    <value>Confirm Password</value>
-  </data>
   <data name="Operators.Form.Label.ShortDescription" xml:space="preserve">
     <value>Short Description</value>
   </data>
-  <data name="Operators.Form.AriaLabel.ShowPassword" xml:space="preserve">
-    <value>Show Password</value>
-  </data>
-  <data name="Operators.Form.Description.TimezoneOverride" xml:space="preserve">
-    <value>If you've set an address for this user, the timezone you set here will be overwritten. Otherwise, if there is no address attributed to this user, the timezone will be set as the value from this dropdown.</value>
+  <data name="Operators.Form.NotFound" xml:space="preserve">
+    <value>Operator not found</value>
   </data>
   <data name="Operators.Form.Saved.Create" xml:space="preserve">
     <value>Operator created successfully</value>
@@ -1906,11 +1936,32 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="Operators.Form.Saved.Update" xml:space="preserve">
     <value>Operator updated successfully</value>
   </data>
-  <data name="Operators.Form.NotFound" xml:space="preserve">
-    <value>Operator not found</value>
+  <data name="Operators.Form.Section.AdditionalInfo" xml:space="preserve">
+    <value>Additional Information</value>
   </data>
-  <data name="Operators.Form.Deactivate" xml:space="preserve">
-    <value>Deactivate</value>
+  <data name="Operators.Form.Section.AddressDetails" xml:space="preserve">
+    <value>Address Details</value>
+  </data>
+  <data name="Operators.Form.Section.LocationTimezone" xml:space="preserve">
+    <value>Location &amp; Time Zone</value>
+  </data>
+  <data name="Operators.Form.Section.LoginCredentials" xml:space="preserve">
+    <value>Login Credentials</value>
+  </data>
+  <data name="Operators.Form.Section.Preferences" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="Operators.Form.Section.PrimaryInformation" xml:space="preserve">
+    <value>Primary Information</value>
+  </data>
+  <data name="Operators.Form.Section.ProfilePhoto" xml:space="preserve">
+    <value>Profile Photo</value>
+  </data>
+  <data name="Operators.Form.Title.Add" xml:space="preserve">
+    <value>Add Operator</value>
+  </data>
+  <data name="Operators.Form.Title.Edit" xml:space="preserve">
+    <value>Edit Operator</value>
   </data>
   <data name="Optional" xml:space="preserve">
     <value>Optional</value>
@@ -1980,6 +2031,9 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="Password_Validation_ConfirmPassword_Required" xml:space="preserve">
     <value>Confirm password is required</value>
+  </data>
+  <data name="Password_Validation_InvalidCharacters" xml:space="preserve">
+    <value>Password contains invalid characters</value>
   </data>
   <data name="Password_Validation_Length" xml:space="preserve">
     <value>The password length needs at least 8 characters</value>
@@ -2290,11 +2344,86 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="SettingsSavedSuccessfully" xml:space="preserve">
     <value>Settings saved successfully</value>
   </data>
+  <data name="Shared.LoginCredentials.Label.Email" xml:space="preserve">
+    <value>Login Email</value>
+  </data>
+  <data name="Shared.LoginCredentials.Placeholder.Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Shared.LoginCredentials.Section.Title" xml:space="preserve">
+    <value>Login Credentials</value>
+  </data>
+  <data name="Shared.Password.AriaLabel.ToggleVisibility" xml:space="preserve">
+    <value>Show Password</value>
+  </data>
+  <data name="Shared.Password.Helper.ComplexityRecommendation" xml:space="preserve">
+    <value>Use at least a symbol (i.e. $, !, &amp;, etc.), an uppercase letter, a lowercase letter, and a number.</value>
+  </data>
+  <data name="Shared.Password.Helper.LengthRecommendation" xml:space="preserve">
+    <value>The longer the password, the more secure it is.</value>
+  </data>
+  <data name="Shared.Password.Helper.MinimumLength" xml:space="preserve">
+    <value>Password must be at least 8 characters long.</value>
+  </data>
+  <data name="Shared.Password.Label.ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Shared.Password.Label.Password" xml:space="preserve">
+    <value>New Password</value>
+  </data>
   <data name="Shared.TimeZone.AutoDetectPrefix" xml:space="preserve">
     <value>Set to auto-detected:</value>
   </data>
   <data name="Shared.TimeZone.Label" xml:space="preserve">
     <value>Timezone</value>
+  </data>
+  <data name="Sidebar.AddJob" xml:space="preserve">
+    <value>Add a job</value>
+  </data>
+  <data name="Sidebar.Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Sidebar.English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Sidebar.Events" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="Sidebar.French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="Sidebar.Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Sidebar.Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Sidebar.Lock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="Sidebar.LogOut" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="Sidebar.Messages" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="Sidebar.MyProfile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="Sidebar.Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="Sidebar.Spanish" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="Sidebar.Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="Sidebar.System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Sidebar.Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
   <data name="Sign In" xml:space="preserve">
     <value>Sign In</value>
@@ -2305,17 +2434,14 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="Spinners" xml:space="preserve">
     <value>Spinners</value>
   </data>
+  <data name="Start_Time" xml:space="preserve">
+    <value>Start Time</value>
+  </data>
   <data name="Stocks" xml:space="preserve">
     <value>Stocks</value>
   </data>
   <data name="Sweet Alerts" xml:space="preserve">
     <value>Sweet Alerts</value>
-  </data>
-  <data name="Start_Time" xml:space="preserve">
-    <value>Start Time</value>
-  </data>
-  <data name="The_Suggested_Routing_Should_Generally" xml:space="preserve">
-    <value>The suggested routing should generally comply with restrictions for vehicles within the following measurements:</value>
   </data>
   <data name="Tables" xml:space="preserve">
     <value>Tables</value>
@@ -2340,6 +2466,9 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="Terms &amp; Conditions" xml:space="preserve">
     <value>Terms &amp; Conditions</value>
+  </data>
+  <data name="The_Suggested_Routing_Should_Generally" xml:space="preserve">
+    <value>The suggested routing should generally comply with restrictions for vehicles&lt;br&gt;within the following measurements:</value>
   </data>
   <data name="Timeline" xml:space="preserve">
     <value>Timeline</value>
@@ -2443,8 +2572,29 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="Utilities" xml:space="preserve">
     <value>Utilities</value>
   </data>
+  <data name="Validation.ApiErrorCodes.Employee.EmailAlreadyExists" xml:space="preserve">
+    <value>An employee with this email already exists.</value>
+  </data>
+  <data name="Validation.ApiErrorCodes.Employee.IpWhitelistDuplicate" xml:space="preserve">
+    <value>IP whitelist contains duplicate IP addresses.</value>
+  </data>
+  <data name="Validation.ApiErrorCodes.Employee.IpWhitelistMaxEntries" xml:space="preserve">
+    <value>IP whitelist can contain up to 5 entries.</value>
+  </data>
+  <data name="Validation.ApiErrorCodes.Employee.LocationNotFound" xml:space="preserve">
+    <value>The selected location was not found.</value>
+  </data>
+  <data name="Validation.ApiErrorCodes.Employee.PasswordRequired" xml:space="preserve">
+    <value>Password is required when creating a new employee.</value>
+  </data>
+  <data name="Validation.ApiErrorCodes.Validation.Generic" xml:space="preserve">
+    <value>Unable to save employee. Please review the information and try again.</value>
+  </data>
   <data name="Validation.InvalidEmail" xml:space="preserve">
     <value>Email is not valid</value>
+  </data>
+  <data name="Validation.MaxLength" xml:space="preserve">
+    <value>{0} must not exceed {1} characters</value>
   </data>
   <data name="Validation.PasswordComplexity" xml:space="preserve">
     <value>Password must contain at least one uppercase letter, one lowercase letter, one digit, and one symbol.</value>
@@ -2457,9 +2607,6 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="Validation.PasswordMaxLength" xml:space="preserve">
     <value>Password must not exceed {0} characters.</value>
-  </data>
-  <data name="Validation.MaxLength" xml:space="preserve">
-    <value>{0} must not exceed {1} characters</value>
   </data>
   <data name="Validation.PasswordMinLength" xml:space="preserve">
     <value>Password must be at least {0} characters.</value>
@@ -2521,41 +2668,35 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="Vehicles.Details.WeightCapacity" xml:space="preserve">
     <value>Weight Capacity (lbs)</value>
   </data>
-  <data name="Vehicles_Volume_Capacity_PlaceHolder" xml:space="preserve">
-    <value>Volume capacity for vehicle</value>
-  </data>
-  <data name="Vehicles_Weight_Capacity_PlaceHolder" xml:space="preserve">
-    <value>Weight capacity for vehicle</value>
-  </data>
   <data name="Vehicles_Capacity_Buffer_Title" xml:space="preserve">
     <value>Capacity Buffer</value>
   </data>
   <data name="Vehicles_Columns_MaxWorkTime" xml:space="preserve">
     <value>Max Work Time</value>
   </data>
+  <data name="Vehicles_Default_Operators_Column" xml:space="preserve">
+    <value>Default Operators</value>
+  </data>
+  <data name="Vehicles_Default_Operators_Helper_Text" xml:space="preserve">
+    <value>Limited to 4 Operators.</value>
+  </data>
+  <data name="Vehicles_Default_Operators_PlaceHolder" xml:space="preserve">
+    <value>Nothing Selected</value>
+  </data>
   <data name="Vehicles_Departure_Time_Title" xml:space="preserve">
     <value>Departure Time</value>
-  </data>
-  <data name="Vehicles_Weight_Capacity_Title" xml:space="preserve">
-    <value>Weight Capacity</value>
-  </data>
-  <data name="Vehicle_Ideal_For_Cars_Small_Vans_SUVs" xml:space="preserve">
-    <value>Ideal for cars, small vans, SUVs.</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_" xml:space="preserve">
-    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_1" xml:space="preserve">
-    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
   </data>
   <data name="Vehicles_Good_Choice_For_Vehicles" xml:space="preserve">
     <value>Good choice for vehicles such as Mercedes Sprinter, Ford Transit, light-duty and medium-duty HINOs, ISUZUs, etc.</value>
   </data>
-  <data name="Vehicles_Return_To_Helper_Text" xml:space="preserve">
-    <value>1 King Street West, Toronto, ON, Canadá</value>
+  <data name="Vehicles_License_Plate_Validation_Not_Empty" xml:space="preserve">
+    <value>License plate is required</value>
   </data>
-  <data name="Vehicles_Start_From_Helper_Text" xml:space="preserve">
-    <value>1 King Street West, Toronto, ON, Canada</value>
+  <data name="Vehicles_Maximun_Work_Time_Helper_Text" xml:space="preserve">
+    <value>Defining a value in these fields will be taken into consideration for this vehicle when the auto-split functionality is utilized. If no such limitation is required, please set both fields to '0'.</value>
+  </data>
+  <data name="Vehicles_PlaceHolder_License_Plate" xml:space="preserve">
+    <value>Vehicle's License Plate</value>
   </data>
   <data name="Vehicles_PlaceHolder_License_Plate1" xml:space="preserve">
     <value>Vehicle's License Plate</value>
@@ -2566,92 +2707,41 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="Vehicles_PlaceHolder_Reference_ID" xml:space="preserve">
     <value>Reference id from an external system</value>
   </data>
-  <data name="Vehicles_Schedule_Break_Blocks_Helper_Text" xml:space="preserve">
-    <value>Configure up to 3 break windows for this vehicle. Break windows help ensure compliance and realistic route planning.</value>
-  </data>
-  <data name="Vehicles_Maximun_Work_Time_Helper_Text" xml:space="preserve">
-    <value>Defining a value in these fields will be taken into consideration for this vehicle when the auto-split functionality is utilized. If no such limitation is required, please set both fields to '0'.</value>
-  </data>
-  <data name="Vehicles_Start_From_Column" xml:space="preserve">
-    <value>Start From</value>
-  </data>
   <data name="Vehicles_Return_To_Column" xml:space="preserve">
     <value>Return To</value>
   </data>
-  <data name="Vehicles_Default_Operators_Column" xml:space="preserve">
-    <value>Default Operators</value>
-  </data>
-  <data name="Vehicles_Default_Operators_Helper_Text" xml:space="preserve">
-    <value>Limited to 4 Operators.</value>
-  </data>
-  <data name="Vehicles_Volume_Capacity_Title" xml:space="preserve">
-    <value>Volume Capacity</value>
-  </data>
-  <data name="Vehicle_Same_As_Car_Profile_But_Specifically" xml:space="preserve">
-    <value>Same as the Car profile, but specifically for delivery and requiring access to private roads.</value>
-  </data>
-  <data name="Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted" xml:space="preserve">
-    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
-  </data>
-  <data name="Vehicles_Schedule_Break_Blocks" xml:space="preserve">
-    <value>Schedule break blocks</value>
-  </data>
-  <data name="Vehicles_Default_Operators_PlaceHolder" xml:space="preserve">
-    <value>Nothing Selected</value>
-  </data>
-  <data name="Vehicles_PlaceHolder_License_Plate" xml:space="preserve">
-    <value>Vehicle's License Plate</value>
-  </data>
-  <data name="Vehicles_Start_From_PlaceHolder" xml:space="preserve">
-    <value>Select a starting location</value>
+  <data name="Vehicles_Return_To_Helper_Text" xml:space="preserve">
+    <value>1 King Street West, Toronto, ON, Canadá</value>
   </data>
   <data name="Vehicles_Return_To_PlaceHolder" xml:space="preserve">
     <value>Select a returning location</value>
   </data>
-  <data name="Vehicle_Name_Length_Validation" xml:space="preserve">
-    <value>The name of the vehicle cannot have more than 200 characters.</value>
+  <data name="Vehicles_Schedule_Break_Blocks" xml:space="preserve">
+    <value>Schedule break blocks</value>
   </data>
-  <data name="Vehicles_License_Plate_Validation_Not_Empty" xml:space="preserve">
-    <value>License plate is required</value>
+  <data name="Vehicles_Schedule_Break_Blocks_Helper_Text" xml:space="preserve">
+    <value>Configure up to 3 break windows for this vehicle. Break windows help ensure compliance and realistic route planning.</value>
   </data>
-  <data name="Vehicle_License_Plate_Length_Validation" xml:space="preserve">
-    <value>The license plate cannot have more than 100 characters</value>
+  <data name="Vehicles_Start_From_Column" xml:space="preserve">
+    <value>Start From</value>
   </data>
-  <data name="Vehicle_Vehicle_Reference_Id_Length_Validation" xml:space="preserve">
-    <value>The vehicle reference Id cannot have more than 100 characters</value>
+  <data name="Vehicles_Start_From_Helper_Text" xml:space="preserve">
+    <value>1 King Street West, Toronto, ON, Canada</value>
   </data>
-  <data name="Vehicle_Weight_Capacity_Validation_OutOfRange" xml:space="preserve">
-    <value>Weight capacity is out of range. Please consider a value between 0 and 9999999999999999 lbs</value>
+  <data name="Vehicles_Start_From_PlaceHolder" xml:space="preserve">
+    <value>Select a starting location</value>
   </data>
-  <data name="Vehicle_Volume_Capacity_Validation_OutOfRange1" xml:space="preserve">
-    <value>Volume capacity is out of range. Please consider a value between 0 and 9999999999999999 lbs</value>
+  <data name="Vehicles_Volume_Capacity_PlaceHolder" xml:space="preserve">
+    <value>Volume capacity for vehicle</value>
   </data>
-  <data name="Vehicle_Capacity_Buffer_Percent" xml:space="preserve">
-    <value>The capacity buffer must be between 0 and 999</value>
+  <data name="Vehicles_Volume_Capacity_Title" xml:space="preserve">
+    <value>Volume Capacity</value>
   </data>
-  <data name="Vehicle_Buffer_PlaceHolder" xml:space="preserve">
-    <value>Percentage of free space on vehicle</value>
+  <data name="Vehicles_Weight_Capacity_PlaceHolder" xml:space="preserve">
+    <value>Weight capacity for vehicle</value>
   </data>
-  <data name="Vehicle_Successfully_Updated" xml:space="preserve">
-    <value>Vehicle successfully updated</value>
-  </data>
-  <data name="Vehicle_Successfully_Created" xml:space="preserve">
-    <value>Vehicle successfully created</value>
-  </data>
-  <data name="Vehicle_Not_Found" xml:space="preserve">
-    <value>Vehicle not found.</value>
-  </data>
-  <data name="Vehicle_Types" xml:space="preserve">
-    <value>Vehicle type</value>
-  </data>
-  <data name="Vehicle_Title_Create_New_Vehicle" xml:space="preserve">
-    <value>Create new vehicle</value>
-  </data>
-  <data name="Vehicle_Title_Update_New_Vehicle" xml:space="preserve">
-    <value>Update vehicle</value>
-  </data>
-  <data name="Vehicle_Name_Is_Required" xml:space="preserve">
-    <value>Vehicle name is required</value>
+  <data name="Vehicles_Weight_Capacity_Title" xml:space="preserve">
+    <value>Weight Capacity</value>
   </data>
   <data name="VehicleType_Car" xml:space="preserve">
     <value>Car</value>
@@ -2683,6 +2773,63 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   <data name="VehicleType_UrbanBike" xml:space="preserve">
     <value>Urban Bike</value>
   </data>
+  <data name="Vehicle_Buffer_PlaceHolder" xml:space="preserve">
+    <value>Percentage of free space on vehicle</value>
+  </data>
+  <data name="Vehicle_Capacity_Buffer_Percent" xml:space="preserve">
+    <value>The capacity buffer must be between 0 and 99.9</value>
+  </data>
+  <data name="Vehicle_Ideal_For_Cars_Small_Vans_SUVs" xml:space="preserve">
+    <value>Ideal for cars, small vans, SUVs.</value>
+  </data>
+  <data name="Vehicle_License_Plate_Length_Validation" xml:space="preserve">
+    <value>The license plate cannot have more than 100 characters</value>
+  </data>
+  <data name="Vehicle_Name_Is_Required" xml:space="preserve">
+    <value>Vehicle name is required</value>
+  </data>
+  <data name="Vehicle_Name_Length_Validation" xml:space="preserve">
+    <value>The name of the vehicle cannot have more than 200 characters.</value>
+  </data>
+  <data name="Vehicle_Not_Found" xml:space="preserve">
+    <value>Vehicle not found.</value>
+  </data>
+  <data name="Vehicle_Same_As_Car_Profile_But_Specifically" xml:space="preserve">
+    <value>Same as the Car profile, but specifically for delivery and requiring access to private roads.</value>
+  </data>
+  <data name="Vehicle_Successfully_Created" xml:space="preserve">
+    <value>Vehicle successfully created</value>
+  </data>
+  <data name="Vehicle_Successfully_Updated" xml:space="preserve">
+    <value>Vehicle successfully updated</value>
+  </data>
+  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_" xml:space="preserve">
+    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
+  </data>
+  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_1" xml:space="preserve">
+    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
+  </data>
+  <data name="Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted" xml:space="preserve">
+    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
+  </data>
+  <data name="Vehicle_Title_Create_New_Vehicle" xml:space="preserve">
+    <value>Add Vehicle</value>
+  </data>
+  <data name="Vehicle_Title_Update_New_Vehicle" xml:space="preserve">
+    <value>Edit Vehicle</value>
+  </data>
+  <data name="Vehicle_Types" xml:space="preserve">
+    <value>Vehicle type</value>
+  </data>
+  <data name="Vehicle_Vehicle_Reference_Id_Length_Validation" xml:space="preserve">
+    <value>The vehicle reference Id cannot have more than 100 characters</value>
+  </data>
+  <data name="Vehicle_Volume_Capacity_Validation_OutOfRange" xml:space="preserve">
+    <value>Volume capacity is out of range. Please consider a value between 0 and 9999999999999999 lbs</value>
+  </data>
+  <data name="Vehicle_Weight_Capacity_Validation_OutOfRange" xml:space="preserve">
+    <value>Weight capacity is out of range. Please consider a value between 0 and 9999999999999999 lbs</value>
+  </data>
   <data name="Wallet" xml:space="preserve">
     <value>Wallet</value>
   </data>
@@ -2694,6 +2841,9 @@ Note: This is in addition to the IP whitelist set in your Company Settings.</val
   </data>
   <data name="What's New?" xml:space="preserve">
     <value>What's New?</value>
+  </data>
+  <data name="Widget Builder" xml:space="preserve">
+    <value>Widget Builder</value>
   </data>
   <data name="Widgets" xml:space="preserve">
     <value>Widgets</value>

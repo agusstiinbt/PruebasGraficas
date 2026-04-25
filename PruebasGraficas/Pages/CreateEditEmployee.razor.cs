@@ -45,6 +45,12 @@ namespace PruebasGraficas.Pages
         private double? _latitude;
         private double? _longitude;
 
+        private async Task ValidateFormAfterPasswordChangedAsync()
+        {
+            if (!string.IsNullOrWhiteSpace(_model.ConfirmPassword))
+                await _form.ValidateAsync();
+        }
+
 
         /// <summary>
         /// Bool for MudSwitch at the top

@@ -2,24 +2,22 @@
 
 @page "/"
 
+
 <MudForm @ref="_form" Model="_model" Validation="@(_validationRules.ValidateValue())" Class="@(_loading ? "cursor-wait" : "")">
 
     <div class="create-edit-page">
 
-        
         @if (!string.IsNullOrWhiteSpace(_error))
         {
             <MudAlert Severity="MudBlazor.Severity.Error" Class="mb-4">@_error</MudAlert>
         }
 
-        <SaveCancelCreateEditFormButtons Id="Id"
-                                         @bind-Deactivate="_deactivate"
-                                         OnCancel="Cancel"
-                                         OnSubmit="Submit"
-                                         Loading="_loading"
-                                         Title="@(Id == 0?_localizer["Vehicle_Title_Create_New_Vehicle"]: _localizer["Vehicle_Title_Update_New_Vehicle"])" />
-
-        <br />
+        <CreateEditFormActions 	CanChangeIsActive="@(Id > 0)"
+								@bind-IsActive="_model.IsActive"
+								OnCancel="Cancel"
+								OnSubmit="Submit"
+								Loading="_loading"
+								Title="@(Id == 0?_localizer["Vehicle_Title_Create_New_Vehicle"]: _localizer["Vehicle_Title_Update_New_Vehicle"])" />
 
         @* Primary Information *@
         <MudCard Class="custom-card mb-6">
@@ -39,14 +37,13 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles.Columns.Name"] </b>
                                 <span class="ce-required">*</span>
                             </MudText>
 
                             <MudTextField @bind-Value="_model.Name"
                                           For="@(()=>_model.Name)"
-                                          Class="ce-white-select input"
                                           Placeholder="@_localizer["Vehicles_PlaceHolder_Name"]"
                                           Variant="Variant.Outlined"></MudTextField>
 
@@ -63,7 +60,7 @@
                                 <b>@_localizer["Vehicles.Columns.Type"]</b>
                             </MudText>
 
-                            <MudSelect T="VehicleType" @bind-Value="_model.Type" Class="ce-white-select input">
+                            <MudSelect Class="ce-label" T="VehicleType" @bind-Value="_model.Type">
 
                                 @foreach (var item in Enum.GetValues<VehicleType>())
                                 {
@@ -86,13 +83,12 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles.Columns.LicensePlate"] </b>
                             </MudText>
 
                             <MudTextField @bind-Value="_model.LicensePlate"
                                           For="@(()=>_model.LicensePlate)"
-                                          Class="ce-white-select input"
                                           Placeholder="@_localizer["Vehicles_PlaceHolder_License_Plate"]"
                                           Variant="Variant.Outlined"></MudTextField>
 
@@ -105,12 +101,11 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles.Columns.ReferenceId"] </b>
                             </MudText>
 
                             <MudTextField @bind-Value="_model.VehicleRefId"
-                                          Class="ce-white-select input"
                                           For="@(()=>_model.VehicleRefId)"
                                           Placeholder="@_localizer["Vehicles_PlaceHolder_Reference_ID"]"
                                           Variant="Variant.Outlined"></MudTextField>
@@ -129,7 +124,7 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles_Weight_Capacity_Title"] </b>
                             </MudText>
 
@@ -141,8 +136,7 @@
                                              Variant="Variant.Outlined"
                                              Adornment="Adornment.End"
                                              AdornmentText="lbs"
-                                             AdornmentColor="Color.Info"
-                                             Class="ce-white-select input" />
+                                             AdornmentColor="Color.Info" />
                         </div>
 
                     </MudItem>
@@ -152,7 +146,7 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles_Volume_Capacity_Title"]</b>
                             </MudText>
 
@@ -164,8 +158,7 @@
                                              Variant="Variant.Outlined"
                                              Adornment="Adornment.End"
                                              AdornmentText="ft"
-                                             AdornmentColor="Color.Info"
-                                             Class="ce-white-select input" />
+                                             AdornmentColor="Color.Info" />
 
                         </div>
 
@@ -176,20 +169,23 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles_Capacity_Buffer_Title"]</b>
                             </MudText>
 
                             <MudNumericField HideSpinButtons="true"
-                                             T="decimal?"
+                                             T="int?"
                                              @bind-Value="_model.CapacityBufferPercent"
-                                             For="@(()=>_model.CapacityBufferPercent)"
+                                             Min="0"
+                                             Max="99"
+                                             MaxLength="2"
+                                             InputMode="InputMode.numeric"
+                                             Pattern="[0-9]*"
                                              Placeholder="@_localizer["Vehicle_Buffer_PlaceHolder"]"
                                              Variant="Variant.Outlined"
                                              Adornment="Adornment.End"
                                              AdornmentText="%"
-                                             AdornmentColor="Color.Info"
-                                             Class="ce-white-select input" />
+                                             AdornmentColor="Color.Info" />
 
                         </div>
 
@@ -202,7 +198,8 @@
 
                             <SelectTime @bind-Time="_model.DepartureTime"
                                         ForTime="@(()=>_model.DepartureTime)"
-                                        Title="@_localizer["Vehicles_Departure_Time_Title"]" />
+                                        Title="@_localizer["Vehicles_Departure_Time_Title"]"
+                                        Required="true" />
 
                         </div>
 
@@ -218,28 +215,29 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles_Columns_MaxWorkTime"] </b>
-                                <span class="ce-required">*</span>
                             </MudText>
 
-                            <MudStack Spacing="0" Row="true">
+                            <MudStack Spacing="2" Row="true">
 
                                 <MudNumericField HideSpinButtons="true"
-                                                 @bind-Value="_model.MaxWorkTimeMinutes"
-                                                 Disabled="true"
-                                                 For="@(()=>_model.MaxWorkTimeMinutes)"
-                                                 Class="ce-white-select input"
+                                                 @bind-Value="_model.WorkTimeHours"
+                                                 Pattern="[0-9]*"
+                                                 MaxLength="2"
+                                                 Min="0"
+                                                 Max="23"
                                                  AdornmentText="hr"
                                                  Adornment="Adornment.End"
                                                  AdornmentColor="Color.Info"
                                                  Variant="Variant.Outlined" />
 
-                                <MudNumericField HideSpinButtons="true"
-                                                 @bind-Value="_model.MaxWorkTimeMinutes"
-                                                 Disabled="true"
-                                                 For="@(()=>_model.MaxWorkTimeMinutes)"
-                                                 Class="ce-white-select input"
+                                 <MudNumericField HideSpinButtons="true"
+                                                 @bind-Value="_model.WorkTimeMinutes"
+                                                 Pattern="[0-9]*"
+                                                 MaxLength="2"
+                                                 Min="0"
+                                                 Max="59"
                                                  AdornmentText="min"
                                                  Adornment="Adornment.End"
                                                  AdornmentColor="Color.Info"
@@ -260,14 +258,13 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles_Start_From_Column"]</b>
                                 <span class="ce-required">*</span>
                             </MudText>
 
                             <MudTextField T="string"
                                           Placeholder="@_localizer["Vehicles_Start_From_PlaceHolder"]"
-                                          Class="ce-white-select input"
                                           Variant="Variant.Outlined"
                                           Disabled="true"></MudTextField>
 
@@ -284,14 +281,13 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles_Return_To_Column"]</b>
                                 <span class="ce-required">*</span>
                             </MudText>
 
                             <MudTextField T="string"
                                           Placeholder="@_localizer["Vehicles_Return_To_PlaceHolder"]"
-                                          Class="ce-white-select input"
                                           Variant="Variant.Outlined"
                                           Disabled="true"></MudTextField>
 
@@ -307,14 +303,13 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
+                            <MudText Class="ce-label" Align="Align.Left" Typo="Typo.subtitle2">
                                 <b>@_localizer["Vehicles_Default_Operators_Column"] </b>
                             </MudText>
 
                             <MudSelect T="string"
                                        @bind-Value="_model.LicensePlate"
                                        Placeholder="Nothing selected"
-                                       Class="ce-white-select input"
                                        Variant="Variant.Outlined"
                                        Disabled="true">
                             </MudSelect>
@@ -337,9 +332,8 @@
 
                         <div>
 
-                            <MudText Align="Align.Left" Class="label-text">
+                            <MudText Align="Align.Left" Class="ce-label">
                                 <b>@_localizer["Vehicles_Schedule_Break_Blocks"] </b>
-                                <span class="ce-required">*</span>
                             </MudText>
 
                             <p class="ce-grey-text ">
@@ -365,9 +359,8 @@
                             </MudText>
 
                             <MudSelect T="string"
-                                       Style="border-radius: 2px;
-                                border: 0.25px dashed #A5A5A5;
-                                background: #FFF;"
+                                       Style="border-radius: 2px; border: 0.25px dashed #A5A5A5;"
+                                       Class="ce-helper-text"
                                        @bind-Value="_model.LicensePlate"
                                        Placeholder="8:00 am"
                                        Variant="Variant.Outlined"
@@ -405,9 +398,8 @@
 
                             <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
                                 <MudTextField T="string"
-                                              Style="border-radius: 2px;
-                                border: 0.25px dashed #A5A5A5;
-                                background: #FFF;"
+                                              Class="ce-helper-text"
+                                              Style="padding-top:6px;border-radius: 2px; border: 0.25px dashed #A5A5A5;"
                                               Placeholder="@_localizer["Enter_Duration_Time"]"
                                               Variant="Variant.Outlined"></MudTextField>
                                 <MudFab Color="Color.Success" Size="Size.Small" StartIcon="@Icons.Material.Filled.Add" IconSize="Size.Large" />
@@ -450,7 +442,7 @@
 
                         @* Car Enhanced 🚗 *@
                         <div class="ce-section-group-header">
-                            <img src="/assets/vehicle-types/car.svg" class="ce-section-group-icon" />
+                            <img src="/assets/vehicle-types/greenCar.svg" class="ce-section-group-icon" />
 
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_CarEnhanced"]</MudText>
                         </div>
@@ -466,18 +458,17 @@
                         </div>
                         <ul class="ce-section-group-list">
                             <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
                         </ul>
 
-                    
                         @* Small Truck Enhanced 🚛 *@
                         <div class="ce-section-group-header">
-                            <img src="/assets/vehicle-types/truck.svg" class="ce-section-group-icon" />
+                            <img src="/assets/vehicle-types/greenSmalTruck.svg" class="ce-section-group-icon" />
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_SmallTruckEnhanced"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
                             <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
                         </ul>
 
                         @* Trucks 🚛🚛 *@
@@ -487,7 +478,7 @@
                         </div>
                         <ul class="ce-section-group-list">
                             <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
                         </ul>
 
 
@@ -526,10 +517,10 @@
                         </div>
                         <ul class="ce-section-group-list">
                             <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
                         </ul>
 
-                    
+
                         @* Mountain Bike 🚵 *@
                         <div class="ce-section-group-header">
                             <img src="/assets/vehicle-types/mountain-bike.svg" class="ce-section-group-icon" />
@@ -537,7 +528,7 @@
                         </div>
                         <ul class="ce-section-group-list">
                             <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
                         </ul>
 
                         @* On Foot 🚶 *@
@@ -547,9 +538,8 @@
                         </div>
                         <ul class="ce-section-group-list">
                             <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@_localizer["The_Suggested_Routing_Should_Generally"]</li>
+                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
                         </ul>
-
 
                     </MudStack>
 

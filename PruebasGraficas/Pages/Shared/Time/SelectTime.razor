@@ -2,11 +2,14 @@
 {
     <MudText Align="Align.Left" Typo="Typo.subtitle2">
         <b>@Title</b>
-        <span class="ce-required">*</span>
+        @if (Required)
+        {
+            <span class="ce-required">*</span>
+        }
     </MudText>
 }
 
-<MudSelect T="TimeOnly" Value="@Time" For="@ForTime" ValueChanged="HandleTimeChanged" Class="departure-time-default">
+<MudSelect T="TimeOnly" Value="@Time" For="@ForTime" ValueChanged="HandleTimeChanged" Style="color: #9ca3af; opacity: 1;">
 
     @foreach (var option in TimeHelper.GenerateTimeOptions(IntervalMinutes))
     {
@@ -19,6 +22,7 @@
 
 @code {
 
+    [Parameter] public bool Required { get; set; } = false;
     [Parameter] public int IntervalMinutes { get; set; } = 15;
 
     [Parameter] public required string Title { get; set; } = string.Empty;
@@ -42,3 +46,4 @@
     #endregion
 
 }
+

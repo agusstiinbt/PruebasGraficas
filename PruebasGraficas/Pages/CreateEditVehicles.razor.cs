@@ -11,10 +11,11 @@ public partial class CreateEditVehicles
 
     [Inject] private IValidator<VehicleCreateEditModel> _validationRules { get; set; } = default!;
     [Inject] private NavigationManager _nav { get; set; } = default!;
+    [Inject] private ISnackbar _snack { get; set; } = default!;
 
     #endregion
 
-
+    public int value { get; set; }
     private MudForm _form = new();
     public required VehicleCreateEditModel _model = new();
 
@@ -46,7 +47,7 @@ public partial class CreateEditVehicles
 
         _loading = true;
 
-       
+
         _loading = false;
     }
 
@@ -61,20 +62,20 @@ public partial class CreateEditVehicles
 
         if (_form.IsValid)
             await ProcessSubmit();
+
         StateHasChanged();
         _loading = false;
     }
 
     private async Task ProcessSubmit()
     {
+        _snack.Add("Success", MudBlazor.Severity.Success);
         var cancellationToken = _cancellationToken?.Token ?? CancellationToken.None;
 
-       
         _loading = false;
     }
 
     private void Cancel() => _nav.NavigateTo(IndexPage, true);
-
 
     #endregion
 

@@ -1,5 +1,6 @@
 ﻿@page "/employee"
 
+
 <MudForm @ref="_form" Model="_model" Validation="@(_validationRules.ValidateValue())" Class="@(_loading ? "cursor-wait" : "")">
 
     <div class="create-edit-page">
@@ -10,7 +11,7 @@
             <MudAlert Severity="MudBlazor.Severity.Error" Class="mb-4">@_error</MudAlert>
         }
 
-        <SaveCancelCreateEditFormButtons Id="Id"
+        <CreateEditFormActions Id="Id"
                                          @bind-Deactivate="_deactivate"
                                          OnCancel="Cancel"
                                          OnSubmit="Submit"
@@ -109,7 +110,7 @@
                     @* <MudGrid  Spacing="4"> *@
 
                     <MudItem xs="12">
-                        @*  <AddressInput @bind-Address="_model.AddressStreet"
+                        <AddressInput @bind-Address="_model.AddressStreet"
                                       @bind-Unit="_model.UnitNumber"
                                       @bind-PostalCode="_model.PostalCode"
                                       @bind-Province="_model.ProvinceState"
@@ -120,7 +121,7 @@
                                       Longitude="@_longitude"
                                       LongitudeChanged="OnLongitudeChanged"
                                       AllowManualAddressEntry="@_model.AllowManualAddressEntry"
-                                      AllowManualAddressEntryChanged="OnAllowManualAddressEntryChanged" /> *@
+                                      AllowManualAddressEntryChanged="OnAllowManualAddressEntryChanged" />
 
                     </MudItem>
 
@@ -132,104 +133,14 @@
         </MudCard>
 
         @* Login Credentials *@
-        <MudCard Class="custom-card mb-6">
-            <MudCardContent>
-                @* Login Credentials : Title *@
-                <div>
-                    <MudText Typo="Typo.h4" Inline="true" Class="ce-section-title">@_localizer["CreateEditEmployee_Title_LoginCredentials"]</MudText>
-                </div>
-
-                @* Login Email, New Password, Confirm Password *@
-                <MudGrid Class="mt-4" Spacing="4" Justify="Justify.Center">
-
-                    @* Login Email *@
-                    <MudItem xs="5">
-                        <div>
-                            <MudText Align="Align.Left" Typo="Typo.subtitle2">
-                                <b>@_localizer["CreateEditEmployee_Label_LoginEmail"] </b>
-                                <span class="ce-required">*</span>
-                            </MudText>
-
-                            <MudTextField @bind-Value="_model.Email"
-                                          For="@(() => _model.Email)"
-                                          Placeholder="Email"
-                                          Variant="Variant.Outlined"></MudTextField>
-                        </div>
-                    </MudItem>
-
-                    @* Empty *@
-                    <MudItem xs="7">
-
-                    </MudItem>
-
-                    @* New Password *@
-                    <MudItem xs="5">
-
-                        <div>
-
-                            <MudText Align="Align.Left" Class="ce-label">
-                                <b>@_localizer["CreateEditEmployee_Label_NewPassword"] </b>
-                                <span class="ce-required">*</span>
-                            </MudText>
-
-                            <MudTextField @bind-Value="_model.Password"
-                                          @bind-Value:after="OnPasswordChanged"
-                                          T="string"
-                                          For="@(() => _model.Password)"
-                                          DebounceInterval="150"
-                                          Placeholder="@_localizer["CreateEditEmployee_Placeholder_Password"]"
-                                          Variant="Variant.Outlined"
-                                          InputType="@_passwordVis.InputType"
-                                          Adornment="Adornment.End"
-                                          AdornmentIcon="@_passwordVis.Icon"
-                                          OnAdornmentClick="(() => TogglePasswordVisibility(false))"
-                                          Immediate="true"
-                                          Class="password-input" />
-
-                            @if (!string.IsNullOrWhiteSpace(_model.Password))
-                            {
-                                <MudProgressLinear Class="my-6" Rounded="true" Size="Size.Medium" Value="_passwordStrength.Value" Color="_passwordStrength.Color" />
-
-                                <MudText Class="ce-grey-text" Typo="Typo.body1">@_passwordStrength.Label</MudText>
-                            }
-
-                        </div>
-
-                    </MudItem>
-
-                    @* Confirm Password *@
-                    <MudItem xs="5">
-
-                        <div>
-
-                            <MudText Align="Align.Left" Class="ce-label">
-                                <b>@_localizer["CreateEditEmployee_Label_ConfirmPassword"] </b>
-                                <span class="ce-required">*</span>
-                            </MudText>
-
-                            <MudTextField @bind-Value="_model.ConfirmPassword"
-                                          For="@(() => _model.ConfirmPassword)"
-                                          DebounceInterval="150"
-                                          Placeholder="@_localizer["CreateEditEmployee_Placeholder_ConfirmPassword"]"
-                                          Variant="Variant.Outlined"
-                                          InputType="@_confirmPasswordVis.InputType"
-                                          Adornment="Adornment.End"
-                                          AdornmentIcon="@_confirmPasswordVis.Icon"
-                                          OnAdornmentClick="(() => TogglePasswordVisibility(true))"
-                                          AdornmentAriaLabel="@_localizer["CreateEditEmployee_AriaLabel_ShowPassword"]"></MudTextField>
-
-                        </div>
-
-                    </MudItem>
-
-                    @* Empty *@
-                    <MudItem xs="2">
-
-                    </MudItem>
-
-                </MudGrid>
-            </MudCardContent>
-        </MudCard>
+		<LoginCredentialsCard @bind-LoginEmail="_model.Email"
+								ForLoginEmail="@(() => _model.Email)"
+								@bind-Password="_model.Password"
+								ForPassword="@(() => _model.Password)"
+								@bind-ConfirmPassword="_model.ConfirmPassword"
+								ForConfirmPassword="@(() => _model.ConfirmPassword)"
+								Required="@(!(Id > 0))"
+								PasswordValueChangedAfter="ValidateFormAfterPasswordChangedAsync" />
 
         @* Location & Timezone *@
         <MudCard Class="custom-card mb-6">
@@ -340,7 +251,6 @@
                     @* IP Whitelist*@
                     <MudItem xs="6">
                         <MudStack Spacing="1">
-
                             <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
 
                                 <MudText Typo="Typo.subtitle2" Class="ce-label">
@@ -364,7 +274,6 @@
 
                         @* Set a label, Add and IP address*@
                         <MudStack Spacing="1">
-
                             <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
                                 <MudTextField @bind-Value="_textValue" PlaceHolder=" Set a label" Style="border: dashed 2px;border-radius:5px;height:40px"></MudTextField>
                                 <MudTextField @bind-Value="_textValue" PlaceHolder=" Add an IP address" Style="border: dashed 2px;border-radius:5px;height:40px"></MudTextField>
@@ -394,10 +303,11 @@
                     @* Section to upload picture *@
                     <MudItem xs="6">
 
-                        @*  <ManagedFileUpload @ref="_logoUpload"
+                      @*   <ManagedFileUpload @ref="_logoUpload"
                                            Label="@_localizer["CreateEditEmployee_Label_ProfilePhoto"]"
                                            Description="@_localizer["CreateEditEmployee_Description_ProfilePhotoUpload"]"
-                                           HelperText="@_localizer["ImageUpload.LogoIdealHelperText"]"
+                                           HelperText="@_localizer["ImageUpload.UploadRules"]"
+                                           SecondaryHelperText="@_localizer["ImageUpload.UploadFormats"]"
                                            DescriptionForSave="@_localizer["ImageUpload.Description.EmployeeLogo"]"
                                            EmployeeId="@(_model.Id > 0 ? _model.Id : Id)"
                                            CropAspectRatio="1:1"

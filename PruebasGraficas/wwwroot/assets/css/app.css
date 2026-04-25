@@ -203,6 +203,9 @@
     --text-muted: #8c9097;
     --input-border: #e9edf6;
     --form-control-bg: #ffffff;
+    --sidebar-toggle-border-color: rgba(0, 0, 0, 0.08);
+    --sidebar-toggle-bg: var(--custom-white);
+    --sidebar-toggle-shadow-color: rgba(17, 24, 39, 0.16);
     --gray-1: #f9fafb;
     --gray-2: #f2f4f5;
     --gray-3: #e6eaeb;
@@ -258,6 +261,8 @@
     --text-muted: rgba(255,255,255,0.5);
     --input-border: #313335;
     --form-control-bg: #232628;
+    --sidebar-toggle-border-color: rgba(255, 255, 255, 0.16);
+    --sidebar-toggle-bg: #1f232b;
     --gray-100: #110f0f;
     --gray-200: #17171c;
     --gray-300: #393946;
@@ -398,7 +403,7 @@
 @media (max-width: 991.98px) {
     [data-toggled=close] .app-sidebar {
         transition: all 300ms ease;
-        transform: translateX(-15rem);
+        transform: translateX(-16.5rem);
     }
 
     [data-toggled=close] .app-header {
@@ -411,7 +416,7 @@
 
     [data-toggled=close][dir=rtl] .app-sidebar {
         transition: all 300ms ease;
-        transform: translateX(15rem);
+        transform: translateX(16.5rem);
     }
 }
 
@@ -573,7 +578,7 @@
     }
 
     [data-width=boxed][data-vertical-style=detached][data-toggled=detached-close] .app-content {
-        margin-inline-start: 5rem;
+        margin-inline-start: 5.5rem;
     }
 
     [data-width=boxed][data-vertical-style=detached] .app-header .main-header-container {
@@ -581,7 +586,7 @@
     }
 
     [data-width=boxed][data-vertical-style=detached] .app-content {
-        margin-inline-start: 15rem;
+        margin-inline-start: 16.5rem;
     }
 
     [data-width=boxed][data-vertical-style=doublemenu] .app-sidebar .main-sidebar {
@@ -2737,7 +2742,7 @@ body {
     --mud-palette-surface: #fafbfc;
     --mud-zindex-appbar: 999;
     --mud-palette-drawer-icon: #fff;
-    --mud-drawer-width-mini-left: 240px !important;
+    --mud-drawer-width-mini-left: 264px !important;
     --mud-palette-divider: #f3f3f3;
     --mud-palette-dark: rgb(var(--dark-rgb));
     --mud-palette-light: rgb(var(--light-rgb));
@@ -15024,7 +15029,7 @@ button {
         min-height: calc(100vh - 7.5rem);
         margin-block-end: 0;
         margin-block-start: 3.7rem;
-        margin-inline-start: 15rem;
+        margin-inline-start: 16.5rem;
         transition: all 0.05s ease;
     }
 }
@@ -15225,7 +15230,7 @@ button {
 
 @media (min-width: 992px) {
     .footer {
-        padding-inline-start: 15rem;
+        padding-inline-start: 16.5rem;
     }
 }
 
@@ -21395,7 +21400,7 @@ table.table-bordered.dataTable {
 
 @media (min-width: 992px) {
     .app-header {
-        padding-inline-start: 15rem;
+        padding-inline-start: 16.5rem;
     }
 }
 
@@ -25709,11 +25714,11 @@ code[class*=language-] {
 
 @media (min-width: 992px) {
     [data-vertical-style=closed][data-toggled=close-menu-open] .app-content {
-        margin-inline-start: 15rem;
+        margin-inline-start: 16.5rem;
     }
 
     [data-vertical-style=closed][data-toggled=close-menu-open] .app-header {
-        padding-inline-start: 15rem;
+        padding-inline-start: 16.5rem;
     }
 }
 
@@ -25745,7 +25750,7 @@ code[class*=language-] {
     }
 
     [data-vertical-style=detached] .app-content {
-        margin-inline-start: 15rem;
+        margin-inline-start: 16.5rem;
         position: relative;
     }
 
@@ -25808,7 +25813,7 @@ code[class*=language-] {
     }
 
     [data-vertical-style=detached][data-toggled=detached-close]:not([data-icon-overlay=open]) .app-sidebar {
-        width: 5rem;
+        width: 5.5rem;
     }
 
         [data-vertical-style=detached][data-toggled=detached-close]:not([data-icon-overlay=open]) .app-sidebar .side-menu__label,
@@ -25847,16 +25852,16 @@ code[class*=language-] {
             }
 
     [data-vertical-style=detached][data-toggled=detached-close] .app-content {
-        margin-inline-start: 5rem;
+        margin-inline-start: 5.5rem;
         position: relative;
     }
 
     [data-vertical-style=detached][data-toggled=detached-close][data-icon-overlay=open] .app-sidebar {
-        width: 15rem;
+        width: 16.5rem;
     }
 
         [data-vertical-style=detached][data-toggled=detached-close][data-icon-overlay=open] .app-sidebar .main-sidebar-header {
-            width: 15rem;
+            width: 16.5rem;
         }
 
             [data-vertical-style=detached][data-toggled=detached-close][data-icon-overlay=open] .app-sidebar .main-sidebar-header .header-logo .desktop-logo {
@@ -25969,7 +25974,7 @@ code[class*=language-] {
     }
 
     [data-vertical-style=doublemenu] .app-sidebar {
-        width: 5rem !important;
+        width: 5.5rem !important;
     }
 
         [data-vertical-style=doublemenu] .app-sidebar .main-sidebar {
@@ -25980,7 +25985,7 @@ code[class*=language-] {
         }
 
         [data-vertical-style=doublemenu] .app-sidebar .main-sidebar-header {
-            width: 5rem;
+            width: 5.5rem;
             backdrop-filter: blur(30px);
         }
 
@@ -26041,7 +26046,7 @@ code[class*=language-] {
 
     [data-vertical-style=doublemenu] .slide.has-sub .slide-menu {
         position: absolute !important;
-        inset-inline-start: 5rem !important;
+        inset-inline-start: 5.5rem !important;
         background: var(--menu-bg);
         box-shadow: none;
         transition: none !important;
@@ -26186,11 +26191,11 @@ code[class*=language-] {
     }
 
     [data-vertical-style=doublemenu][data-toggled=double-menu-close] .app-header {
-        padding-inline-start: 5rem;
+        padding-inline-start: 5.5rem;
     }
 
     [data-vertical-style=doublemenu][data-toggled=double-menu-close] .app-content {
-        margin-inline-start: 5rem;
+        margin-inline-start: 5.5rem;
     }
 
     [data-vertical-style=doublemenu][data-toggled=double-menu-close] .app-sidebar .slide.has-sub .slide-menu {
@@ -26619,7 +26624,7 @@ code[class*=language-] {
     .icon-click .app-sidebar,
     [data-nav-style=icon-click][data-nav-layout=horizontal] .app-sidebar,
     [data-nav-style=icon-click][data-toggled=icon-click-closed] .app-sidebar {
-        width: 5rem;
+        width: 5.5rem;
     }
 
         .icon-click .app-sidebar .main-sidebar,
@@ -26632,7 +26637,7 @@ code[class*=language-] {
         .icon-click .app-sidebar .main-sidebar-header,
         [data-nav-style=icon-click][data-nav-layout=horizontal] .app-sidebar .main-sidebar-header,
         [data-nav-style=icon-click][data-toggled=icon-click-closed] .app-sidebar .main-sidebar-header {
-            width: 5rem;
+            width: 5.5rem;
         }
 
             .icon-click .app-sidebar .main-sidebar-header .header-logo .toggle-logo,
@@ -26721,13 +26726,13 @@ code[class*=language-] {
     .icon-click .app-header,
     [data-nav-style=icon-click][data-nav-layout=horizontal] .app-header,
     [data-nav-style=icon-click][data-toggled=icon-click-closed] .app-header {
-        padding-inline-start: 5rem;
+        padding-inline-start: 5.5rem;
     }
 
     .icon-click .app-content,
     [data-nav-style=icon-click][data-nav-layout=horizontal] .app-content,
     [data-nav-style=icon-click][data-toggled=icon-click-closed] .app-content {
-        margin-inline-start: 5rem;
+        margin-inline-start: 5.5rem;
     }
 
     .icon-click .slide.side-menu__label1,
@@ -26742,7 +26747,7 @@ code[class*=language-] {
     [data-nav-style=icon-click][data-nav-layout=horizontal] .slide.has-sub .slide-menu,
     [data-nav-style=icon-click][data-toggled=icon-click-closed] .slide.has-sub .slide-menu {
         position: absolute !important;
-        inset-inline-start: 5rem;
+        inset-inline-start: 5.5rem;
         background: var(--menu-bg);
         inset-block-start: auto !important;
         box-shadow: 0.125rem 0.063rem 0.5rem var(--black-1);
@@ -26892,7 +26897,7 @@ code[class*=language-] {
     .icon-hover .app-sidebar,
     [data-nav-layout=horizontal][data-nav-style=icon-hover] .app-sidebar,
     [data-nav-style=icon-hover][data-toggled=icon-hover-closed] .app-sidebar {
-        width: 5rem;
+        width: 5.5rem;
     }
 
         .icon-hover .app-sidebar .main-sidebar,
@@ -26905,7 +26910,7 @@ code[class*=language-] {
         .icon-hover .app-sidebar .main-sidebar-header,
         [data-nav-layout=horizontal][data-nav-style=icon-hover] .app-sidebar .main-sidebar-header,
         [data-nav-style=icon-hover][data-toggled=icon-hover-closed] .app-sidebar .main-sidebar-header {
-            width: 5rem;
+            width: 5.5rem;
         }
 
             .icon-hover .app-sidebar .main-sidebar-header .header-logo .toggle-logo,
@@ -26994,13 +26999,13 @@ code[class*=language-] {
     .icon-hover .app-header,
     [data-nav-layout=horizontal][data-nav-style=icon-hover] .app-header,
     [data-nav-style=icon-hover][data-toggled=icon-hover-closed] .app-header {
-        padding-inline-start: 5rem;
+        padding-inline-start: 5.5rem;
     }
 
     .icon-hover .app-content,
     [data-nav-layout=horizontal][data-nav-style=icon-hover] .app-content,
     [data-nav-style=icon-hover][data-toggled=icon-hover-closed] .app-content {
-        margin-inline-start: 5rem;
+        margin-inline-start: 5.5rem;
     }
 
     .icon-hover .slide.side-menu__label1,
@@ -27015,7 +27020,7 @@ code[class*=language-] {
     [data-nav-layout=horizontal][data-nav-style=icon-hover] .slide.has-sub .slide-menu,
     [data-nav-style=icon-hover][data-toggled=icon-hover-closed] .slide.has-sub .slide-menu {
         position: absolute !important;
-        inset-inline-start: 5rem !important;
+        inset-inline-start: 5.5rem !important;
         background: var(--menu-bg);
         inset-block-start: auto !important;
         box-shadow: 0.125rem 0.063rem 0.5rem var(--black-1);
@@ -27195,11 +27200,11 @@ code[class*=language-] {
 
 @media (min-width: 992px) {
     [data-vertical-style=overlay][data-toggled=icon-overlay-close]:not([data-icon-overlay=open]) .app-sidebar {
-        width: 5rem;
+        width: 5.5rem;
     }
 
         [data-vertical-style=overlay][data-toggled=icon-overlay-close]:not([data-icon-overlay=open]) .app-sidebar .main-sidebar-header {
-            width: 5rem;
+            width: 5.5rem;
         }
 
             [data-vertical-style=overlay][data-toggled=icon-overlay-close]:not([data-icon-overlay=open]) .app-sidebar .main-sidebar-header .header-logo .toggle-logo {
@@ -27256,19 +27261,19 @@ code[class*=language-] {
     }
 
     [data-vertical-style=overlay][data-toggled=icon-overlay-close] .app-header {
-        padding-inline-start: 5rem;
+        padding-inline-start: 5.5rem;
     }
 
     [data-vertical-style=overlay][data-toggled=icon-overlay-close] .app-content {
-        margin-inline-start: 5rem;
+        margin-inline-start: 5.5rem;
     }
 
     [data-vertical-style=overlay][data-toggled=icon-overlay-close][data-icon-overlay=open] .app-sidebar {
-        width: 15rem;
+        width: 16.5rem;
     }
 
         [data-vertical-style=overlay][data-toggled=icon-overlay-close][data-icon-overlay=open] .app-sidebar .main-sidebar-header {
-            width: 15rem;
+            width: 16.5rem;
         }
 
             [data-vertical-style=overlay][data-toggled=icon-overlay-close][data-icon-overlay=open] .app-sidebar .main-sidebar-header .header-logo .desktop-logo {
@@ -27379,11 +27384,11 @@ code[class*=language-] {
     }
 
     [data-vertical-style=icontext][data-toggled=icon-text-close][data-icon-text=open] .app-sidebar {
-        width: 15rem;
+        width: 16.5rem;
     }
 
         [data-vertical-style=icontext][data-toggled=icon-text-close][data-icon-text=open] .app-sidebar .main-sidebar-header {
-            width: 15rem;
+            width: 16.5rem;
         }
 
         [data-vertical-style=icontext][data-toggled=icon-text-close][data-icon-text=open] .app-sidebar .side-menu__icon {
@@ -27642,7 +27647,7 @@ code[class*=language-] {
     .menu-click .app-sidebar,
     [data-nav-style=menu-click][data-nav-layout=horizontal] .app-sidebar,
     [data-nav-style=menu-click][data-toggled=menu-click-closed] .app-sidebar {
-        width: 15rem;
+        width: 16.5rem;
     }
 }
 
@@ -27919,7 +27924,7 @@ code[class*=language-] {
 }
 
 .app-sidebar {
-    width: 15rem;
+    width: 16.5rem;
     height: 100%;
     background: var(--menu-bg) !important;
     border-inline-end: 1px solid var(--menu-border-color);
@@ -27946,7 +27951,7 @@ code[class*=language-] {
 
     .app-sidebar .main-sidebar-header {
         height: 3.75rem;
-        width: 15rem;
+        width: 16.5rem;
         position: fixed;
         display: flex;
         background: var(--menu-bg) !important;
