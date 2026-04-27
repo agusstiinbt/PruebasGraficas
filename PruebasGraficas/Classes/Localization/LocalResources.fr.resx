@@ -2685,7 +2685,7 @@ Remarque : Ceci s’ajoute à la liste blanche d’IP définie dans les paramèt
   </data>
   <data name="Vehicles_Good_Choice_For_Vehicles" xml:space="preserve">
     <value>Un excellent choix pour des véhicules tels que Mercedes Sprinter, Ford Transit, HINO légers et moyens, ISUZU, etc.</value>
-  </data>
+	</data>
   <data name="Vehicles_License_Plate_Validation_Not_Empty" xml:space="preserve">
     <value>La plaque d'immatriculation est obligatoire.</value>
   </data>
@@ -2693,9 +2693,6 @@ Remarque : Ceci s’ajoute à la liste blanche d’IP définie dans les paramèt
     <value>La valeur saisie dans ces champs sera prise en compte pour ce véhicule lors de l'utilisation de la fonction de répartition automatique. Si aucune limitation de ce type n'est requise, veuillez indiquer « 0 » dans les deux champs.</value>
   </data>
   <data name="Vehicles_PlaceHolder_License_Plate" xml:space="preserve">
-    <value>Plaque d'immatriculation du véhicule</value>
-  </data>
-  <data name="Vehicles_PlaceHolder_License_Plate1" xml:space="preserve">
     <value>Plaque d'immatriculation du véhicule</value>
   </data>
   <data name="Vehicles_PlaceHolder_Name" xml:space="preserve">
@@ -2740,17 +2737,38 @@ Remarque : Ceci s’ajoute à la liste blanche d’IP définie dans les paramèt
   <data name="Vehicles_Weight_Capacity_Title" xml:space="preserve">
     <value>Capacité de poids</value>
   </data>
+  <data name="VehicleTypes_RoadBike_Text" xml:space="preserve">
+    <value>Le routage suggéré pour ce type de vélo sera limité à l’accès pour vélos &lt;br/&gt; en privilégiant les routes.</value>
+  </data>
   <data name="VehicleType_Car" xml:space="preserve">
     <value>Voiture</value>
   </data>
   <data name="VehicleType_CarEnhanced" xml:space="preserve">
     <value>Voiture Améliorée</value>
   </data>
+  <data name="VehicleType_CarEnhanced_Text" xml:space="preserve">
+    <value>Identique au profil Voiture, mais spécifiquement pour la livraison et nécessitant &lt;br/&gt; un accès à des routes privées.</value>
+  </data>
+  <data name="VehicleType_CarEnhanced_Text2" xml:space="preserve">
+    <value>Le routage suggéré pour cette sélection est limité aux endroits où les voitures &lt;br/&gt; ont accès. Ce profil est plus spécifiquement destiné à effectuer des livraisons et à &lt;br/&gt; accéder à des routes privées (comme les communautés fermées).</value>
+  </data>
+  <data name="VehicleType_Car_Text" xml:space="preserve">
+    <value>Idéal pour les voitures, les petites camionnettes, les SUV.</value>
+  </data>
+  <data name="VehicleType_Car_Text2" xml:space="preserve">
+    <value>Le routage suggéré pour cette sélection est limité aux endroits où &lt;br/&gt; les voitures ont accès.</value>
+  </data>
   <data name="VehicleType_MountainBike" xml:space="preserve">
     <value>Vélo de Montagne</value>
   </data>
+  <data name="VehicleType_MountainBike_Text" xml:space="preserve">
+    <value>Le routage suggéré pour ce type de vélo sera limité à l’accès pour vélos &lt;br/&gt; avec une possible circulation hors route.</value>
+  </data>
   <data name="VehicleType_OnFoot" xml:space="preserve">
     <value>À Pied</value>
+  </data>
+  <data name="VehicleType_OnFoot_Text" xml:space="preserve">
+    <value>Le routage suggéré sera limité à l’accès piéton &lt;br/&gt; (en évitant les sentiers de randonnée, les chemins de montagne et les routes alpines).</value>
   </data>
   <data name="VehicleType_RoadBike" xml:space="preserve">
     <value>Vélo de Route</value>
@@ -2758,26 +2776,50 @@ Remarque : Ceci s’ajoute à la liste blanche d’IP définie dans les paramèt
   <data name="VehicleType_Scooter" xml:space="preserve">
     <value>Scooter</value>
   </data>
+  <data name="VehicleType_Scooter_Text1" xml:space="preserve">
+    <value>Scooter cyclomoteur tels que Emco, Motorino, Daymak, etc.</value>
+  </data>
+  <data name="VehicleType_Scooter_Text2" xml:space="preserve">
+    <value>Le routage suggéré supposera une vitesse maximale d’environ 50 &lt;br/&gt; km/h (30 mph).</value>
+  </data>
   <data name="VehicleType_SmallTruck" xml:space="preserve">
     <value>Petit Camion</value>
   </data>
   <data name="VehicleType_SmallTruckEnhanced" xml:space="preserve">
     <value>Petit Camion Amélioré</value>
   </data>
+  <data name="VehicleType_SmallTruckEnhanced_Text1" xml:space="preserve">
+    <value>Identique au profil Camion léger, mais spécifiquement pour la livraison et nécessitant &lt;br/&gt; un acceso a des routes privées.</value>
+  </data>
+  <data name="VehicleType_SmallTruckEnhanced_Text2" xml:space="preserve">
+    <value>Le routage suggéré pour cette sélection est limité aux endroits où &lt;br/&gt; les petits camions ont accès. Ce profil est plus spécifiquement destiné à effectuer &lt;br/&gt; des livraisons et à accéder à des routes privées (comme les communautés fermées).</value>
+  </data>
+  <data name="VehicleType_SmallTruck_Text1" xml:space="preserve">
+    <value>Bon choix pour des véhicules tels que Mercedes Sprinter, Ford Transit, &lt;br/&gt; HINO et ISUZU légers et moyens, etc.</value>
+  </data>
+  <data name="VehicleType_SmallTruck_Text2" xml:space="preserve">
+    <value>Le routage suggéré doit généralement respecter les restrictions pour les &lt;br/&gt; véhicules dans les dimensions suivantes :</value>
+  </data>
   <data name="VehicleType_Truck" xml:space="preserve">
     <value>Camion</value>
   </data>
+  <data name="VehicleType_Truck_Text1" xml:space="preserve">
+    <value>Camions lourds tels que HINO série XL, MAN, Mercedes-Benz &lt;br/&gt; Actros, ISUZU C&amp;E, etc.</value>
+  </data>
+  <data name="VehicleType_Truck_Text2" xml:space="preserve">
+    <value>Le routage suggéré doit généralement respecter les restrictions pour les &lt;br/&gt; véhicules dans les dimensions suivantes :</value>
+  </data>
   <data name="VehicleType_UrbanBike" xml:space="preserve">
     <value>Vélo Urbain</value>
+  </data>
+  <data name="VehicleType_UrbanBike_Text" xml:space="preserve">
+    <value>Le routage suggéré pour ce type de vélo évitera généralement &lt;br/&gt; les collines.</value>
   </data>
   <data name="Vehicle_Buffer_PlaceHolder" xml:space="preserve">
     <value>Pourcentage d'espace libre dans le véhicule</value>
   </data>
   <data name="Vehicle_Capacity_Buffer_Percent" xml:space="preserve">
     <value>La capacité tampon doit être comprise entre 0 et 99.9</value>
-  </data>
-  <data name="Vehicle_Ideal_For_Cars_Small_Vans_SUVs" xml:space="preserve">
-    <value>Idéal pour les voitures, les petites camionnettes et les SUV.</value>
   </data>
   <data name="Vehicle_License_Plate_Length_Validation" xml:space="preserve">
     <value>La plaque d'immatriculation ne peut pas comporter plus de 100 caractères.</value>
@@ -2791,23 +2833,11 @@ Remarque : Ceci s’ajoute à la liste blanche d’IP définie dans les paramèt
   <data name="Vehicle_Not_Found" xml:space="preserve">
     <value>Véhicule introuvable</value>
   </data>
-  <data name="Vehicle_Same_As_Car_Profile_But_Specifically" xml:space="preserve">
-    <value>Identique au profil Voiture, mais spécifiquement pour la livraison et nécessitant l'accès aux voies privées.</value>
-  </data>
   <data name="Vehicle_Successfully_Created" xml:space="preserve">
     <value>Véhicule créé avec succès</value>
   </data>
   <data name="Vehicle_Successfully_Updated" xml:space="preserve">
     <value>Mise à jour du véhicule réussie</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_" xml:space="preserve">
-    <value>L'itinéraire suggéré pour cette sélection est limité aux zones accessibles aux voitures.</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_1" xml:space="preserve">
-    <value>L'itinéraire suggéré pour cette sélection est limité aux zones accessibles aux voitures.</value>
-  </data>
-  <data name="Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted" xml:space="preserve">
-    <value>L'itinéraire suggéré pour cette sélection est limité aux zones accessibles aux voitures.</value>
   </data>
   <data name="Vehicle_Title_Create_New_Vehicle" xml:space="preserve">
     <value>Ajouter un véhicule</value>
@@ -2826,6 +2856,12 @@ Remarque : Ceci s’ajoute à la liste blanche d’IP définie dans les paramèt
   </data>
   <data name="Vehicle_Weight_Capacity_Validation_OutOfRange" xml:space="preserve">
     <value>La capacité de pesée est hors plage. Veuillez choisir une valeur comprise entre 0 et 99999999999999999 livres.</value>
+  </data>
+  <data name="Vehicle_Work_Time_Hours_Validation" xml:space="preserve">
+    <value>La durée de travail doit être inférieure ou égale à « 23 ».</value>
+  </data>
+  <data name="Vehicle_Work_Time_Minutes_Validation" xml:space="preserve">
+    <value>La durée de travail en minutes doit être inférieure ou égale à « 59 ».</value>
   </data>
   <data name="Wallet" xml:space="preserve">
     <value>Portefeuille</value>

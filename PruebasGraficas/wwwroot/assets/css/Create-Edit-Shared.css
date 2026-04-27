@@ -154,6 +154,84 @@
     background-color: transparent;
 }
 
+.create-edit-page .ce-spec-grid {
+    margin-top: 12px;
+    margin-left: 24px;
+    width: 100%;
+    max-width: 461px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: var(--ce-card-bg);
+}
+
+    .create-edit-page .ce-spec-grid td {
+        height: 32px;
+        padding: 4px 13px;
+        border: 0.5px solid #A5A5A5;
+        background-color: var(--ce-card-bg);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0;
+    }
+
+        /* column widths from figma */
+        .create-edit-page .ce-spec-grid td:nth-child(1) {
+            width: 91px;
+            font-weight: 600;
+            color: var(--Grey-Body-text, #585858);
+        }
+
+        .create-edit-page .ce-spec-grid td:nth-child(2) {
+            width: 185px;
+            font-weight: 400;
+            text-align: right;
+            color: var(--mud-palette-text-secondary);
+        }
+
+        .create-edit-page .ce-spec-grid td:nth-child(3) {
+            width: 185px;
+            font-weight: 400;
+            text-align: right;
+            color: var(--mud-palette-text-secondary);
+        }
+
+
+/* dark mode */
+
+[data-theme-mode="dark"] .create-edit-page .ce-spec-grid td {
+    border-color: rgba(120,120,120,.65);
+    background-color: transparent;
+}
+
+    [data-theme-mode="dark"] .create-edit-page .ce-spec-grid td:nth-child(1) {
+        color: var(--mud-palette-text-primary);
+    }
+
+    [data-theme-mode="dark"] .create-edit-page .ce-spec-grid td:nth-child(2),
+    [data-theme-mode="dark"] .create-edit-page .ce-spec-grid td:nth-child(3) {
+        color: var(--mud-palette-text-secondary);
+    }
+
+
+/* responsive */
+
+@media (max-width: 960px) {
+
+    .create-edit-page .ce-spec-grid {
+        max-width: 100%;
+    }
+
+        .create-edit-page .ce-spec-grid td:nth-child(1) {
+            width: 22%;
+        }
+
+        .create-edit-page .ce-spec-grid td:nth-child(2),
+        .create-edit-page .ce-spec-grid td:nth-child(3) {
+            width: 39%;
+        }
+}
+
 
 /* -- White-background select (light mode) ----------------------------------- */
 

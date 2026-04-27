@@ -2695,9 +2695,6 @@
   <data name="Vehicles_PlaceHolder_License_Plate" xml:space="preserve">
     <value>Vehicle's License Plate</value>
   </data>
-  <data name="Vehicles_PlaceHolder_License_Plate1" xml:space="preserve">
-    <value>Vehicle's License Plate</value>
-  </data>
   <data name="Vehicles_PlaceHolder_Name" xml:space="preserve">
     <value>Vehicle name known by your team</value>
   </data>
@@ -2740,17 +2737,38 @@
   <data name="Vehicles_Weight_Capacity_Title" xml:space="preserve">
     <value>Weight Capacity</value>
   </data>
+  <data name="VehicleTypes_RoadBike_Text" xml:space="preserve">
+    <value>The suggested routing for this bicycle type will be restricted to &lt;br/&gt; bike access preferring roads.</value>
+  </data>
   <data name="VehicleType_Car" xml:space="preserve">
     <value>Car</value>
   </data>
   <data name="VehicleType_CarEnhanced" xml:space="preserve">
     <value>Car Enhanced</value>
   </data>
+  <data name="VehicleType_CarEnhanced_Text" xml:space="preserve">
+    <value>Same as the Car profile, but specifically for delivery and requiring &lt;br/&gt; access to private roads.</value>
+  </data>
+  <data name="VehicleType_CarEnhanced_Text2" xml:space="preserve">
+    <value>The suggested routing for this selection is restricted to wherever cars &lt;br/&gt; have access. This profile is more specifically to fulfill deliveries and to &lt;br/&gt; access private roads (such as gated communities).</value>
+  </data>
+  <data name="VehicleType_Car_Text" xml:space="preserve">
+    <value>Ideal for cars, small vans, SUVs.</value>
+  </data>
+  <data name="VehicleType_Car_Text2" xml:space="preserve">
+    <value>The suggested routing for this selection is restricted to wherever &lt;br/&gt;  cars have access.</value>
+  </data>
   <data name="VehicleType_MountainBike" xml:space="preserve">
     <value>Mountain Bike</value>
   </data>
+  <data name="VehicleType_MountainBike_Text" xml:space="preserve">
+    <value>The suggested routing for this bicycle type will be restricted to &lt;br/&gt; bike access with potential off-roading.</value>
+  </data>
   <data name="VehicleType_OnFoot" xml:space="preserve">
     <value>On Foot</value>
+  </data>
+  <data name="VehicleType_OnFoot_Text" xml:space="preserve">
+    <value>The suggested routing will be restricted to foot access for &lt;br/&gt; pedestrians (avoiding hiking trails, mountain paths, and alpine &lt;br/&gt;  routes).</value>
   </data>
   <data name="VehicleType_RoadBike" xml:space="preserve">
     <value>Road Bike</value>
@@ -2758,26 +2776,50 @@
   <data name="VehicleType_Scooter" xml:space="preserve">
     <value>Scooter</value>
   </data>
+  <data name="VehicleType_Scooter_Text1" xml:space="preserve">
+    <value>Moped scooter such as Emco, Motorino, Daymak, etc.</value>
+  </data>
+  <data name="VehicleType_Scooter_Text2" xml:space="preserve">
+    <value>The suggested routing will assume a maximum speed of roughly 50 &lt;br/&gt; km/h (30 mph).</value>
+  </data>
   <data name="VehicleType_SmallTruck" xml:space="preserve">
     <value>Small Truck</value>
   </data>
   <data name="VehicleType_SmallTruckEnhanced" xml:space="preserve">
     <value>Small Truck Enhanced</value>
   </data>
+  <data name="VehicleType_SmallTruckEnhanced_Text1" xml:space="preserve">
+    <value>Same as the Small Truck profile, but specifically for delivery and &lt;br/&gt; requiring access to private roads.</value>
+  </data>
+  <data name="VehicleType_SmallTruckEnhanced_Text2" xml:space="preserve">
+    <value>he suggested routing for this selection is restricted to wherever &lt;br/&gt; small trucks have access. This profile is more specifically to fulfill &lt;br/&gt; deliveries and to access private roads (such as gated communities)</value>
+  </data>
+  <data name="VehicleType_SmallTruck_Text1" xml:space="preserve">
+    <value>Good choice for vehicles such as Mercedes Sprinter, Ford Transit, &lt;br/&gt; light-duty  and medium-duty HINOs, ISUZUs, etc.</value>
+  </data>
+  <data name="VehicleType_SmallTruck_Text2" xml:space="preserve">
+    <value>The suggested routing should generally comply with restrictions for &lt;br/&gt; vehicles within the following measurements:</value>
+  </data>
   <data name="VehicleType_Truck" xml:space="preserve">
     <value>Truck</value>
   </data>
+  <data name="VehicleType_Truck_Text1" xml:space="preserve">
+    <value>Heavy duty trucks such as HINO XL series, MAN, Mercedes-Benz &lt;br/&gt; Actros, ISUZU C&amp;E, etc.</value>
+  </data>
+  <data name="VehicleType_Truck_Text2" xml:space="preserve">
+    <value>The suggested routing should generally comply with restrictions for &lt;br/&gt; vehicles within the following measurements:</value>
+  </data>
   <data name="VehicleType_UrbanBike" xml:space="preserve">
     <value>Urban Bike</value>
+  </data>
+  <data name="VehicleType_UrbanBike_Text" xml:space="preserve">
+    <value>The suggested routing for this bicycle type will generally avoid &lt;br/&gt; hills.</value>
   </data>
   <data name="Vehicle_Buffer_PlaceHolder" xml:space="preserve">
     <value>Percentage of free space on vehicle</value>
   </data>
   <data name="Vehicle_Capacity_Buffer_Percent" xml:space="preserve">
     <value>The capacity buffer must be between 0 and 99.9</value>
-  </data>
-  <data name="Vehicle_Ideal_For_Cars_Small_Vans_SUVs" xml:space="preserve">
-    <value>Ideal for cars, small vans, SUVs.</value>
   </data>
   <data name="Vehicle_License_Plate_Length_Validation" xml:space="preserve">
     <value>The license plate cannot have more than 50 characters</value>
@@ -2791,23 +2833,11 @@
   <data name="Vehicle_Not_Found" xml:space="preserve">
     <value>Vehicle not found.</value>
   </data>
-  <data name="Vehicle_Same_As_Car_Profile_But_Specifically" xml:space="preserve">
-    <value>Same as the Car profile, but specifically for delivery and requiring access to private roads.</value>
-  </data>
   <data name="Vehicle_Successfully_Created" xml:space="preserve">
     <value>Vehicle successfully created</value>
   </data>
   <data name="Vehicle_Successfully_Updated" xml:space="preserve">
     <value>Vehicle successfully updated</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_" xml:space="preserve">
-    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_1" xml:space="preserve">
-    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
-  </data>
-  <data name="Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted" xml:space="preserve">
-    <value>The suggested routing for this selection is restricted to wherever cars have access.</value>
   </data>
   <data name="Vehicle_Title_Create_New_Vehicle" xml:space="preserve">
     <value>Add Vehicle</value>
@@ -2826,6 +2856,12 @@
   </data>
   <data name="Vehicle_Weight_Capacity_Validation_OutOfRange" xml:space="preserve">
     <value>Weigh capacity is out of range. Please consider a value between 0 and 9999999999999999 lbs</value>
+  </data>
+  <data name="Vehicle_Work_Time_Hours_Validation" xml:space="preserve">
+    <value>Working Time Hour must be less than or equal to "23".</value>
+  </data>
+  <data name="Vehicle_Work_Time_Minutes_Validation" xml:space="preserve">
+    <value>Working Time Minute must be less than or equal to "59".</value>
   </data>
   <data name="Wallet" xml:space="preserve">
     <value>Wallet</value>

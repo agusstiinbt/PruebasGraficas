@@ -2,7 +2,6 @@
 
 @page "/"
 
-
 <MudForm @ref="_form" Model="_model" Validation="@(_validationRules.ValidateValue())" Class="@(_loading ? "cursor-wait" : "")">
 
     <div class="create-edit-page">
@@ -12,12 +11,12 @@
             <MudAlert Severity="MudBlazor.Severity.Error" Class="mb-4">@_error</MudAlert>
         }
 
-        <CreateEditFormActions 	CanChangeIsActive="@(Id > 0)"
-								@bind-IsActive="_model.IsActive"
-								OnCancel="Cancel"
-								OnSubmit="Submit"
-								Loading="_loading"
-								Title="@(Id == 0?_localizer["Vehicle_Title_Create_New_Vehicle"]: _localizer["Vehicle_Title_Update_New_Vehicle"])" />
+        <CreateEditFormActions CanChangeIsActive="@(Id > 0)"
+                               @bind-IsActive="_model.IsActive"
+                               OnCancel="Cancel"
+                               OnSubmit="Submit"
+                               Loading="_loading"
+                               Title="@(Id == 0?_localizer["Vehicle_Title_Create_New_Vehicle"]: _localizer["Vehicle_Title_Update_New_Vehicle"])" />
 
         @* Primary Information *@
         <MudCard Class="custom-card mb-6">
@@ -174,13 +173,8 @@
                             </MudText>
 
                             <MudNumericField HideSpinButtons="true"
-                                             T="int?"
                                              @bind-Value="_model.CapacityBufferPercent"
-                                             Min="0"
-                                             Max="99"
-                                             MaxLength="2"
-                                             InputMode="InputMode.numeric"
-                                             Pattern="[0-9]*"
+                                             For="@(()=>_model.CapacityBufferPercent)"
                                              Placeholder="@_localizer["Vehicle_Buffer_PlaceHolder"]"
                                              Variant="Variant.Outlined"
                                              Adornment="Adornment.End"
@@ -219,25 +213,23 @@
                                 <b>@_localizer["Vehicles_Columns_MaxWorkTime"] </b>
                             </MudText>
 
-                            <MudStack Spacing="2" Row="true">
+                            <MudStack Spacing="0" Row="true">
 
                                 <MudNumericField HideSpinButtons="true"
-                                                 @bind-Value="_model.WorkTimeHours"
                                                  Pattern="[0-9]*"
-                                                 MaxLength="2"
-                                                 Min="0"
-                                                 Max="23"
+                                                 @bind-Value="_model.WorkTimeHours"
+                                                 For="@(()=>_model.WorkTimeHours)"
+                                                 Class="ce-label"
                                                  AdornmentText="hr"
                                                  Adornment="Adornment.End"
                                                  AdornmentColor="Color.Info"
                                                  Variant="Variant.Outlined" />
 
-                                 <MudNumericField HideSpinButtons="true"
+                                <MudNumericField HideSpinButtons="true"
                                                  @bind-Value="_model.WorkTimeMinutes"
                                                  Pattern="[0-9]*"
-                                                 MaxLength="2"
-                                                 Min="0"
-                                                 Max="59"
+                                                 For="@(()=>_model.WorkTimeMinutes)"
+                                                 Class="ce-label"
                                                  AdornmentText="min"
                                                  Adornment="Adornment.End"
                                                  AdornmentColor="Color.Info"
@@ -436,8 +428,9 @@
                             </MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicle_Ideal_For_Cars_Small_Vans_SUVs"]</li>
-                            <li>@_localizer["Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_"]</li>
+                            <li>@_localizer["VehicleType_Car_Text"]</li>
+                            <li>@((MarkupString)_localizer["VehicleType_Car_Text2"].Value)</li>
+
                         </ul>
 
                         @* Car Enhanced 🚗 *@
@@ -447,8 +440,8 @@
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_CarEnhanced"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicle_Same_As_Car_Profile_But_Specifically"]</li>
-                            <li>@_localizer["Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted"]</li>
+                            <li>@((MarkupString)_localizer["VehicleType_CarEnhanced_Text"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_CarEnhanced_Text2"].Value)</li>
                         </ul>
 
                         @* Small Truck 🚚 *@
@@ -457,9 +450,45 @@
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_SmallTruck"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_SmallTruck_Text1"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_SmallTruck_Text2"].Value)</li>
                         </ul>
+                        <table class="ce-spec-grid">
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Height</td>
+                                    <td>2.7m</td>
+                                    <td>8.9ft</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Width</td>
+                                    <td>2 - 2.4m</td>
+                                    <td>6.6 - 7.9ft</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Length</td>
+                                    <td>5.5m</td>
+                                    <td>18ft</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>2080 - 3480 kg</td>
+                                    <td>4586 - 7672 lbs</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </MudStack>
+
+                    <!-- COLUMN 2 -->
+                    <MudStack Style="flex:1" Spacing="4">
 
                         @* Small Truck Enhanced 🚛 *@
                         <div class="ce-section-group-header">
@@ -467,25 +496,50 @@
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_SmallTruckEnhanced"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_SmallTruckEnhanced_Text1"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_SmallTruckEnhanced_Text2"].Value)</li>
                         </ul>
 
-                        @* Trucks 🚛🚛 *@
+                        @* Truck 🚛 *@
                         <div class="ce-section-group-header">
                             <img src="/assets/vehicle-types/small-truck.svg" class="ce-section-group-icon" />
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_Truck"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_Truck_Text1"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_Truck_Text2"].Value)</li>
                         </ul>
+                        <table class="ce-spec-grid">
 
+                            <tbody>
 
-                    </MudStack>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>2.7m</td>
+                                    <td>8.9ft</td>
+                                </tr>
 
-                    <!-- COLUMN 2 -->
-                    <MudStack Style="flex:1" Spacing="4">
+                                <tr>
+                                    <td>Width</td>
+                                    <td>2 - 2.4m</td>
+                                    <td>6.6 - 7.9ft</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Length</td>
+                                    <td>5.5m</td>
+                                    <td>18ft</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>2080 - 3480 kg</td>
+                                    <td>4586 - 7672 lbs</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
 
                         @* Scooter  🚗 *@
                         <div class="ce-section-group-header">
@@ -495,8 +549,22 @@
                             </MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicle_Ideal_For_Cars_Small_Vans_SUVs"]</li>
-                            <li>@_localizer["Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_"]</li>
+                            <li>@_localizer["VehicleType_Scooter_Text1"]</li>
+                            <li>@_localizer["VehicleType_Scooter_Text2"]</li>
+                        </ul>
+
+                    </MudStack>
+
+                    <!-- COLUMN 3 -->
+                    <MudStack Style="flex:1" Spacing="4">
+
+                        @* On Foot 🚶 *@
+                        <div class="ce-section-group-header">
+                            <img src="/assets/vehicle-types/on-foot.svg" class="ce-section-group-icon" />
+                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_OnFoot"]</MudText>
+                        </div>
+                        <ul class="ce-section-group-list">
+                            <li>@((MarkupString)_localizer["VehicleType_OnFoot_Text"].Value)</li>
                         </ul>
 
                         @* Road Bike 🚗 *@
@@ -506,8 +574,7 @@
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_RoadBike"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicle_Same_As_Car_Profile_But_Specifically"]</li>
-                            <li>@_localizer["Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted"]</li>
+                            <li>@((MarkupString)_localizer["VehicleTypes_RoadBike_Text"].Value)</li>
                         </ul>
 
                         @* Urban bike 🚚 *@
@@ -516,10 +583,8 @@
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_UrbanBike"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_UrbanBike_Text"].Value)</li>
                         </ul>
-
 
                         @* Mountain Bike 🚵 *@
                         <div class="ce-section-group-header">
@@ -527,18 +592,7 @@
                             <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_MountainBike"]</MudText>
                         </div>
                         <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
-                        </ul>
-
-                        @* On Foot 🚶 *@
-                        <div class="ce-section-group-header">
-                            <img src="/assets/vehicle-types/on-foot.svg" class="ce-section-group-icon" />
-                            <MudText Typo="Typo.h6" Class="ce-section-group-title">@_localizer["VehicleType_OnFoot"]</MudText>
-                        </div>
-                        <ul class="ce-section-group-list">
-                            <li>@_localizer["Vehicles_Good_Choice_For_Vehicles"]</li>
-                            <li>@((MarkupString)_localizer["The_Suggested_Routing_Should_Generally"].Value)</li>
+                            <li>@((MarkupString)_localizer["VehicleType_MountainBike_Text"].Value)</li>
                         </ul>
 
                     </MudStack>

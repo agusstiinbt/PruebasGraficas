@@ -2691,11 +2691,8 @@ Nota: Esto es adicional a la lista blanca de IP configurada en los ajustes de la
   </data>
   <data name="Vehicles_Maximun_Work_Time_Helper_Text" xml:space="preserve">
     <value>Al definir un valor en estos campos, este se tendrá en cuenta para este vehículo cuando se utilice la función de división automática. Si no se requiere ninguna limitación, establezca ambos campos en '0'.</value>
-  </data>
+   </data>
   <data name="Vehicles_PlaceHolder_License_Plate" xml:space="preserve">
-    <value>Matrícula del vehículo</value>
-  </data>
-  <data name="Vehicles_PlaceHolder_License_Plate1" xml:space="preserve">
     <value>Matrícula del vehículo</value>
   </data>
   <data name="Vehicles_PlaceHolder_Name" xml:space="preserve">
@@ -2740,17 +2737,38 @@ Nota: Esto es adicional a la lista blanca de IP configurada en los ajustes de la
   <data name="Vehicles_Weight_Capacity_Title" xml:space="preserve">
     <value>Capacidad de peso</value>
   </data>
+  <data name="VehicleTypes_RoadBike_Text" xml:space="preserve">
+    <value>El enrutamiento sugerido para este tipo de bicicleta estará restringido al acceso para bicicletas &lt;br/&gt; priorizando las carreteras.</value>
+  </data>
   <data name="VehicleType_Car" xml:space="preserve">
     <value>Auto</value>
   </data>
   <data name="VehicleType_CarEnhanced" xml:space="preserve">
     <value>Auto Mejorado</value>
   </data>
+  <data name="VehicleType_CarEnhanced_Text" xml:space="preserve">
+    <value>Igual que el perfil de Auto, pero específicamente para entregas y que requiere &lt;br/&gt; acceso a caminos privados.</value>
+  </data>
+  <data name="VehicleType_CarEnhanced_Text2" xml:space="preserve">
+    <value>El enrutamiento sugerido para esta selección está restringido a donde los autos &lt;br/&gt; tienen acceso. Este perfil está más específicamente orientado a realizar entregas y a &lt;br/&gt; acceder a caminos privados (como barrios cerrados).</value>
+  </data>
+  <data name="VehicleType_Car_Text" xml:space="preserve">
+    <value>Ideal para autos, furgonetas pequeñas, SUV.</value>
+  </data>
+  <data name="VehicleType_Car_Text2" xml:space="preserve">
+    <value>El enrutamiento sugerido para esta selección está restringido a donde &lt;br/&gt; los autos tienen acceso.</value>
+  </data>
   <data name="VehicleType_MountainBike" xml:space="preserve">
     <value>Bicicleta de Montaña</value>
   </data>
+  <data name="VehicleType_MountainBike_Text" xml:space="preserve">
+    <value>El enrutamiento sugerido para este tipo de bicicleta estará restringido al acceso para bicicletas &lt;br/&gt; con posible circulación fuera de carretera.</value>
+  </data>
   <data name="VehicleType_OnFoot" xml:space="preserve">
     <value>A Pie</value>
+  </data>
+  <data name="VehicleType_OnFoot_Text" xml:space="preserve">
+    <value>El enrutamiento sugerido estará restringido al acceso peatonal &lt;br/&gt; (evitando senderos de trekking, caminos de montaña y rutas alpinas).</value>
   </data>
   <data name="VehicleType_RoadBike" xml:space="preserve">
     <value>Bicicleta de Ruta</value>
@@ -2758,26 +2776,50 @@ Nota: Esto es adicional a la lista blanca de IP configurada en los ajustes de la
   <data name="VehicleType_Scooter" xml:space="preserve">
     <value>Scooter</value>
   </data>
+  <data name="VehicleType_Scooter_Text1" xml:space="preserve">
+    <value>Scooter ciclomotor como Emco, Motorino, Daymak, etc.</value>
+  </data>
+  <data name="VehicleType_Scooter_Text2" xml:space="preserve">
+    <value>El enrutamiento sugerido asumirá una velocidad máxima de aproximadamente 50 &lt;br/&gt; km/h (30 mph).</value>
+  </data>
   <data name="VehicleType_SmallTruck" xml:space="preserve">
     <value>Camión Pequeño</value>
   </data>
   <data name="VehicleType_SmallTruckEnhanced" xml:space="preserve">
     <value>Camión Pequeño Mejorado</value>
   </data>
+  <data name="VehicleType_SmallTruckEnhanced_Text1" xml:space="preserve">
+    <value>Igual que el perfil de Camión Pequeño, pero específicamente para entregas y que requiere &lt;br/&gt; acceso a caminos privados.</value>
+  </data>
+  <data name="VehicleType_SmallTruckEnhanced_Text2" xml:space="preserve">
+    <value>El enrutamiento sugerido para esta selección está restringido a donde &lt;br/&gt; los camiones pequeños tienen acceso. Este perfil está más específicamente orientado a realizar &lt;br/&gt; entregas y a acceder a caminos privados (como barrios cerrados).</value>
+  </data>
+  <data name="VehicleType_SmallTruck_Text1" xml:space="preserve">
+    <value>Buena opción para vehículos como Mercedes Sprinter, Ford Transit, &lt;br/&gt; HINO e ISUZU de servicio liviano y mediano, etc.</value>
+  </data>
+  <data name="VehicleType_SmallTruck_Text2" xml:space="preserve">
+    <value>El enrutamiento sugerido generalmente debe cumplir con las restricciones para &lt;br/&gt; vehículos dentro de las siguientes medidas:</value>
+  </data>
   <data name="VehicleType_Truck" xml:space="preserve">
     <value>Camión</value>
   </data>
+  <data name="VehicleType_Truck_Text1" xml:space="preserve">
+    <value>Camiones de servicio pesado como HINO serie XL, MAN, Mercedes-Benz &lt;br/&gt; Actros, ISUZU C&amp;E, etc.Camiones de servicio pesado como HINO serie XL, MAN, Mercedes-Benz &lt;br/&gt; Actros, ISUZU C&amp;E, etc.</value>
+  </data>
+  <data name="VehicleType_Truck_Text2" xml:space="preserve">
+    <value>El enrutamiento sugerido generalmente debe cumplir con las restricciones para &lt;br/&gt; vehículos dentro de las siguientes medidas:</value>
+  </data>
   <data name="VehicleType_UrbanBike" xml:space="preserve">
     <value>Bicicleta Urbana</value>
+  </data>
+  <data name="VehicleType_UrbanBike_Text" xml:space="preserve">
+    <value>El enrutamiento sugerido para este tipo de bicicleta generalmente evitará &lt;br/&gt; colinas.</value>
   </data>
   <data name="Vehicle_Buffer_PlaceHolder" xml:space="preserve">
     <value>Porcentaje de espacio libre en el vehículo</value>
   </data>
   <data name="Vehicle_Capacity_Buffer_Percent" xml:space="preserve">
     <value>El búfer de capacidad debe estar entre 0 y 99.9</value>
-  </data>
-  <data name="Vehicle_Ideal_For_Cars_Small_Vans_SUVs" xml:space="preserve">
-    <value>Ideal para coches, furgonetas pequeñas y todoterrenos.</value>
   </data>
   <data name="Vehicle_License_Plate_Length_Validation" xml:space="preserve">
     <value>La matrícula no puede tener más de 100 caracteres.</value>
@@ -2791,23 +2833,11 @@ Nota: Esto es adicional a la lista blanca de IP configurada en los ajustes de la
   <data name="Vehicle_Not_Found" xml:space="preserve">
     <value>Vehículo no encontrado</value>
   </data>
-  <data name="Vehicle_Same_As_Car_Profile_But_Specifically" xml:space="preserve">
-    <value>Igual que el perfil de coche, pero específicamente para reparto y que requiere acceso a carreteras privadas.</value>
-  </data>
   <data name="Vehicle_Successfully_Created" xml:space="preserve">
     <value>Vehículo creado con éxito</value>
   </data>
   <data name="Vehicle_Successfully_Updated" xml:space="preserve">
     <value>Vehículo actualizado correctamente</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_" xml:space="preserve">
-    <value>La ruta sugerida para esta selección se limita a los lugares donde los automóviles tienen acceso.</value>
-  </data>
-  <data name="Vehicle_TheSuggested_Routing_For_This_Selection_Is_Restricted_1" xml:space="preserve">
-    <value>La ruta sugerida para esta selección se limita a los lugares donde los automóviles tienen acceso.</value>
-  </data>
-  <data name="Vehicle_The_Suggested_Routing_For_This_Selection_Is_Restricted" xml:space="preserve">
-    <value>La ruta sugerida para esta selección se limita a los lugares donde los automóviles tienen acceso.</value>
   </data>
   <data name="Vehicle_Title_Create_New_Vehicle" xml:space="preserve">
     <value>Agregar vehículo</value>
@@ -2826,6 +2856,12 @@ Nota: Esto es adicional a la lista blanca de IP configurada en los ajustes de la
   </data>
   <data name="Vehicle_Weight_Capacity_Validation_OutOfRange" xml:space="preserve">
     <value>La capacidad de pesaje está fuera de rango. Considere un valor entre 0 y 99999999999999999 libras.</value>
+  </data>
+  <data name="Vehicle_Work_Time_Hours_Validation" xml:space="preserve">
+    <value>La hora de trabajo debe ser menor o igual a "23".</value>
+  </data>
+  <data name="Vehicle_Work_Time_Minutes_Validation" xml:space="preserve">
+    <value>El tiempo de trabajo en minutos debe ser menor o igual a "59".</value>
   </data>
   <data name="Wallet" xml:space="preserve">
     <value>Billetera</value>
